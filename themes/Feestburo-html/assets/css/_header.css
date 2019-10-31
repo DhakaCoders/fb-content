@@ -1,0 +1,25 @@
+
+.hdr-topbar{
+	background: rgba(247, 247, 247, 0.9);
+	padding: 18px 0;
+}
+.hdr-lft{
+	float: left;
+	width: 30%;
+}
+.hdr-rgt{
+	float: right;
+	width: 70%;
+	padding-left: 20px;
+}
+.logo{
+	padding-top: 10px;
+}
+.logo a{
+	display: inline-block;
+	vertical-align: baseline;
+	max-width: 345px;
+}
+.logo a img{
+	width: 100%;
+}
