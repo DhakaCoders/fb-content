@@ -15,9 +15,9 @@ a, a:hover, a:focus, button:hover, button:focus{
 }
 
 body {
-    background: #f8f8f8;
-    color: #000000;
-    font-size: 18px;
+    background: #fff;
+    color: #3A3A3A;
+    font-size: 16px;
     line-height: 1.2;
 }
 /*-- app gap use pattern --*/
