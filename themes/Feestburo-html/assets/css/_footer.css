@@ -1,0 +1,108 @@
+
+footer.footer-wrap{
+	background-repeat: no-repeat!important;
+	background-size: cover!important;
+	background-position: center center!important;
+}
+.ftr-main{
+	color: #fff;
+}
+.ftr-head{
+	padding: 50px 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);;
+}
+.ftr-head h3{
+	font-size: 36px;
+	line-height:40px;
+	text-transform: uppercase;
+	position: relative;
+}
+.ftr-head h3 span{
+	font-weight: 700;
+}
+.ftr-head p{
+	font-size: 18px;
+	line-height: 25px;
+}
+.ftr-head a {
+	display: inline-block;
+	vertical-align: baseline;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	text-transform: uppercase;
+	background: #EB1C23;
+	padding: 25px 20px;
+	color: #fff;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.ftr-head a span{
+	display: inline-block;
+	vertical-align: baseline;
+	position: relative;
+	padding-right: 55px;
+}
+.ftr-head a span:after{
+	content:"";
+	position: absolute;
+	top:0;
+	right: 0;
+	background:url(../images/ftr-right-angle.svg)no-repeat; 
+	background-size: 100% auto; 
+	background-position: center center;
+	width:20px;
+	height: 18px;
+	-webkit-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	transition: all .3s ease;	
+}
+.ftr-col-wrp{
+	padding-top: 32px;
+	font-weight: 600;
+	line-height: 17px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+.ftr-col-wrp a{
+	display: inline-block;
+	vertical-align: baseline;
+	color:#fff;
+}
+.ftr-col{
+	float: left;
+	padding-right: 15px;
+}
+.ftr-col-1{
+	width:42.33%;
+}
+.ftr-col-2{
+	width:18.76%;
+	padding-top: 25px;
+}
+.ftr-col-3{
+	width:15.40%;
+	padding-top: 25px;
+}
+.ftr-col-4{
+	width:23.51%;
+	padding-top: 25px;
+}
+
+
+/*
+
+Feestburo 
+Nobels-Peelmanstraat 4 
+9100 Sint-Niklaas 
+
+0472 97 40 57 
+info@feestburo.be 
+BTW 0824.550.082
+
+
+*/
