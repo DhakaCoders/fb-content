@@ -20,8 +20,57 @@ var windowWidth = $(window).width();
 // }
 
 
-// http://codepen.io/norman_pixelkings/pen/NNbqgG
-// https://stackoverflow.com/questions/38686650/slick-slides-on-pagination-hover
+
+/*Start code of Prashanto*/
+
+
+
+
+
+
+
+
+
+/*End code of Prashanto*/
+
+
+
+
+
+/*Start code of Milon*/
+
+
+
+
+
+
+
+
+
+/*End code of Milon*/
+
+
+
+
+
+
+
+
+
+/*Start code of Rannojit*/
+
+
+
+
+$('.hdr-search button').on('click', function(){
+    $(this).parent().toggleClass('hdr-search-field-show');
+});
+
+
+
+
+/*End code of Rannojit*/
+
 
 
 //$("[data-fancybox]").fancybox({});
