@@ -1,11 +1,13 @@
 /**
 All Transitions
 */
+.hm-catagory-innr:hover .hm-catagory-img,
 a,input,img,textarea,button{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
+.hm-catagory-innr:hover .hm-catagory-img,
 .scale{
 	transform: scale(1.1);
 	-ms-transform: scale(1.1);
