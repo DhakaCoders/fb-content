@@ -1,18 +1,40 @@
 /**
 All Transitions
 */
+.hm-gallery-overflow:hover .hm-single-post-img,
+.hm-gallery-rgt-overflow:hover .hm-gallery-tp-rgt-img,
+.hm-gallery-overflow:hover .hm-gallery-top-lft-img,
 .hm-catagory-innr:hover .hm-catagory-img,
 a,input,img,textarea,button{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
+.hm-gallery-overflow:hover .hm-single-post-img,
+.hm-gallery-rgt-overflow:hover .hm-gallery-tp-rgt-img,
+.hm-gallery-top-lft-item:hover .hm-gallery-top-lft-img,
 .hm-catagory-innr:hover .hm-catagory-img,
 .scale{
 	transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	-webkit-transform: scale(1.1);
 	-o-transform: scale(1.1);
+}
+
+.hm-gallery-rgt-overflow:hover .hm-gallery-tp-rgt-img,
+.hm-catagory-innr:hover .hm-catagory-img,
+a,input,img,textarea,button{
+	transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+}
+.hm-gallery-rgt-overflow:hover .hm-gallery-tp-rgt-img,
+.hm-catagory-innr:hover .hm-catagory-img,
+.scale{
+	transform: scale(1.03);
+	-ms-transform: scale(1.03);
+	-webkit-transform: scale(1.03);
+	-o-transform: scale(1.03);
 }
 
 /**

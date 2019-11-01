@@ -187,6 +187,9 @@ hm-gallery-post-sec-wrp
 	background-size: cover !important;
 	height: 210px !important;
 	position: relative;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
 }
 .hm-gallery-item-top-lft ul{
 	list-style: none;
@@ -205,12 +208,15 @@ hm-gallery-post-sec-wrp
 	background-size: cover !important;
 	height: 672px !important;
 	position: relative;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
 }
 .hm-gallery-btm-img a,
 .hm-gallery-top-img a,
 .hm-single-post-img a,
 .hm-gallery-tp-rgt-img a,
-.hm-gallery-top-lft-img a{
+.hm-gallery-top-lft-item a{
 	display: inline-block;
 	vertical-align: baseline;
 	text-decoration: none;
@@ -227,6 +233,7 @@ hm-gallery-post-sec-wrp
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
+	z-index: 11;
 }
 .hm-gallery-btm-img a,
 .hm-gallery-top-img a,
@@ -238,7 +245,7 @@ hm-gallery-post-sec-wrp
 .hm-gallery-top-img a:after,
 .hm-single-post-img a:after,
 .hm-gallery-tp-rgt-img a:after,
-.hm-gallery-top-lft-img a:after{
+.hm-gallery-top-lft-item a:after{
 	content: "";
 	position: absolute;
 	right: 0;
@@ -261,19 +268,22 @@ hm-gallery-post-sec-wrp
 .hm-gallery-top-img a:hover,
 .hm-single-post-img a:hover,
 .hm-gallery-tp-rgt-img a:hover,
-.hm-gallery-top-lft-img a:hover{
+.hm-gallery-top-lft-item a:hover{
 	color: #eb1c23;
 }
 .hm-gallery-btm-img a:hover:after,
 .hm-gallery-top-img a:hover:after,
 .hm-single-post-img a:hover:after,
 .hm-gallery-tp-rgt-img a:hover:after,
-.hm-gallery-top-lft-img a:hover:after{
+.hm-gallery-top-lft-item a:hover:after{
 	background: url(../images/gallery-arry-icon-hover.svg);
 	background-size: 20px 17px;
 	width: 20px;
 	height: 17px;
 	right: -5px;
+}
+.hm-gallery-tp-rgt-img > a:after{
+	content: none;
 }
 /*
 ---------------------
@@ -325,9 +335,13 @@ hm-single-post-sec-wrp
 	background-size: cover !important;
 	height: 208px !important;
 	position: relative;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
 }
 .hm-single-post-img a{
 	font-style: normal;
+	z-index: 11;
 }
 /*
 ----------------------
