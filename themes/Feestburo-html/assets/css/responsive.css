@@ -17,6 +17,25 @@
 	.show-sm{
 		display: block!important;
 	}
+	h1{
+		font-size:50px;
+	}
+	h2{
+		font-size: 35px ;
+	}
+	h3{
+		font-size: 28px;
+	}
+	h4{
+		font-size: 22px;
+	}
+	h5{
+		font-size: 20px;
+	}
+
+
+
+
 }
 
 
@@ -27,6 +46,21 @@
 	.show-xs{
 		display: block!important;
 	}
+	h1{
+		font-size:40px;
+	}
+	h2{
+		font-size: 30px ;
+	}
+	h3{
+		font-size: 25px;
+	}
+	h4{
+		font-size: 20px;
+	}
+	h5{
+		font-size: 18px;
+	}	
 }
 
 
@@ -44,7 +78,21 @@
 
 
 @media(max-width: 479px){
-
+	h1{
+		font-size:30px;
+	}
+	h2{
+		font-size: 25px ;
+	}
+	h3{
+		font-size: 22px;
+	}
+	h4{
+		font-size: 18px;
+	}
+	h5{
+		font-size: 17px;
+	}
 
 }
 
