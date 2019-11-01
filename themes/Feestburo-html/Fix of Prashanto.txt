@@ -1,0 +1,22 @@
+Home
+--------------------
+1. https://www.screencast.com/t/wjsjezB04
+	ata strong tag hobe
+2. https://www.screencast.com/t/s20u34WOW5e
+	font-weight 300 dile thik thake maybe
+3. https://www.screencast.com/t/xjHeTLf1gLKy
+	h1 hobena h3 use korte paro
+4. https://www.screencast.com/t/6OjkKJNB9
+	ai button ar div keno dorkar porteche . normal a nilei to hoy
+5. https://www.screencast.com/t/srlhh7XJFN
+	ai title ar fix age motoi hobe
+6. https://www.screencast.com/t/r0Hmrd3TxTPW
+	button ar gap thik nai
+7. https://www.screencast.com/t/1NEwg5YM
+	full stop missing
+8. https://www.screencast.com/t/ppgpIAJGDg
+	font size and font weight thik nai
+
+
+
+
