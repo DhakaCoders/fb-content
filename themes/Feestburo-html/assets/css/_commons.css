@@ -232,9 +232,74 @@ form  .dropdown-menu li a{
 .dropdown-menu>.active>a:hover{
 	background-color: #710023;
 }
+.hm-gallery-btm-img-inr,
+.hm-gallery-top-img-item,
+.hm-gallery-btm-lft,
 .hm-gallery-rgt-overflow,
+.hm-single-post-img-item,
 .hm-gallery-top-lft-item{
 	overflow: hidden;
 	position: relative;
+}
+/*
+---------------------
+ Home page Btn
+---------------------
+*/
+
+a.hm-gallery-big-btn,
+a.hm-gallery-small-btn{
+	display: inline-block;
+	vertical-align: baseline;
+	text-decoration: none;
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: 700;
+	color: #fff;
+	text-transform: uppercase;
+	position: relative;
+	padding-right: 40px;
+	position: absolute;
+	left: 28px;
+	bottom: 28px;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+	z-index: 11;
+}
+
+a.hm-gallery-big-btn{
+	font-size: 24px;
+	line-height: 26px;
+}
+a.hm-gallery-big-btn:after,
+a.hm-gallery-small-btn:after{
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 1px;
+	background: url(../images/gallery-arry-icon.svg);
+	background-repeat: no-repeat;
+	background-size: 20px 17px;
+	width: 20px;
+	height: 17px;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+a.hm-gallery-big-btn:after{
+	top: 5px;
+}
+a.hm-gallery-big-btn:hover,
+a.hm-gallery-small-btn:hover{
+	color: #eb1c23;
+}
+a.hm-gallery-big-btn:hover:after,
+a.hm-gallery-small-btn:hover:after{
+	background: url(../images/gallery-arry-icon-hover.svg);
+	background-size: 20px 17px;
+	width: 20px;
+	height: 17px;
+	right: -5px;
 }
 
