@@ -1,21 +1,22 @@
 
-footer.footer-wrap{
+.ftr-main-controller{
 	background-repeat: no-repeat!important;
 	background-size: cover!important;
 	background-position: center center!important;
 }
 .ftr-main{
 	color: #fff;
+	padding-bottom: 35px;
 }
 .ftr-head{
-	padding: 50px 0;
+	padding: 50px 265px 50px 0;
+	position: relative;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);;
 }
 .ftr-head h3{
 	font-size: 36px;
 	line-height:40px;
 	text-transform: uppercase;
-	position: relative;
 }
 .ftr-head h3 span{
 	font-weight: 700;
@@ -41,6 +42,9 @@ footer.footer-wrap{
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
+.ftr-head a:hover {
+	background: #BF0006;
+}
 .ftr-head a span{
 	display: inline-block;
 	vertical-align: baseline;
@@ -61,6 +65,9 @@ footer.footer-wrap{
 	-ms-transition: all .3s ease;
 	transition: all .3s ease;	
 }
+.ftr-head a:hover span:after{
+	right: -5px;
+}
 .ftr-col-wrp{
 	padding-top: 32px;
 	font-weight: 600;
@@ -68,14 +75,22 @@ footer.footer-wrap{
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
 }
-.ftr-col-wrp a{
+.ftr-col-wrp a,
+.ftr-col-wrp span{
 	display: inline-block;
 	vertical-align: baseline;
 	color:#fff;
 }
+.ftr-col-wrp a:hover{
+	color:#EB1C23;
+}
 .ftr-col{
 	float: left;
 	padding-right: 15px;
+}
+.ftr-col li{
+	padding-bottom: 25px;
+	line-height: 24px;
 }
 .ftr-col-1{
 	width:42.33%;
@@ -92,17 +107,338 @@ footer.footer-wrap{
 	width:23.51%;
 	padding-top: 25px;
 }
+.ftr-col-4 li span,
+.ftr-col-4 li a{
+	text-transform: initial;
+}
+.ftr-col-4 li span{
+	display: block;
+}
+.ftr-social{
+	padding-top: 30px;
+}
+.ftr-social a{
+	margin-right: 10px;
+}
+.ftr-social a i svg{
+	-webkit-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	transition: all .3s ease;
+}
+.ftr-social a:hover i svg{
+	fill:#EB1C23!important;
+}
+
+.ftr-btm{
+	padding: 35px 0
+}
+.ftr-btm-lft{
+	float: left;
+	width:80%;
+}
+.ftr-btm-rgt{
+	float: left;
+	width:20%;
+}
+.ftr-btm span,
+.ftr-btm a{
+	color: #929292;
+	display: inline-block;
+	vertical-align: baseline;
+	line-height: 25px;
+}
+.ftr-btm a:hover{
+	color: #fff;
+}
+.ftr-btm-lft > span{
+	padding-right: 18px;
+	vertical-align: top;
+}
+.ftr-btm-lft ul {
+    display: inline-block;
+	vertical-align: baseline;
+}
+.ftr-btm-lft ul li{
+	float: left;
+    display: inline-block;
+	vertical-align: baseline;
+	padding-left: 22px;
+	padding-right: 18px;
+    position: relative;
+}
+.ftr-btm-lft ul li:after{
+	content: "-";
+	position: absolute;
+	left: 0;
+	top:3px;
+	color: #929292;
+}
+.ftr-btm-rgt{
+	text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /*
-
-Feestburo 
-Nobels-Peelmanstraat 4 
-9100 Sint-Niklaas 
-
-0472 97 40 57 
-info@feestburo.be 
-BTW 0824.550.082
-
-
+	ftr-top-newsletter
 */
+
+
+.ftr-top-newsletter-con{
+	padding-bottom: 92px;
+}
+
+.ftr-top-newsletter-innr-wrp{
+	padding-top:70px;
+	border-top: 2px solid #F0F0F0;
+}
+.ftr-top-newsletter-innr{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.ftr-top-newsletter-head {
+	text-align: center;
+	padding-bottom: 13px;
+}
+.ftr-top-newsletter-head h3{
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 45px;
+	text-transform: uppercase;
+	color: #0C1421;
+}
+.ftr-top-newsletter-head p{
+	color: #3A3A3A;
+}
+.ftr-top-newsletter .from-group:nth-child(1),
+.ftr-top-newsletter .from-group:nth-child(2){
+	width:38.75%;
+	float: left;
+	padding-right: 25px;
+}
+.ftr-top-newsletter .from-group:nth-child(3){
+	width:22.5%;
+	float: left;
+}
+.ftr-top-newsletter .from-group input{
+	width:100%;
+	border: 2px solid #F0F0F0;
+	padding: 18px 20px 20px;
+}
+.ftr-top-newsletter .from-group input:focus{
+	border: 2px solid #C4C2C2;
+}
+.ftr-top-newsletter .from-group input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: #B7B7B7;
+	opacity: 1;
+}
+
+.ftr-top-newsletter .from-group input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: #B7B7B7;
+	opacity: 1;
+}
+
+.ftr-top-newsletter .from-group input::-ms-input-placeholder { /* Microsoft Edge */
+	color: #B7B7B7;
+	opacity: 1;
+}
+
+.from-group button {
+	width: 100%;
+	padding: 22px 20px;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	background:#EB1C23;
+	text-align: left;
+	position: relative;
+}
+
+.from-group button:after {
+	content:"";
+	position: absolute;
+	top:50%;
+	right: 33px;
+	background:url(../images/ftr-right-angle.svg)no-repeat; 
+	background-size: 100% auto; 
+	background-position: center center;
+	width:20px;
+	height: 18px;
+	transform: translateY(-50%);
+	-webkit-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+.from-group button:hover:after {
+	right: 28px;
+}
+.from-group button:hover{
+	background: #BF0006;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+	 home section
+*/
+
+.home-feest-buro-sec{
+	padding: 115px 0
+}
+.feest-buro-innr{
+	
+}
+.feest-buro-lft{
+	position: relative;
+	width:51%;
+	float: left;
+}
+.feest-buro-lft-bg{
+	background-repeat: no-repeat!important;
+	background-size: cover!important;
+	background-position: center center!important;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+.feest-buro-rgt{
+	padding: 140px 0 140px 110px;
+	width:49%;
+	float: left;
+}
+.feest-buro-rgt h1{
+	font-weight: 700;
+	font-size: 64px;
+	line-height:70px;
+	text-transform: uppercase;
+	color: #0C1421;
+	margin-bottom: 36px;
+}
+.feest-buro-rgt p {
+    color: #3A3A3A;
+    margin-bottom: 33px;
+}
+.feest-buro-rgt a {
+	display: inline-block;
+	vertical-align: baseline;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	text-transform: uppercase;
+	color: #0C1421;
+	border: 2px solid #0C1421;
+	padding: 18px 50px;
+}
+.feest-buro-rgt a:hover {
+	color: #fff;
+	background: #0C1421
+}
+.feest-buro-lft > span{
+	display: inline-block;
+	vertical-align: baseline;
+	position: absolute;
+	right: 52px;
+	bottom: 22px;
+	z-index: 2;
+	max-width: 331px;
+}
+.feest-buro-lft > span > img{
+	width: 100%;
+}
+
+
+
+
+.home-b2b-lft{
+	background-repeat: no-repeat!important;
+	background-size: cover!important;
+	background-position: center center!important;
+	padding: 105px 40px 105px 60px;
+	float: left;
+	width:51%;
+	color:#fff;
+}
+.home-b2b-rgt{
+	background-repeat: no-repeat!important;
+	background-size: cover!important;
+	background-position: center center!important;
+	float: left;
+	width:49%;
+}
+.home-b2b-lft h3{
+	font-weight: 400;
+	font-size: 36px;
+	line-height: 42px;
+	text-transform: uppercase;
+}
+.home-b2b-lft h3 span{
+	font-weight: 700;
+}
+.home-b2b-lft p {
+    font-size: 22px;
+    line-height: 34px;
+    margin-bottom: 18px;
+}
+.home-b2b-lft a{
+	display: inline-block;
+	vertical-align: baseline;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	background: #EB1C23;
+	min-width: 270px;
+	padding: 19px 55px 21px 20px;
+	position: relative;
+}
+.home-b2b-lft a:hover{
+	background: #BF0006;
+}
+
+.home-b2b-lft a:after{
+	content:"";
+	position: absolute;
+	top:50%;
+	right: 30px;
+	background:url(../images/ftr-right-angle.svg)no-repeat; 
+	background-size: 100% auto; 
+	background-position: center center;
+	width:20px;
+	height: 18px;
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-webkit-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	transition: all .3s ease;	
+}
+.home-b2b-lft a:hover:after{
+	right: 25px;
+}

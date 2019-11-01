@@ -23,7 +23,12 @@ var windowWidth = $(window).width();
 
 /*Start code of Prashanto*/
 
-
+//match Height
+if (windowWidth > 768) {
+  if($('.matchHeightCol').length){
+    $('.matchHeightCol').matchHeight();
+  };
+}
 
 
 

@@ -8,6 +8,9 @@ Commons
 a, button, input{
 	outline: 0;
 	border: 0;
+	-webkit-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	transition: all .3s ease;
 }
 a, a:hover, a:focus, button:hover, button:focus{
 	text-decoration: none;
