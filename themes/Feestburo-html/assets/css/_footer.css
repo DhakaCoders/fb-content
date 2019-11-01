@@ -14,12 +14,10 @@
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);;
 }
 .ftr-head h3{
+	font-weight: 300;
 	font-size: 36px;
 	line-height:40px;
 	text-transform: uppercase;
-}
-.ftr-head h3 span{
-	font-weight: 700;
 }
 .ftr-head p{
 	font-size: 18px;
@@ -33,7 +31,7 @@
 	line-height: 17px;
 	text-transform: uppercase;
 	background: #EB1C23;
-	padding: 25px 20px;
+	padding: 25px 28px 25px 30px;
 	color: #fff;
 	position: absolute;
 	right: 0;
@@ -88,9 +86,11 @@
 	float: left;
 	padding-right: 15px;
 }
-.ftr-col li{
-	padding-bottom: 25px;
-	line-height: 24px;
+.ftr-col li {
+    padding-bottom: 25px;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 600;
 }
 .ftr-col-1{
 	width:42.33%;
@@ -110,6 +110,11 @@
 .ftr-col-4 li span,
 .ftr-col-4 li a{
 	text-transform: initial;
+	font-size: 18px;
+	font-weight: 400;
+}
+.ftr-col-4 ul li:first-clild span{
+	font-weight: 600
 }
 .ftr-col-4 li span{
 	display: block;
@@ -175,15 +180,6 @@
 .ftr-btm-rgt{
 	text-align: right;
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -369,22 +365,17 @@
 	width:49%;
 	float: left;
 }
-.feest-buro-rgt h1{
+.feest-buro-rgt h3{
+	font-size: 64px;
 	font-weight: 300;
 	line-height:70px;
 	text-transform: uppercase;
 	color: #0C1421;
 	margin-bottom: 36px;
 }
-.feest-buro-rgt h1 span{
-	font-weight: 700;
-}
 .feest-buro-rgt p {
     color: #3A3A3A;
     margin-bottom: 33px;
-}
-.feest-buro-lnc{
-	padding-top: 23px;	
 }
 .feest-buro-rgt a {
 	display: inline-block;
@@ -396,6 +387,7 @@
 	color: #0C1421;
 	border: 2px solid #0C1421;
 	padding: 18px 50px;
+	margin-top: 23px;
 }
 .feest-buro-rgt a:hover {
 	color: #fff;
@@ -435,15 +427,13 @@
 	display: none;
 }
 .home-b2b-lft h3{
-	font-weight: 400;
+	font-weight: 300;
 	font-size: 36px;
 	line-height: 42px;
 	text-transform: uppercase;
 	margin-bottom: 12px;
 }
-.home-b2b-lft h3 span{
-	font-weight: 700;
-}
+
 .home-b2b-lft p {
     font-size: 22px;
     line-height: 34px;
