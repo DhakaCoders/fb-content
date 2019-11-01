@@ -120,15 +120,14 @@
 .ftr-social a{
 	margin-right: 10px;
 }
-.ftr-social a i svg{
+.ftr-social a svg{
 	-webkit-transition: all .3s ease;
 	-ms-transition: all .3s ease;
 	transition: all .3s ease;
 }
-.ftr-social a:hover i svg{
+.ftr-social a:hover svg{
 	fill:#EB1C23!important;
 }
-
 .ftr-btm{
 	padding: 35px 0
 }
@@ -148,7 +147,7 @@
 	line-height: 25px;
 }
 .ftr-btm a:hover{
-	color: #fff;
+	color: #EB1C23;
 }
 .ftr-btm-lft > span{
 	padding-right: 18px;
@@ -388,7 +387,7 @@
 	background-repeat: no-repeat!important;
 	background-size: cover!important;
 	background-position: center center!important;
-	float: left;
+	float: right;
 	width:49%;
 }
 .home-b2b-lft h3{
@@ -421,7 +420,6 @@
 .home-b2b-lft a:hover{
 	background: #BF0006;
 }
-
 .home-b2b-lft a:after{
 	content:"";
 	position: absolute;
@@ -442,3 +440,7 @@
 .home-b2b-lft a:hover:after{
 	right: 25px;
 }
+
+
+
+
