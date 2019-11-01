@@ -1,21 +1,21 @@
 Home
 --------------------
 1. https://www.screencast.com/t/wjsjezB04
-	ata strong tag hobe
+	ata strong tag hobe ---done
 2. https://www.screencast.com/t/s20u34WOW5e
-	font-weight 300 dile thik thake maybe
+	font-weight 300 dile thik thake maybe ---done
 3. https://www.screencast.com/t/xjHeTLf1gLKy
-	h1 hobena h3 use korte paro
+	h1 hobena h3 use korte paro ---done
 4. https://www.screencast.com/t/6OjkKJNB9
-	ai button ar div keno dorkar porteche . normal a nilei to hoy
+	ai button ar div keno dorkar porteche . normal a nilei to hoy ---done
 5. https://www.screencast.com/t/srlhh7XJFN
-	ai title ar fix age motoi hobe
+	ai title ar fix age motoi hobe ---done
 6. https://www.screencast.com/t/r0Hmrd3TxTPW
-	button ar gap thik nai
+	button ar gap thik nai ---done
 7. https://www.screencast.com/t/1NEwg5YM
-	full stop missing
+	full stop missing ---done
 8. https://www.screencast.com/t/ppgpIAJGDg
-	font size and font weight thik nai
+	font size and font weight thik nai ---done
 
 
 
