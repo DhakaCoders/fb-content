@@ -36,6 +36,8 @@ if (windowWidth > 768) {
 
 
 
+
+
 /*End code of Prashanto*/
 
 
@@ -43,7 +45,59 @@ if (windowWidth > 768) {
 
 
 /*Start code of Milon*/
+if (windowWidth <= 767) {
+  if( $('#HmServiceSlider').length ){
+      $('#HmServiceSlider').slick({
+        pauseOnHover: false,
+        autoplay: false,
+        autoplaySpeed: 6000,
+        arrows:false,
+        dots: true,
+        infinite: false,
+        speed: 1000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+      });
+  }
+}
 
+if (windowWidth <= 767) {
+  if( $('#HmGalleryItemTopLft').length ){
+      $('#HmGalleryItemTopLft').slick({
+        pauseOnHover: false,
+        autoplay: false,
+        autoplaySpeed: 6000,
+        arrows:true,
+        dots: true,
+        infinite: false,
+        speed: 1000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        prevArrow: $('.HmGalleryItem .leftArrow'),
+        nextArrow: $('.HmGalleryItem .rightArrow'),
+      });
+  }
+}
+if (windowWidth <= 575) {
+  if( $('#HmGalleryBtmLft').length ){
+      $('#HmGalleryBtmLft').slick({
+        pauseOnHover: false,
+        autoplay: false,
+        autoplaySpeed: 6000,
+        arrows:true,
+        dots: true,
+        infinite: false,
+        speed: 1000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        prevArrow: $('.HmGalleryBtmPagi .leftArrow'),
+        nextArrow: $('.HmGalleryBtmPagi .rightArrow'),
+      });
+  }
+}
 
 
 

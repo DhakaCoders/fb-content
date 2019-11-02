@@ -246,7 +246,7 @@ form  .dropdown-menu li a{
  Home page Btn
 ---------------------
 */
-
+a.hm-gallery-single-small-btn,
 a.hm-gallery-big-btn,
 a.hm-gallery-small-btn{
 	display: inline-block;
@@ -272,6 +272,7 @@ a.hm-gallery-big-btn{
 	font-size: 24px;
 	line-height: 26px;
 }
+a.hm-gallery-single-small-btn:after,
 a.hm-gallery-big-btn:after,
 a.hm-gallery-small-btn:after{
 	content: "";
@@ -290,10 +291,12 @@ a.hm-gallery-small-btn:after{
 a.hm-gallery-big-btn:after{
 	top: 5px;
 }
+a.hm-gallery-single-small-btn:hover,
 a.hm-gallery-big-btn:hover,
 a.hm-gallery-small-btn:hover{
 	color: #eb1c23;
 }
+a.hm-gallery-single-small-btn:hover:after,
 a.hm-gallery-big-btn:hover:after,
 a.hm-gallery-small-btn:hover:after{
 	background: url(../images/gallery-arry-icon-hover.svg);
