@@ -95,7 +95,9 @@ Containers
 }
 .container-md{}
 
-.container-sm{}
+.container-sm{
+	max-width: 940px;
+}
 
 .olc,
 .ulc{
