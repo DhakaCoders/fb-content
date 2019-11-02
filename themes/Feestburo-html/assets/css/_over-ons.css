@@ -55,6 +55,9 @@
 	padding: 18px 50px;
 	margin: 5px 20px 10px 0;
 }
+.over-ons-feest-buro-rgt a:last-child {
+	margin: 5px 0 10px 0;
+}
 .over-ons-feest-buro-rgt a:hover {
 	color: #fff;
 	background: #0C1421
@@ -188,9 +191,13 @@
 
 
 
+.hm-gallery-post-sec-wrp.overOns-gallery-post-sec {
+    padding-top: 75px;
+}
 
-
-
+.hm-gallery-post-sec-wrp.overOns-gallery-post-sec .hm-gallery-item-top-wrp {
+    padding-bottom: 85px;
+}
 
 
 
@@ -211,56 +218,107 @@
 */
 
 @media(max-width: 1399px){
-.overOns-howWeWork-bloc h4 br{
-    display: none;
+	.overOns-howWeWork-bloc h4 br{
+	    display: none;
+	}
+	.overOns-howWeWork-bloc h4 {
+	    font-size: 22px;
+	}
 }
-.overOns-howWeWork-bloc h4 {
-    font-size: 22px;
-}
+
+
+@media(max-width: 1299px){
+	.over-ons-feest-buro-rgt {
+	    padding-left: 70px;
+	}
+	.over-ons-feest-buro-innr > ul > li:nth-child(2n+2) .over-ons-feest-buro-rgt {
+	    padding-right: 70px;
+	}
 }
 
 @media(max-width: 1199px){
-.overOns-howWeWork-bloc-pera {
-    padding: 0 15px;
-}
-.overOns-howWeWork-bloc h4 {
-    font-size: 17px;
-    line-height: 27px;
-}
+	.overOns-howWeWork-bloc-pera {
+	    padding: 0 15px;
+	}
+	.overOns-howWeWork-bloc h4 {
+	    font-size: 17px;
+	    line-height: 27px;
+	}
+	.over-ons-feest-buro-rgt {
+	    padding-left: 40px;
+	}
+	.over-ons-feest-buro-innr > ul > li:nth-child(2n+2) .over-ons-feest-buro-rgt {
+	    padding-right: 40px;
+	}
+	.over-ons-feest-buro-lft > i {
+	    right: 35px;
+	    bottom: 25px;
+	    max-width: 235px;
+	}
+	.over-ons-feest-buro-innr > ul > li {
+	    padding-bottom: 50px;
+	}
 
 }
 
 @media(max-width: 991px){
-.overOns-howWeWork-bloc-wrp li{
-    padding-left: 12px;
-    padding-right: 12px;
-    width: 50%;
-    margin-top: 0;
-}
-.overOns-howWeWork-bloc-wrp li:nth-child(2) {
-    margin-top: 0;
-}
-.overOns-howWeWork-bloc-wrp li:nth-child(3n+1){
-	clear:initial;
-}
-.overOns-howWeWork-bloc-wrp li:nth-child(2n+1){
-	clear:left;
-}
-.overOns-howWeWork-bloc-wrp {
-    padding-top: 80px;
-}
-.overOns-howWeWork-bloc h4 {
-    font-size: 20px;
-    line-height: 27px;
-}
+	.overOns-howWeWork-bloc-wrp li{
+	    padding-left: 12px;
+	    padding-right: 12px;
+	    width: 50%;
+	    margin-top: 0;
+	}
+	.overOns-howWeWork-bloc-wrp li:nth-child(2) {
+	    margin-top: 0;
+	}
+	.overOns-howWeWork-bloc-wrp li:nth-child(3n+1){
+		clear:initial;
+	}
+	.overOns-howWeWork-bloc-wrp li:nth-child(2n+1){
+		clear:left;
+	}
+	.overOns-howWeWork-bloc-wrp {
+	    padding-top: 80px;
+	}
+	.overOns-howWeWork-bloc h4 {
+	    font-size: 20px;
+	    line-height: 27px;
+	}	
+	.over-ons-feest-buro-rgt h3 {
+	    font-size: 50px;
+	    line-height:55px;
+	    margin-bottom: 12px;
+	}
 
 }
 
 @media(max-width: 767px){
-.overOns-howWeWork-bloc p {
-    margin-bottom: 15px;
-}
-
+	.overOns-howWeWork-bloc p {
+	    margin-bottom: 15px;
+	}
+	.overOns-howWeWork-bloc-wrp li .overOns-howWeWork-bloc {
+	    padding: 57px 0 15px;
+	}
+	.over-ons-feest-buro-lft {
+	    width: 100%;
+	    min-height: 400px;
+	    margin-bottom: 25px;
+	}
+	.over-ons-feest-buro-rgt {
+	    padding: 0;
+	    width: 100%;
+	    float: left;
+	}
+	.over-ons-feest-buro-innr > ul > li:nth-child(2n+2) .over-ons-feest-buro-rgt {
+	    padding: 0;
+	}
+	.over-ons-feest-buro-rgt h3 {
+	    font-size: 40px;
+	    line-height: 45px;
+	}
+	.over-ons-feest-buro-sec {
+	    padding: 60px 0;
+	}
 }
 
 @media(max-width: 639px){
@@ -274,20 +332,35 @@
 	    max-width: 450px;
 	    margin: 0 auto;
 	}
-
+	.overOns-howWeWork-bloc-wrp li:last-child{
+	    margin-bottom: 45px;
+	}
 }
 
 @media(max-width: 575px){
-
+	.over-ons-feest-buro-lft > i {
+	    max-width: 175px;
+	}
 
 }
 
 @media(max-width: 479px){
-
+	.over-ons-feest-buro-rgt h3 {
+	    font-size: 30px;
+	    line-height: 35px;
+	}
+	.over-ons-feest-buro-lft {
+	    min-height: 350px;
+	}
+	.over-ons-feest-buro-sec {
+	    padding: 50px 0;
+	}
 
 }
 
 @media(max-width: 359px){
-
+	.over-ons-feest-buro-lft > i {
+	    max-width: 145px;
+	}
 }
 

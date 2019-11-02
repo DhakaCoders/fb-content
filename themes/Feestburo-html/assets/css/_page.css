@@ -121,3 +121,69 @@ h1.banner-page-title,
 .breadcrumbs ul li:last-child:after{
 	content: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+----- Responsive ------
+*/
+@media(max-width: 1199px){
+
+}
+
+@media(max-width: 991px){
+
+}
+
+@media(max-width: 767px){
+	strong.banner-page-title, 
+	h1.banner-page-title, 
+	.page-banner-des-inner h1, 
+	.page-banner-des-inner strong {
+		margin-bottom: 15px;
+		font-weight: 700;
+		font-size: 50px;
+		line-height: 55px;
+	}
+}
+
+@media(max-width: 639px){
+
+}
+
+@media(max-width: 575px){
+	.page-banner-des-innr {
+	    padding: 70px 0 55px;	}
+	}
+}
+
+@media(max-width: 479px){
+
+
+}
+
+@media(max-width: 359px){
+
+}
+
+
+
+
+
+
+
+
+
+
+
