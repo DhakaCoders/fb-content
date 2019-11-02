@@ -144,6 +144,10 @@
 	position: relative;
 }
 
+
+.dft-blockquote-module{
+	margin-bottom: 80px;
+}
 .dft-blockquote-img,
 .dft-blockquote{
 	float: left;
@@ -159,13 +163,13 @@
 	background-repeat: no-repeat!important;
 }
 .dft-blockquote{
-	padding: 60px 55px 45px 50px;
+	padding: 60px 49px 45px 50px;
 }
 .dft-blockquote blockquote{
 	margin: 0;
 	font-weight: 200;
-	font-size: 30px;
-	line-height: 46px;
+	font-size: 29px;
+	line-height: 44px;
 	color: #fff;
 	border: none;
 	position: relative;
@@ -188,7 +192,7 @@
 /*table*/
 
 .dfp-tbl-wrap{
-	padding-top: 50px;
+	padding-top: 0;
 }
 
 .table-dsc{
@@ -333,10 +337,21 @@ Gallery design
 
 
 .dft-img-title-grd-controller{
-	background: #F4F7F9;
-	padding: 35px 0 30px 10px;
-	margin-bottom: 50px;
+	padding: 40px 0 35px;
+	margin-bottom: 30px;
+	border-top: 2px solid #F0F0F0;
+	border-bottom: 2px solid #F0F0F0;
 }
+.dft-img-title-grd-controller h5{
+	margin-bottom: 10px;
+}
+.dft-img-title-grd-controller p{
+	margin-bottom: 0;
+	line-height: 26px;
+}
+
+
+
 .dft-img-title-grd-col{
 	float: left;
 	width: 50%;
