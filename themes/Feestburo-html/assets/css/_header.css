@@ -113,7 +113,9 @@
 	color: #919499;
 	letter-spacing: 0.04em;
 }
-
+.hdr-topbar-nav ul li a:hover{
+	color: #EB1C23;
+}
 
 .hdr-topbar-tel{
 	padding-left: 108px;

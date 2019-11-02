@@ -1,22 +1,59 @@
 Home
 --------------------
 1. https://www.screencast.com/t/wjsjezB04
-	ata strong tag hobe ---done
+	ata strong tag hobe ---done --> < ---ok
+
 2. https://www.screencast.com/t/s20u34WOW5e
 	font-weight 300 dile thik thake maybe ---done
+
 3. https://www.screencast.com/t/xjHeTLf1gLKy
-	h1 hobena h3 use korte paro ---done
+	h1 hobena h3 use korte paro ---done----> <--- ok
+
 4. https://www.screencast.com/t/6OjkKJNB9
-	ai button ar div keno dorkar porteche . normal a nilei to hoy ---done
+	ai button ar div keno dorkar porteche . normal a nilei to hoy ---done---> <--- ok
+
 5. https://www.screencast.com/t/srlhh7XJFN
-	ai title ar fix age motoi hobe ---done
+	ai title ar fix age motoi hobe ---done <--- font-weight 300 dile mil thake
+
 6. https://www.screencast.com/t/r0Hmrd3TxTPW
-	button ar gap thik nai ---done
+	button ar gap thik nai ---done --> < -----ok
+
 7. https://www.screencast.com/t/1NEwg5YM
-	full stop missing ---done
+	full stop missing ---done --> <-- ok
+
 8. https://www.screencast.com/t/ppgpIAJGDg
 	font size and font weight thik nai ---done
 
 
+home fix 2
+------------
+1. https://www.screencast.com/t/gpjEmE20gY
+	atar font-weight 200 dile mil thake ---done
 
+Footer
+------------
+1. https://www.screencast.com/t/fDZ4LDQ2
+	ai button ar gap thik nai ---done
+2. https://www.screencast.com/t/cxz8BkYAr
+	gap , font-weight thik nai. mileni (fix of home 8.) ---done
+3. https://www.screencast.com/t/64Fptu0MQx
+	font-size mil nai ---done
+
+Over Ons
+------------------
+1. https://www.screencast.com/t/6UuwtZMb
+	Banner a img scale effect ta hobe
+2. https://www.screencast.com/t/94o6shScvXxK
+	ata fixed hobe
+3. https://www.screencast.com/t/eKg2yin7g
+	matchHeightCol hobena . flex use korte hobe. bcoz top and bottom padding approx same
+4. https://www.screencast.com/t/SMRg0T7z
+	i) min-height aro besi hobe. bottom gap ta kom mone hosche. 
+	ii) r heading ar margin na diye padding daw
+5. https://www.screencast.com/t/1HAT4vNg
+	ai gap r aktu besi hobe maybe
+6. https://www.screencast.com/t/QkZ59TUAOt
+	ata h1 use korte pari 
+7. https://www.screencast.com/t/7CQ1dSb4i
+	ata h1 hobena
 

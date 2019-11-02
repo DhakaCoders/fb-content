@@ -30,6 +30,19 @@ if (windowWidth > 768) {
   };
 }
 
+if( $('.categoty-meubilair-slider').length ){
+    $('.categoty-meubilair-slider').slick({
+      pauseOnHover: false,
+      autoplay: false,
+      dots: false,
+      arrows:true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      fade: true,
+    });
+}
 
 
 

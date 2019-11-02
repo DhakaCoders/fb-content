@@ -111,7 +111,7 @@
 .ftr-col-4 li a{
 	text-transform: initial;
 	font-size: 18px;
-	font-weight: 400;
+	font-weight: 600;
 }
 .ftr-col-4 ul li:first-clild span{
 	font-weight: 600
@@ -134,7 +134,7 @@
 	fill:#EB1C23!important;
 }
 .ftr-btm{
-	padding: 38px 0 33px;
+	padding: 36px 0 33px;
 }
 .ftr-btm-lft{
 	float: left;
@@ -150,6 +150,7 @@
 	display: inline-block;
 	vertical-align: baseline;
 	line-height: 25px;
+	font-size: 14px;
 }
 .ftr-btm a:hover{
 	color: #EB1C23;
@@ -252,7 +253,7 @@
 
 .from-group button {
 	width: 100%;
-	padding: 22px 20px;
+	padding: 22px 30px;
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 17px;
@@ -621,7 +622,7 @@
 	display: none;
 }
 .home-b2b-lft h3{
-	font-weight: 300;
+	font-weight: 200;
 	font-size: 36px;
 	line-height: 42px;
 	text-transform: uppercase;
