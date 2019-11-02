@@ -28,16 +28,16 @@ Home
 home fix 2
 ------------
 1. https://www.screencast.com/t/gpjEmE20gY
-	atar font-weight 200 dile mil thake
+	atar font-weight 200 dile mil thake ---done
 
 Footer
 ------------
 1. https://www.screencast.com/t/fDZ4LDQ2
-	ai button ar gap thik nai
+	ai button ar gap thik nai ---done
 2. https://www.screencast.com/t/cxz8BkYAr
-	gap , font-weight thik nai. mileni (fix of home 8.)
+	gap , font-weight thik nai. mileni (fix of home 8.) ---done
 3. https://www.screencast.com/t/64Fptu0MQx
-	font-size mil nai
+	font-size mil nai ---done
 
 Over Ons
 ------------------
