@@ -555,7 +555,7 @@
 	z-index: 1;
 }
 .feest-buro-rgt{
-	padding: 138px 0 140px 110px;
+	padding: 138px 0 140px 112px;
 	width:49%;
 	float: left;
 }
@@ -587,7 +587,7 @@
 	color: #fff;
 	background: #0C1421
 }
-.feest-buro-lft > span{
+.feest-buro-lft > i{
 	display: inline-block;
 	vertical-align: baseline;
 	position: absolute;
@@ -596,7 +596,7 @@
 	z-index: 2;
 	max-width: 331px;
 }
-.feest-buro-lft > span > img{
+.feest-buro-lft > i > img{
 	width: 100%;
 }
 
