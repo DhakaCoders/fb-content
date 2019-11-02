@@ -4,7 +4,6 @@ hm-catagorys-sec-wrp
 ---------------------
 */
 .hm-catagorys-sec-wrp{
-	padding-top: 30px;
 	padding-left: 27px;
 	padding-right: 27px;
 }
@@ -13,11 +12,12 @@ hm-catagorys-sec-wrp
 	margin: 0 -13px;
 	padding: 0;
 	overflow: hidden;
+	padding-top: 30px;
 }
-.hm-catagory-wrp ul li{
-	width: 20%;
-	float: left;
-	padding: 0 13px 15px;
+.hm-catagory-wrp ul li {
+    width: 20%;
+    float: left;
+    padding: 0 13px 30px;
 }
 .hm-catagory-innr{
 	position: relative;
@@ -92,7 +92,7 @@ hm-service-sec-wrp
 -----------------------
 */
 .hm-service-sec-wrp{
-	padding-top: 55px;
+	padding-top: 40px;
 }
 .hm-service-wrp{
 	padding-bottom: 60px;
@@ -324,7 +324,7 @@ a.hm-gallery-btm-lft-btn {
     color: #fff;
     text-transform: uppercase;
     position: relative;
-    padding: 12px 12px;
+    padding: 12px 14px 12px 12px;
     position: absolute;
     bottom: 35px;
     left: 35px;
@@ -332,29 +332,39 @@ a.hm-gallery-btm-lft-btn {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
     z-index: 11;
+    border-right: 3px solid #fff;
 }
+a.hm-gallery-btm-lft-btn:before,
 a.hm-gallery-btm-lft-btn:after{
 	content: "";
 	position: absolute;
-	right: -5px;
-	top: 2px;
-	background: url(../images/hm-gallery-btn-bdr.svg);
-	background-repeat: no-repeat;
-	background-size: 205px 68px;
-	width: 205px;
-	height: 68px;
+	right: 0;
+	background: #fff;
+}
+a.hm-gallery-btm-lft-btn:after{
+	top: 0;
+	width: 125px;
+	height: 3px;
+	background: #fff;
 	-ms-transition: all 0.5s;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
-a.hm-gallery-btm-lft-btn:hover:after{
-	background: url(../images/hm-gallery-btn-bdr-hover.svg);
-	background-size: 205px 68px;
+a.hm-gallery-btm-lft-btn:before{
+	bottom: 0;
 	width: 205px;
-	height: 68px;
+	height: 3px;
+	-ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+a.hm-gallery-btm-lft-btn:hover:before,
+a.hm-gallery-btm-lft-btn:hover:after{
+	background: #eb1c24;
 }
 a.hm-gallery-btm-lft-btn:hover{
 	color: #eb1c23;
+	border-color: #eb1c23; 
 }
 .hm-gallery-top-img-wrp ul{
 	list-style: none;
@@ -699,6 +709,9 @@ Responsive Csss
 	.hm-service-wrp ul li:nth-child(2n+1) {
 	    clear: none;
 	}
+	.hm-catagory-wrp ul{
+		padding-top: 15px;
+	}
 
 
 	/*
@@ -864,8 +877,15 @@ Responsive Csss
 -----------------------------
  Main Slider Next Prev css
 ------------------------------
-*/	.HmGalleryItem .rightArrow,
-	.HmGalleryItem .leftArrow{
+*/
+	.HmGalleryItem .leftArrow,
+	.HmGalleryItem .rightArrow {
+		display: block;
+		height: 17px;
+		width: 20px;
+		cursor: pointer;
+		color: #fff;
+		text-align: center;
 		z-index: 5;
 		background-size: 20px 17px;
 		bottom: 3px;
@@ -884,15 +904,6 @@ Responsive Csss
 		right:15px;	
 		background: url(../images/rightArrow.svg);
 		background-repeat: no-repeat;
-	}
-	.HmGalleryItem .leftArrow,
-	.HmGalleryItem .rightArrow {
-		display: block;
-		height: 17px;
-		width: 20px;
-		cursor: pointer;
-		color: #fff;
-		text-align: center;
 	}
 	.HmGalleryItem .leftArrow:hover{
 		background: url(../images/leftArrow-hover.svg);
@@ -1014,7 +1025,6 @@ Responsive Csss
 
 @media(max-width: 575px){
 	.hm-catagorys-sec-wrp {
-	    padding-top: 15px;
 	    padding-left: 24px;
 	    padding-right: 24px;
 	}

@@ -24,6 +24,7 @@ a,input,img,textarea,button{
 	-webkit-transform: scale(1.1);
 	-o-transform: scale(1.1);
 }
+.pt-btm-slide-item:hover .pt-btm-slide-item-img a span,
 .hm-gallery-btm-img-inr:hover .hm-gallery-btm-img,
 .hm-gallery-btm-lft:hover .hm-gallery-btm-lft-img,
 .hm-gallery-rgt-overflow:hover .hm-gallery-tp-rgt-img,
@@ -33,6 +34,7 @@ a,input,img,textarea,button{
 	-ms-transition: all 0.3s;
 	-webkit-transition: all 0.3s;
 }
+.pt-btm-slide-item:hover .pt-btm-slide-item-img a span,
 .hm-gallery-btm-img-inr:hover .hm-gallery-btm-img,
 .hm-gallery-btm-lft:hover .hm-gallery-btm-lft-img,
 .hm-gallery-rgt-overflow:hover .hm-gallery-tp-rgt-img,
