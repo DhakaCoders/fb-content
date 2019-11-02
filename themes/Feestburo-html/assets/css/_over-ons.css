@@ -92,7 +92,7 @@
 .overOns-howWeWork-sec{
 }
 .overOns-howWeWork-innr{
-	padding: 60px 0 80px;
+	padding: 60px 0 20px;
 	border-top: 2px solid #F0F0F0;
 	border-bottom: 2px solid #F0F0F0;
 }
@@ -128,6 +128,13 @@
 	padding-right: 12px;
 	width:33.333%;
 	float: left;
+	margin-bottom: 60px;
+}
+.overOns-howWeWork-bloc-wrp li:nth-child(2) {
+    margin-top: -90px;
+}
+.overOns-howWeWork-bloc-wrp li:nth-child(3n+1) {
+    clear: left;
 }
 .overOns-howWeWork-bloc-wrp li .overOns-howWeWork-bloc{
 	padding: 57px 0 5px;
@@ -147,6 +154,7 @@
     line-height: 34px;
     color: #000000;
     margin-bottom: 22px;
+    font-size: 26px;
 }
 .overOns-howWeWork-bloc p{
     margin-bottom: 30px;
@@ -177,14 +185,6 @@
 	background: #EB1C23;
 }
 
-.overOns-howWeWork-bloc-wrp li:nth-child(2) {
-    padding-left: 12px;
-    padding-right: 12px;
-    width: 33.333%;
-    float: left;
-    margin-top: -90px;
-}
-
 
 
 
@@ -209,19 +209,71 @@
 /*
 ----- Responsive ------
 */
+
+@media(max-width: 1399px){
+.overOns-howWeWork-bloc h4 br{
+    display: none;
+}
+.overOns-howWeWork-bloc h4 {
+    font-size: 22px;
+}
+}
+
 @media(max-width: 1199px){
+.overOns-howWeWork-bloc-pera {
+    padding: 0 15px;
+}
+.overOns-howWeWork-bloc h4 {
+    font-size: 17px;
+    line-height: 27px;
+}
 
 }
 
 @media(max-width: 991px){
+.overOns-howWeWork-bloc-wrp li{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 50%;
+    margin-top: 0;
+}
+.overOns-howWeWork-bloc-wrp li:nth-child(2) {
+    margin-top: 0;
+}
+.overOns-howWeWork-bloc-wrp li:nth-child(3n+1){
+	clear:initial;
+}
+.overOns-howWeWork-bloc-wrp li:nth-child(2n+1){
+	clear:left;
+}
+.overOns-howWeWork-bloc-wrp {
+    padding-top: 80px;
+}
+.overOns-howWeWork-bloc h4 {
+    font-size: 20px;
+    line-height: 27px;
+}
 
 }
 
 @media(max-width: 767px){
+.overOns-howWeWork-bloc p {
+    margin-bottom: 15px;
+}
 
 }
 
 @media(max-width: 639px){
+	.overOns-howWeWork-bloc-wrp li:nth-child(2n+1) {
+	    clear: initial;
+	}
+	.overOns-howWeWork-bloc-wrp li {
+	    width: 100%;
+	}
+	.overOns-howWeWork-bloc-wrp li .overOns-howWeWork-bloc {
+	    max-width: 450px;
+	    margin: 0 auto;
+	}
 
 }
 
