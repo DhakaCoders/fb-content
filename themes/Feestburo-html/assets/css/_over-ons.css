@@ -321,6 +321,9 @@
 	.overOns-howWeWork-bloc-wrp li .overOns-howWeWork-bloc {
 	    padding: 57px 0 15px;
 	}
+	.over-ons-feest-buro-innr > ul > li {
+	    display: block;
+	}
 	.over-ons-feest-buro-lft {
 	    width: 100%;
 	    min-height: 400px;
