@@ -42,18 +42,18 @@ Footer
 Over Ons
 ------------------
 1. https://www.screencast.com/t/6UuwtZMb
-	Banner a img scale effect ta hobe
+	Banner a img scale effect ta hobe ---done
 2. https://www.screencast.com/t/94o6shScvXxK
 	ata fixed hobe
 3. https://www.screencast.com/t/eKg2yin7g
 	matchHeightCol hobena . flex use korte hobe. bcoz top and bottom padding approx same
 4. https://www.screencast.com/t/SMRg0T7z
-	i) min-height aro besi hobe. bottom gap ta kom mone hosche. 
+	i) min-height aro besi hobe. bottom gap ta kom mone hosche.   ---done
 	ii) r heading ar margin na diye padding daw
 5. https://www.screencast.com/t/1HAT4vNg
-	ai gap r aktu besi hobe maybe
+	ai gap r aktu besi hobe maybe ---done
 6. https://www.screencast.com/t/QkZ59TUAOt
-	ata h1 use korte pari 
+	ata h1 use korte pari  ---done
 7. https://www.screencast.com/t/7CQ1dSb4i
-	ata h1 hobena
+	ata h1 hobena ---done
 

@@ -23,6 +23,19 @@ var windowWidth = $(window).width();
 
 /*Start code of Prashanto*/
 
+
+$(window).scroll(function() {
+  var scroll = $(window).scrollTop();
+  $('.page-banner-bg').css({
+    '-webkit-transform' : 'scale(' + (1 + scroll/2000) + ')',
+    '-moz-transform'    : 'scale(' + (1 + scroll/2000) + ')',
+    '-ms-transform'     : 'scale(' + (1 + scroll/2000) + ')',
+    '-o-transform'      : 'scale(' + (1 + scroll/2000) + ')',
+    'transform'         : 'scale(' + (1 + scroll/2000) + ')'
+  });
+});
+
+
 //match Height
 if (windowWidth > 768) {
   if($('.matchHeightCol').length){
