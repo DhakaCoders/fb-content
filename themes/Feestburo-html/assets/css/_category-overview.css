@@ -38,8 +38,7 @@
 .categoty-meubilair-rgt-vdo .video-play-main a:after{
   content: '';
   position: absolute;
-  opacity: 0.6;
-  background-color: #202227;
+  opacity: 1;
   background-repeat: no-repeat;
   top: 0;
   left: 0;
@@ -49,6 +48,7 @@
 }
 .categoty-meubilair-rgt-vdo .video-play-main a:hover:after{
   opacity: .4;
+  background-color: #000;
 }
 .categoty-meubilair-rgt-vdo .img-zoom:hover img{
   transform: scale(1.03);
@@ -57,6 +57,8 @@
 }
 .categoty-meubilair-innr{
 	padding:60px 0 70px;
+}
+.categoty-meubilair-two-part{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -76,6 +78,10 @@
 	color: #0C1421;
 	margin-bottom: 50px;
 }
+.categoty-meubilair-lft-des h1 span{
+	font-weight: 300;
+}
+.categoty-meubilair-full-des p,
 .categoty-meubilair-lft-des p{
 	color: #3A3A3A;
 	margin-bottom: 30px;
@@ -121,6 +127,12 @@
 
 .categoty-meubilair-lft-des a:hover span:after{ 
 	top:4px;
+}
+.categoty-meubilair-full-des {
+    padding-top: 46px;
+}
+.categoty-meubilair-full-des p:last-child{
+    margin-bottom: 0;
 }
 .categoty-meubilair-slider{
 	margin-left: -12px;
@@ -284,6 +296,7 @@ a.subcat-meubilair-grd-lnc:hover{
 .sub-cat-request-price{
 	position: relative;
 	padding: 70px 400px 55px 90px;
+	margin-bottom: 1px;
 	color: #FFFFFF;
 	background-repeat: no-repeat!important;
 	background-size: cover!important;
@@ -342,8 +355,9 @@ a.subcat-meubilair-grd-lnc:hover{
 	right: 5px;
 }
 
-
-
+#sub-cat-meubilair-sec .categoty-meubilair-innr {
+    padding: 72px 0 70px;
+}
 
 
 
