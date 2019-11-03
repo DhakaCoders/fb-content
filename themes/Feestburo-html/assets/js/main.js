@@ -26,7 +26,7 @@ var windowWidth = $(window).width();
 
 $(window).scroll(function() {
   var scroll = $(window).scrollTop();
-  $('.page-banner-bg').css({
+  $('.page-banner-img').css({
     '-webkit-transform' : 'scale(' + (1 + scroll/2000) + ')',
     '-moz-transform'    : 'scale(' + (1 + scroll/2000) + ')',
     '-ms-transform'     : 'scale(' + (1 + scroll/2000) + ')',
@@ -42,6 +42,11 @@ if (windowWidth > 768) {
     $('.matchHeightCol').matchHeight();
   };
 }
+
+if($('.subcatGrd-matchCol').length){
+  $('.subcatGrd-matchCol').matchHeight();
+}
+
 
 if( $('.categoty-meubilair-slider').length ){
     $('.categoty-meubilair-slider').slick({
@@ -125,87 +130,7 @@ if (windowWidth <= 575) {
   }
 }
 
-if( $('#PtSlider').length ){
-    $('#PtSlider').slick({
-      arrows:true,
-      dots: false,
-      infinite: false,
-      speed: 300,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      prevArrow: $('.PtSliderArrow .leftArrow'),
-      nextArrow: $('.PtSliderArrow .rightArrow'),
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-      ]
-    });
-}
 
-if( $('#PtBtmSlider').length ){
-    $('#PtBtmSlider').slick({
-      arrows:true,
-      dots: false,
-      infinite: false,
-      speed: 300,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      prevArrow: $('.PtBtmSliderArrow .leftArrow'),
-      nextArrow: $('.PtBtmSliderArrow .rightArrow'),
-      responsive: [
-        {
-          breakpoint: 1199,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: false
-          }
-        },
-        {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-      ]
-    });
-}
 
 
 
