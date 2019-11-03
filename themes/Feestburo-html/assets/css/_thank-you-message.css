@@ -36,7 +36,7 @@ thank-you-message-sec-wrp
 	text-align: center;
 	margin-bottom: 40px;
 }
-.hm-single-post-img-item:hover .overlay-hover{
+.message-dsc-wrp .hm-single-post-img-item:hover .overlay-hover{
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -49,18 +49,33 @@ thank-you-message-sec-wrp
 	transition: all 0.5s;
 }
 .message-dsc-wrp  .hm-single-post-img-item:hover a.hm-gallery-single-small-btn{
-    top: 45%;
-    left: 25%;
-    right: 0;
-    display: table;
-    margin: 0 auto;
+    position: relative;
     -ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
 	color: #fff;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+}
+.message-dsc-wrp  .hm-single-post-img-item:hover .ty-hover-btn{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+	z-index: 2;
+	text-align: center;
 }
 .message-dsc-wrp  .hm-single-post-img-item:hover a.hm-gallery-single-small-btn:hover:after{
 	background: url(../images/gallery-arry-icon.svg);
+	right: -5px !important;
 }
 .thank-message-info-wrp .Contact-info-inr{
 	max-width: 720px;

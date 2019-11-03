@@ -30,14 +30,11 @@
 }
 .Contact-info-dsc h1{
 	margin: 0;
-	font-weight: 700;
+	font-weight: 200;
 	color: #000000;
 	text-transform: uppercase;
 	margin-bottom: 15px;
 	margin-top: 3px;
-}
-.Contact-info-dsc strong{
-	font-weight: normal;
 }
 .Contact-info-dsc span{
 	display:block;
