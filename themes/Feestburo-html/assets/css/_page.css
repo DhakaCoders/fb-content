@@ -1,10 +1,12 @@
 
 
 /*page-banner*/
-
+.page-banner{
+	position: relative; 	
+}
 .page-banner-con{
 	position: relative; 
-	/*overflow: hidden*/
+	overflow: hidden
 }
 .page-banner-bg{
     position: absolute;
@@ -36,9 +38,12 @@ h1.banner-page-title,
 	text-transform: uppercase;
 	text-shadow: 0px 4px 25px rgba(55, 69, 91, 0.1);
 }
-.page-banner-con a.main-bnr-rgt-btn {
-    top: 106px!important;
+.page-banner a.main-bnr-rgt-btn {
+    top: 150px!important;
+    position: fixed;
 }
+
+
 /*breadcrumbs*/
 
 .breadcrumbs ul{
