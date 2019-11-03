@@ -26,7 +26,7 @@ var windowWidth = $(window).width();
 
 $(window).scroll(function() {
   var scroll = $(window).scrollTop();
-  $('.page-banner-img').css({
+  $('.page-banner-bg').css({
     '-webkit-transform' : 'scale(' + (1 + scroll/2000) + ')',
     '-moz-transform'    : 'scale(' + (1 + scroll/2000) + ')',
     '-ms-transform'     : 'scale(' + (1 + scroll/2000) + ')',
