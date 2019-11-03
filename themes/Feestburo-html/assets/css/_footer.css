@@ -6,7 +6,7 @@
 }
 .ftr-main{
 	color: #fff;
-	padding-bottom: 30px;
+	padding-bottom: 37px;
 }
 .ftr-head{
 	padding: 50px 290px 35px 0;
@@ -14,7 +14,7 @@
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);;
 }
 .ftr-head h3{
-	font-weight: 300;
+	font-weight: 200;
 	font-size: 36px;
 	line-height:40px;
 	text-transform: uppercase;
@@ -111,18 +111,24 @@
 .ftr-col-4 li a{
 	text-transform: initial;
 	font-size: 18px;
-	font-weight: 600;
+	font-weight: 300;
 }
-.ftr-col-4 ul li:first-clild span{
-	font-weight: 600
+.ftr-col-4 li strong{
+	display: block;
+	text-transform: initial;
+	font-size: 18px;
+	font-weight: 600;
 }
 .ftr-col-4 li span{
 	display: block;
 }
+
 .ftr-social{
-	padding-top: 30px;
+	padding-top: 5px;
 }
-.ftr-social a{
+.ftr-social ul li{
+	float: left;
+	display: inline-block;
 	margin-right: 10px;
 }
 .ftr-social a svg{
@@ -130,7 +136,7 @@
 	-ms-transition: all .3s ease;
 	transition: all .3s ease;
 }
-.ftr-social a:hover svg{
+.ftr-social > ul > li > a:hover svg{
 	fill:#EB1C23!important;
 }
 .ftr-btm{
