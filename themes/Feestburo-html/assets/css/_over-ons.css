@@ -3,10 +3,16 @@
 .over-ons-feest-buro-sec{
 	padding: 80px 0;
 }
+.over-ons-feest-buro-innr > ul > li{
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .over-ons-feest-buro-lft{
 	position: relative;
 	width:51%;
-	float: left;
+	order:1;
+	min-height: 480px;
 }
 .over-ons-feest-buro-lft-bg{
 	background-repeat: no-repeat!important;
@@ -24,7 +30,7 @@
 	padding-top: 10px;
 	padding-bottom: 10px;
 	width:49%;
-	float: left;
+	order:2;
 }
 .over-ons-feest-buro-rgt h3{
 	font-size: 64px;
@@ -83,9 +89,11 @@
 .over-ons-feest-buro-innr > ul > li:nth-child(2n+2) .over-ons-feest-buro-rgt {
     padding-right:112px;
     padding-left: 0;
+    order:1;
 }
 .over-ons-feest-buro-innr > ul > li:nth-child(2n+2) .over-ons-feest-buro-lft {
-    float: right;
+    order:2;
+    min-height: 380px;
 }
 
 
@@ -209,8 +217,11 @@
 
 .hm-gallery-post-sec-wrp.overOns-gallery-post-sec .hm-enti-hdr-dsc h2{
     font-size: 36px;
+    font-weight: 700;
 }
-
+.hm-gallery-post-sec-wrp.overOns-gallery-post-sec .hm-enti-hdr-dsc h2 strong{
+    font-weight: 300;
+}
 
 
 

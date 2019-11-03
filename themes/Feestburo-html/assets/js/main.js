@@ -61,8 +61,8 @@ if($('.subcatGrd-matchCol').length){
 // }
 
 
-if( $('.categoty-meubilair-slider').length){
-  $('.categoty-meubilair-slider').slick({
+if( $('.catMeubilairSlider').length){
+  $('.catMeubilairSlider').slick({
     pauseOnHover: false,
     autoplay: false,
     dots: false,
@@ -70,8 +70,7 @@ if( $('.categoty-meubilair-slider').length){
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 1,
-    arrows: true,
-    fade: true,
+    arrows: true
   });
 }
 
