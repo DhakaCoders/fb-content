@@ -5,6 +5,7 @@ thank-you-message-sec-wrp
 */
 .thank-you-message-sec-wrp{
 	padding-top: 22px;
+	padding-bottom: 60px;
 }
 .message-dsc{
 	max-width: 1105px;
@@ -27,4 +28,58 @@ thank-you-message-sec-wrp
 }
 .message-dsc h1 strong{
 	font-weight: normal;
+}
+.hm-single-post-wrp h5{
+	margin: 0;
+	font-weight: 700;
+	color: #000;
+	text-align: center;
+	margin-bottom: 40px;
+}
+.message-dsc-wrp .hm-single-post-img-item:hover .overlay-hover{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	background: #EB1C23;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.message-dsc-wrp  .hm-single-post-img-item:hover a.hm-gallery-single-small-btn{
+    position: relative;
+    -ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+	color: #fff;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+}
+.message-dsc-wrp  .hm-single-post-img-item:hover .ty-hover-btn{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+	z-index: 2;
+	text-align: center;
+}
+.message-dsc-wrp  .hm-single-post-img-item:hover a.hm-gallery-single-small-btn:hover:after{
+	background: url(../images/gallery-arry-icon.svg);
+	right: -5px !important;
+}
+.thank-message-info-wrp .Contact-info-inr{
+	max-width: 720px;
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 70px;
 }

@@ -1,11 +1,40 @@
-Milon
---------------------
-1. https://www.screencast.com/t/nmhUZCLqDB
-	box shadow missing
-2. https://www.screencast.com/t/MkdP4YPQ2
-	in text ta right a hobe. niche name geche
-3. https://www.screencast.com/t/Wt5ZrDOf
- 	h1 hobe
+Contact
+-------------
+1. https://www.screencast.com/t/8XOvdU7NWc
+	text mileni
+2. https://www.screencast.com/t/tnbrNRwpiOvn
+	strong a ai code gulo hobe
+3. https://www.screencast.com/t/bdUpBVsww
+	ata h3 hobena. h1 and h2 diye disign kore rakho
+4. https://www.screencast.com/t/BSuC0wbT3pi
+	placeholder ar color mileni
+5. https://www.screencast.com/t/RDa9kRbK9t
+	ai arrow ta r aktu niche nambe
+
+6. https://www.screencast.com/t/HsMlowwevG
+		ata hover color hobe. active na
+
+Party Type
+------------
+1. https://prnt.sc/pryt1p
+	h1 hobe
+2. https://www.screencast.com/t/ouSKg0Ja5WV
+	flex hobe. matchHeightCol js hobena
+3. https://www.screencast.com/t/ckngJhjc
+		h2 hobe
+4. https://www.screencast.com/t/falq1BNac
+		strong a ai code gulo hobe
+		amon aro kothao thakle same hobe
+5. https://www.screencast.com/t/k6Ewi5IB
+		slider item show korena
+6. https://www.screencast.com/t/zUc32ugY4HCx
+		slider payni
+7. https://prnt.sc/pryz5u
+		gap and text mileni
+			kotha thake copy korle update section ta pest koro
+
+
+
 
 
 
