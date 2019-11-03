@@ -6,7 +6,6 @@
 .over-ons-feest-buro-innr > ul > li{
 	display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 .over-ons-feest-buro-lft{
 	position: relative;
