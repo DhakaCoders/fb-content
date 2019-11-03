@@ -48,22 +48,32 @@ if($('.subcatGrd-matchCol').length){
 }
 
 
-if( $('.categoty-meubilair-slider').length ){
-    $('.categoty-meubilair-slider').slick({
-      pauseOnHover: false,
-      autoplay: false,
-      dots: false,
-      arrows:true,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      fade: true,
-    });
+// if( $('.categoty-meubilair-slider').length){
+//   $('.categoty-meubilair-slider').slick({
+//     dots: false,
+//     arrows:true,
+//     infinite: true,
+//     speed: 300,
+//     slidesToShow: 4,
+//     slidesToScroll: 1,
+//     fade: true,
+//   });
+// }
+
+
+if( $('.categoty-meubilair-slider').length){
+  $('.categoty-meubilair-slider').slick({
+    pauseOnHover: false,
+    autoplay: false,
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: true,
+  });
 }
-
-
-
 
 
 
