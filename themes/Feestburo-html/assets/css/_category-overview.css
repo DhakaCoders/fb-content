@@ -248,24 +248,15 @@
 	border-radius: 4px;
 }
 .subcat-meubilair-grd .subcat-meubilair-grd-bg-wrp{
-	min-height: 260px;
 	position: relative;
 	overflow: hidden;
 }
-.subcat-meubilair-grd .subcat-meubilair-grd-bg{
-	background-repeat: no-repeat!important;
-	background-size: cover!important;
-	background-position: center center!important;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+.subcat-meubilair-grd img{
 	-webkit-transition: all .5s ease;
 	-ms-transition: all .5s ease;
 	transition: all .5s ease;
 }
-.subcat-meubilair-grd:hover .subcat-meubilair-grd-bg{
+.subcat-meubilair-grd:hover img{
 	-webkit-transform: scale(1.08);
 	-ms-transform: scale(1.08);
 	transform: scale(1.08);

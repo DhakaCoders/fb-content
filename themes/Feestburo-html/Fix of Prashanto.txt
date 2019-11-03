@@ -71,12 +71,12 @@ Category Overview
 5. https://www.screencast.com/t/3Qt0xN4GHB
 	akta item barale lege jay ---done
 6. https://www.screencast.com/t/g9Z82yOq
-	ai img gulo img tag a hobe. milon ar page thake idea nite paro
+	ai img gulo img tag a hobe. milon ar page thake idea nite paro ---done
 
 Sub-Category
 --------------------
 1. https://www.screencast.com/t/b7V4jQNM
-	ai div ar fix ager motoi img just scale hobe icon ta na r img ta main img ta inline a hobe
+	ai div ar fix ager motoi img just scale hobe icon ta na r img ta main img ta inline a hobe ---done
 2. https://www.screencast.com/t/gofAXGrGgud
 	gap besi hobe ---done
 3. https://www.screencast.com/t/SnutsbOh
