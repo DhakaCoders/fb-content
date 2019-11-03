@@ -4,7 +4,7 @@ Home
 	ata strong tag hobe ---done --> < ---ok
 
 2. https://www.screencast.com/t/s20u34WOW5e
-	font-weight 300 dile thik thake maybe ---done
+	font-weight 300 dile thik thake maybe ---done <----ok
 
 3. https://www.screencast.com/t/xjHeTLf1gLKy
 	h1 hobena h3 use korte paro ---done----> <--- ok
@@ -13,7 +13,7 @@ Home
 	ai button ar div keno dorkar porteche . normal a nilei to hoy ---done---> <--- ok
 
 5. https://www.screencast.com/t/srlhh7XJFN
-	ai title ar fix age motoi hobe ---done <--- font-weight 300 dile mil thake
+	ai title ar fix age motoi hobe ---done <--- ok
 
 6. https://www.screencast.com/t/r0Hmrd3TxTPW
 	button ar gap thik nai ---done --> < -----ok
@@ -21,23 +21,22 @@ Home
 7. https://www.screencast.com/t/1NEwg5YM
 	full stop missing ---done --> <-- ok
 
-8. https://www.screencast.com/t/ppgpIAJGDg
-	font size and font weight thik nai ---done
 
 
 home fix 2
 ------------
 1. https://www.screencast.com/t/gpjEmE20gY
-	atar font-weight 200 dile mil thake ---done
+	atar font-weight 200 dile mil thake ---done--> <----ok
 
 Footer
 ------------
 1. https://www.screencast.com/t/fDZ4LDQ2
-	ai button ar gap thik nai ---done
+	ai button ar gap thik nai ---done ---> <-----ok
+
 2. https://www.screencast.com/t/cxz8BkYAr
-	gap , font-weight thik nai. mileni (fix of home 8.) ---done
+	gap , font-weight thik nai. mileni ---done
 3. https://www.screencast.com/t/64Fptu0MQx
-	font-size mil nai ---done
+	font-size mil nai ---done -> <----ok
 
 Over Ons
 ------------------
