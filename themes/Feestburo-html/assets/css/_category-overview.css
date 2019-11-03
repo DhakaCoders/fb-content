@@ -218,6 +218,7 @@
 	float: left;
 	padding-left: 12px;
 	padding-right: 12px;
+	margin-bottom: 15px;
 }
 .subcat-meubilair-grd-main > ul > li:nth-child(4n+1){
 	clear: left;
@@ -305,7 +306,7 @@
 }
 .subcat-meubilair-grd-lnc-wrp{
 	text-align: center;
-	padding-top: 40px
+	padding-top: 25px
 }
 a.subcat-meubilair-grd-lnc{
 	display: inline-block;
@@ -412,15 +413,85 @@ a.subcat-meubilair-grd-lnc:hover{
 ----- Responsive ------
 */
 @media(max-width: 1199px){
-
+	.categoty-meubilair-lft-des {
+	    padding-left: 60px;
+	    padding-top: 15px;
+	    padding-bottom: 15px;
+	}
+	.subcat-meubilair-grd-main > ul {
+	    margin-right: -7px;
+	    margin-left: -7px;
+	}
+	.subcat-meubilair-grd-main > ul > li {
+	    padding-left: 7px;
+	    padding-right: 7px;
+	}
 }
 
 @media(max-width: 991px){
-
+	.categoty-meubilair-lft-des {
+	    padding-left: 25px;
+	    padding-top: 20px;
+	}
+	.categoty-meubilair-lft-des h1 {
+	    line-height: 40px;
+	    margin-bottom: 20px;
+	}
+	.categoty-meubilair-full-des p, 
+	.categoty-meubilair-lft-des p {
+	    margin-bottom: 20px;
+	}
+	.categoty-meubilair-lft-des a {
+	    margin-top: 10px;
+	}
+	.categoty-meubilair-innr {
+	    padding: 50px 0 40px;
+	}
+	.subcat-meubilair-grd-main > ul > li {
+	    width: 33.333%;
+	}
+	.subcat-meubilair-grd-main > ul > li:nth-child(4n+1) {
+	    clear: initial;
+	}
+	.subcat-meubilair-grd-main > ul > li:nth-child(3n+1) {
+	    clear: left;
+	}
+	.subcat-meubilair-grd-sec {
+	    padding: 45px 0;
+	}
+.subcat-meubilair-grd-head h2 {
+    font-size: 30px;
+    line-height: 35px;
+}	
+.subcat-meubilair-grd-head p {
+    font-size: 16px;
+}
 }
 
 @media(max-width: 767px){
-	
+	.categoty-meubilair-two-part {
+	    display: block;
+	}	
+	.categoty-meubilair-rgt-vdo {
+	    width: 100%;
+	}
+	.categoty-meubilair-lft-des {
+	    width: 100%;
+	    padding-left: 0;
+	}
+	.subcat-meubilair-grd-main > ul > li {
+	    width: 50%;
+	}
+	.subcat-meubilair-grd-main > ul > li:nth-child(3n+1) {
+	    clear: initial;
+	}
+	.subcat-meubilair-grd-main > ul > li:nth-child(2n+1) {
+	    clear: left;
+	}
+	.subcat-meubilair-grd-head h2 {
+	    font-size: 25px;
+	    line-height: 30px;
+	}	
 }
 
 @media(max-width: 639px){
@@ -428,13 +499,27 @@ a.subcat-meubilair-grd-lnc:hover{
 }
 
 @media(max-width: 575px){
-
-
+	.subcat-meubilair-grd-main > ul > li {
+	    width: 100%;
+	}
+	.subcat-meubilair-grd-main > ul > li:nth-child(2n+1) {
+	    clear: initial;
+	}
+.subcat-meubilair-grd-main .subcat-meubilair-grd {
+	max-width: 420px;
+	margin: 0 auto;
+}
 }
 
 @media(max-width: 479px){
-
-
+	.categoty-meubilair-lft-des h1 {
+	    line-height: 35px;
+	    margin-bottom: 15px;
+	}
+	.subcat-meubilair-grd-head h2 {
+	    font-size: 22px;
+	    line-height: 28px;
+	}
 }
 
 @media(max-width: 359px){
