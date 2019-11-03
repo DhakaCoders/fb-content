@@ -317,18 +317,18 @@ nav.main-nav > ul > li.current-menu-item > a:before{
 	text-align: center;
 	color: #fff;
 }
-.main-bnr-des strong{
-	font-weight: 700;
+.main-bnr-des span{
+	font-weight: 200;
 	display: block;
 	font-size: 70px;
 	line-height: 72px;
 	text-transform: uppercase;
 	padding-bottom: 5px;
 }
-.main-bnr-des strong span{
+.main-bnr-des span strong{
 	display: inline-block;
 	vertical-align: baseline;
-	font-weight: 300;
+	font-weight: 700;
 }
 .main-bnr-des p{
 	font-size: 70px;
@@ -360,7 +360,7 @@ nav.main-nav > ul > li.current-menu-item > a:before{
 	z-index: 1;
 }
 a.main-bnr-rgt-btn{
-	position: absolute;
+	position: fixed;
 	right: 28px;
 	top: 145px;
 	transform-origin: right;
