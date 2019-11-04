@@ -145,17 +145,15 @@ hm-gallery-post-sec-wrp
 	margin: 0 auto;
 	text-align: center;
 }
+.hm-enti-hdr-dsc h2,
 .hm-enti-hdr-dsc h1{
 	margin: 0;
 	margin-bottom: 12px;
 	font-size: 36px;
 	line-height: 38px;
-	font-weight: 700;
+	font-weight: 200;
 	color: #0C1421;
 	text-transform: uppercase;
-}
-.hm-enti-hdr-dsc h1 strong{
-	font-weight: normal;
 }
 .hm-enti-hdr-dsc a{
 	display: inline-block;
@@ -242,15 +240,12 @@ hm-single-post-sec-wrp
 	margin: 0;
 	font-size: 36px;
 	line-height: 38px;
-	font-weight: 700;
+	font-weight: 200;
 	color: #0C1421;
 	text-transform: uppercase;
 	padding-left: 115px;
 	position: relative;
 	margin-bottom: 50px;
-}
-.hm-post-title h3 strong{
-	font-weight: normal;
 }
 .hm-post-title h3:after{
 	content: "";

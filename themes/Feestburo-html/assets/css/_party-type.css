@@ -9,8 +9,8 @@ party-type-two-grid-sec-wrp
 .party-type-two-grid-sec-wrp .feest-buro-rgt{
 	padding: 62px 0 62px 112px;
 }
-.party-type-two-grid-sec-wrp .feest-buro-rgt h3{
-	font-weight: 700;
+.party-type-two-grid-sec-wrp .feest-buro-rgt h1{
+	font-weight: 700 !important;
 }
 .party-type-two-grid-sec-wrp .feest-buro-rgt a{
 	position: relative;
@@ -133,13 +133,10 @@ pt-btm-slider-sec-wrp
 	margin: 0;
 	font-size: 36px;
 	line-height: 38px;
-	font-weight: 700;
+	font-weight: 200;
 	color: #0C1421;
 	text-align: center;
 	text-transform: uppercase;
-}
-.pt-meets-title h3 strong{
-	font-weight: 300;
 }
 .pt-btm-slider-wrp ul{
 	list-style: none;
