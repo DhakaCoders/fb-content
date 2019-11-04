@@ -8,11 +8,11 @@
 #googlemap{
 	height: 440px;
 }
-.Contact-info-wrp{
-	position: absolute;
-	left: 0;
-	top: 85px;
-	z-index: 5;
+.Contact-info-wrp {
+    position: absolute;
+    left: 15px;
+    top: 85px;
+    z-index: 5;
 }
 .Contact-info-img{
 	float: left;
@@ -34,7 +34,7 @@
 	color: #000000;
 	text-transform: uppercase;
 	margin-bottom: 15px;
-	margin-top: 3px;
+	margin-top: 5px;
 }
 .Contact-info-dsc span{
 	display:block;
@@ -60,7 +60,7 @@
 	padding-bottom: 0;
 }
 .Contact-info-dsc span:last-child i{
-	top: 7px;
+	top: 5px;
 }
 .Contact-info-dsc span a:hover{
 	color: #EB1C23;
@@ -219,7 +219,8 @@ contact-form-sec-wrp
 }
 .contact-form .wpforms-submit-container button[type="submit"],
 .contact-form .wpforms-submit-container input[type="submit"]{
-    width: 270px;
+    max-width: 270px;
+    width: 100%;
     height: 60px;
     margin: 0 auto;
     font-style: normal;
@@ -335,3 +336,181 @@ contact-form-sec-wrp
 	background: #fb030d;
 	color: #fff;
 }
+
+/*
+------------------------
+ Contact Responsive Css
+------------------------
+*/
+
+@media(max-width: 1199px){
+	.hide-md{
+		display: none!important;
+	}
+	.show-md{
+		display: block!important;
+	}
+	.contac-form-dsc h1,
+	.contac-form-dsc h2 {
+	    font-size: 34px;
+	    line-height: 36px;
+	}
+
+}
+
+
+@media(max-width: 991px){
+	.hide-sm{
+		display: none!important;
+	}
+	.show-sm{
+		display: block!important;
+	}
+	.contac-form-dsc h1,
+	.contac-form-dsc h2 {
+	    font-size: 32px;
+	    line-height: 34px;
+	}
+	
+
+
+
+
+}
+
+
+@media(max-width: 767px){
+	.hide-xs{
+		display: none!important;
+	}
+	.show-xs{
+		display: block!important;
+	}
+	.google-map-sec-wrp {
+	    padding-top: 50px;
+	}
+	.Contact-info-wrp {
+	    position: static;
+	}
+	.Contact-info-img {
+	    float: none;
+	    width: 100%;
+	}
+	.Contact-info-img img{
+		width: 100%;
+	}
+	.Contact-info-dsc {
+	    padding-left: 0;
+	    width: 100%;
+	    padding-top: 30px;
+	    padding-bottom: 40px;
+	}
+	.Contact-info-dsc span {
+	    margin-top: 30px;
+	    padding-left: 40px;
+	}
+	.Contact-info-dsc span a {
+	    font-size: 32px;
+	    line-height: 35px;
+	}
+	.contac-form-dsc h1,
+	.contac-form-dsc h2 {
+	    font-size: 30px;
+	    line-height: 32px;
+	}
+	.contact-form-sec-wrp {
+	    padding-top: 60px;
+	}
+	.contact-form-offer-btn p {
+	    float: none;
+	    padding-right: 0;
+	    text-align: center;
+	    padding-bottom: 20px;
+	    padding-top: 0;
+	}
+	.contact-form-offer-btn {
+	    max-width: 450px;
+	    width: 100%;
+	    margin: 0 auto;
+	    text-align: center;
+	}
+	.contact-form-offer-btn-wrp {
+	    padding: 25px 0;
+	}
+		
+}
+
+
+
+@media(max-width: 639px){
+
+}
+
+
+
+@media(max-width: 575px){
+	.Contact-info-dsc span a {
+	    font-size: 30px;
+	    line-height: 33px;
+	}
+	.contac-form-dsc h1,
+	.contac-form-dsc h2 {
+	    font-size: 28px;
+	    line-height: 30px;
+	}
+	.contac-form-dsc{
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	.contact-form .wpforms-form .wpforms-field-container .wpforms-field .wpforms-field-row .wpforms-one-half {
+	    width: 100% !important;
+	    float: left !important;
+	    padding-bottom: 15px;
+	}
+	.contact-form .fullwidth{
+		padding-bottom: 15px;
+	}
+	.contact-form .wpforms-form .wpforms-field-container .wpforms-field .wpforms-field-row .wpforms-one-half:first-child{
+		padding-right: 0;
+	}
+	.contact-form .wpforms-form .wpforms-field-container .wpforms-field .wpforms-field-row .wpforms-one-half:last-child{
+		padding-left: 0;
+	}
+	.contact-form .wpforms-form .wpforms-field-container .wpforms-field {
+	    width: 100%;
+	    margin-bottom: 0;
+	}
+	.contact-form .wpforms-submit-container button[type="submit"],
+	.contact-form .wpforms-submit-container input[type="submit"]{
+		margin-top: 30px;
+		max-width: 328px;
+		width: 100%;
+	}
+
+
+}
+
+
+@media(max-width: 479px){
+	.Contact-info-dsc span a {
+	    font-size: 27px;
+	    line-height: 30px;
+	}
+	.contact-form .wpforms-form .wpforms-field-container .wpforms-field input[type="text"],
+	.contact-form .wpforms-form .wpforms-field-container .wpforms-field input[type="email"],
+	.contact-form .wpforms-form .wpforms-field-container .wpforms-field input[type="number"],
+	.contact-form .wpforms-form .wpforms-field-container .wpforms-field textarea{
+		height: 50px !important;
+	}
+	.contact-form .wpforms-form .wpforms-field-container .wpforms-field textarea {
+	    height: 140px !important;
+	}
+}
+
+
+
+@media(max-width: 359px){
+
+}
+
