@@ -549,8 +549,6 @@ a.subcat-meubilair-grd-lnc:hover{
 	.sub-cat-request-price p {
 	    font-size: 20px;
 	}
-
-
 }
 
 @media(max-width: 767px){
@@ -594,6 +592,9 @@ a.subcat-meubilair-grd-lnc:hover{
 	    margin-top: 15px;
 	    transform: initial;
 	}
+}
+
+@media(max-width: 639px){
 	.catMeubilairSlider .slick-next.slick-arrow:hover,
 	.catMeubilairSlider .slick-prev.slick-arrow:hover,
 	.catMeubilairSlider .slick-next.slick-arrow,
@@ -601,11 +602,6 @@ a.subcat-meubilair-grd-lnc:hover{
 	    width: 38px!important;
 	    height: 38px!important;
 	}
-
-}
-
-@media(max-width: 639px){
-
 }
 
 @media(max-width: 575px){
