@@ -1,37 +1,90 @@
 Contact
 -------------
-1. https://www.screencast.com/t/8XOvdU7NWc
-	text mileni
-2. https://www.screencast.com/t/tnbrNRwpiOvn
+1. https://www.screencast.com/t/8XOvdU7NWc    <--ok
+	text mileni 
+2. https://www.screencast.com/t/tnbrNRwpiOvn  <---mistake
 	strong a ai code gulo hobe
-3. https://www.screencast.com/t/bdUpBVsww
+
+3. https://www.screencast.com/t/bdUpBVsww  <--ok
 	ata h3 hobena. h1 and h2 diye disign kore rakho
-4. https://www.screencast.com/t/BSuC0wbT3pi
+
+4. https://www.screencast.com/t/BSuC0wbT3pi  <--ok
 	placeholder ar color mileni
-5. https://www.screencast.com/t/RDa9kRbK9t
+
+5. https://www.screencast.com/t/RDa9kRbK9t  <--ok
 	ai arrow ta r aktu niche nambe
 
-6. https://www.screencast.com/t/HsMlowwevG
+6. https://www.screencast.com/t/HsMlowwevG <--ok
 		ata hover color hobe. active na
+
+7. https://www.screencast.com/t/Jms2IBbfCl
+	atar positon change korte hobe.
+8. https://www.screencast.com/t/rvGUwamLu
+	strong ar design missing
+
+9. https://www.screencast.com/t/lRyJN6nxMaQ
+	ai img ta inline a daw
 
 Party Type
 ------------
-1. https://prnt.sc/pryt1p
+1. https://prnt.sc/pryt1p <---ok
 	h1 hobe
 2. https://www.screencast.com/t/ouSKg0Ja5WV
 	flex hobe. matchHeightCol js hobena
-3. https://www.screencast.com/t/ckngJhjc
+
+3. https://www.screencast.com/t/ckngJhjc <--ok
 		h2 hobe
 4. https://www.screencast.com/t/falq1BNac
 		strong a ai code gulo hobe
 		amon aro kothao thakle same hobe
-5. https://www.screencast.com/t/k6Ewi5IB
+
+5. https://www.screencast.com/t/k6Ewi5IB <---ok
 		slider item show korena
-6. https://www.screencast.com/t/zUc32ugY4HCx
+
+6. https://www.screencast.com/t/zUc32ugY4HCx <--ok
 		slider payni
+
 7. https://prnt.sc/pryz5u
 		gap and text mileni
-			kotha thake copy korle update section ta pest koro
+			kotha thake copy korle update section ta pest koro.
+		ai section ta jekhan thake copy korcho setate gap kom ache. tomay new class niye update korte hobe
+
+8. https://www.screencast.com/t/H331MMre0K
+	arrow and slide item box shadow kata porche
+9. https://www.screencast.com/t/r8D4Au13
+	ai slider ar item a link and img scale hover hobe. PD fixed kore felle dekhi j thik ache kina. or abar copy kore dio
+
+10. https://www.screencast.com/t/9EoQtQDimrs5
+	border missing
+
+
+
+
+Offerte vraag
+---------------------------------------
+1. https://www.screencast.com/t/Ez5y75KL9aK
+	textarea ar label ar top gap ta besi hobe
+
+2. https://www.screencast.com/t/CFggiiLZm
+	ai 2 ta checked active thakbe. bakigulo thakbena
+
+3. https://www.screencast.com/t/klLaJhASO
+	ata r aktu upore uthbe
+
+4. https://www.screencast.com/t/AOdNwI6np1Vo
+	hover a border gulo o red hobe
+
+Thank You Message
+------------------------------
+1. https://www.screencast.com/t/oyNxXZDhi
+	text mileni
+2. https://www.screencast.com/t/Egu2p2KGT
+	ata black thakbe normaly
+3. https://www.screencast.com/t/xFfgg70a5lBR
+	ai img ta inline a daw
+4. https://www.screencast.com/t/bjPthsBf
+	ai page a ata h1 hobena
+
 
 
 
