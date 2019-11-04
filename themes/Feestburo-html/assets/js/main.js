@@ -46,7 +46,9 @@ if (windowWidth > 768) {
 if($('.subcatGrd-matchCol').length){
   $('.subcatGrd-matchCol').matchHeight();
 }
-
+if($('.refOvrGrd-matchCol').length){
+  $('.refOvrGrd-matchCol').matchHeight();
+}
 
 if( $('.refDetailsSlider').length){
   $('.refDetailsSlider').slick({

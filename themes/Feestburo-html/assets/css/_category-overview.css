@@ -62,10 +62,7 @@
 	background-position: center center!important;
 	min-height: 625px;
 	display: block;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	height: 100%;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
