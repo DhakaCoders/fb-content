@@ -296,7 +296,7 @@ a.hm-gallery-big-btn:after{
 a.hm-gallery-single-small-btn:hover,
 a.hm-gallery-big-btn:hover,
 a.hm-gallery-small-btn:hover{
-	color: #eb1c23;
+	color: #eb1c23 !important;
 }
 a.hm-gallery-single-small-btn:hover:after,
 a.hm-gallery-big-btn:hover:after,

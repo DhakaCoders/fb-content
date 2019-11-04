@@ -1031,10 +1031,14 @@ Responsive Csss
 	    width: 100%;
 	    padding: 11px 11px;
 	}
-	.hm-single-post-img-item {
+	.hm-single-post-sec-wrp .hm-single-post-img-item {
 	    background: #FFFFFF;
 	    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
 	    padding: 24px 20px;
+	}
+	.hm-single-post-sec-wrp .hm-single-post-img-item a.overlay-link{
+		position: static;
+		display: none;
 	}
 	.hm-single-post-img{
 		display: none;

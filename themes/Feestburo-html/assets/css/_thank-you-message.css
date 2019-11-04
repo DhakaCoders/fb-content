@@ -20,14 +20,11 @@ thank-you-message-sec-wrp
 	margin: 0;
 	font-size: 36px;
 	line-height: 38px;
-	font-weight: 700;
+	font-weight: 200;
 	color: #0C1421;
 	text-transform: uppercase;
 	margin-top: 30px;
 	margin-bottom: 15px;
-}
-.message-dsc h1 strong{
-	font-weight: normal;
 }
 .hm-single-post-wrp h5{
 	margin: 0;
@@ -35,6 +32,10 @@ thank-you-message-sec-wrp
 	color: #000;
 	text-align: center;
 	margin-bottom: 40px;
+}
+.message-dsc span{
+	display: inline-block;
+	vertical-align: baseline;
 }
 .message-dsc-wrp .hm-single-post-img-item:hover .overlay-hover{
 	position: absolute;
@@ -82,4 +83,113 @@ thank-you-message-sec-wrp
 	width: 100%;
 	margin: 0 auto;
 	padding-bottom: 70px;
+}
+
+/*
+------------------------
+Responsive Css
+------------------------
+*/
+
+@media(max-width: 1199px){
+	.hide-md{
+		display: none!important;
+	}
+	.show-md{
+		display: block!important;
+	}
+	.message-dsc h1{
+		font-size: 34px;
+		line-height: 36px;
+	}
+
+}
+
+
+@media(max-width: 991px){
+	.hide-sm{
+		display: none!important;
+	}
+	.show-sm{
+		display: block!important;
+	}
+	.message-dsc h1{
+		font-size: 32px;
+		line-height: 34px;
+	}
+	
+
+
+
+
+}
+
+
+@media(max-width: 767px){
+	.hide-xs{
+		display: none!important;
+	}
+	.show-xs{
+		display: block!important;
+	}
+	.message-dsc h1{
+		font-size: 30px;
+		line-height: 32px;
+	}
+	.hm-single-post-wrp h5 {
+	    margin-bottom: 25px;
+	}
+	.thank-you-message-sec-wrp {
+	    padding-top: 30px;
+	    padding-bottom: 40px;
+	}
+	.thank-message-info-wrp .Contact-info-inr {
+	    max-width: 550px;
+	    width: 100%;
+	    margin: 0 auto;
+	    padding-bottom: 20px;
+	}
+	
+		
+}
+
+
+
+@media(max-width: 639px){
+
+}
+
+
+
+@media(max-width: 575px){
+	.message-dsc span{
+		width: 120px;
+		height: 120px;
+	}
+	.message-dsc h1 strong{
+		display: block;
+	}
+	.message-dsc-wrp .hm-single-post-img-item{
+		background: #FFFFFF;
+	    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+	    padding: 24px 20px;
+	}
+	.message-dsc-wrp .hm-single-post-img-item:hover{
+	    padding: 24px 20px;
+	}
+	
+	
+
+}
+
+
+@media(max-width: 479px){
+	
+
+}
+
+
+
+@media(max-width: 359px){
+
 }
