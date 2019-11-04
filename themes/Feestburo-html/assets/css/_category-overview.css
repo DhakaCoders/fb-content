@@ -6,16 +6,16 @@
 	position: relative;
 	order:1;
 }
+.refDetailsSlider-lft .video-play-main,
 .categoty-meubilair-rgt-vdo .video-play-main{
 	position: relative;
 	cursor: pointer;
 }
+.refDetailsSlider-lft .video-play-main a img,
 .categoty-meubilair-rgt-vdo .video-play-main a img {
 	width: 100%;
-	-webkit-transition: all .5s ease;
-	-ms-transition: all .5s ease;
-	transition: all .5s ease;
 }
+.refDetailsSlider-lft .video-play-main a i,
 .categoty-meubilair-rgt-vdo .video-play-main a i {
 	position: absolute;
 	left: 50%;
@@ -29,12 +29,14 @@
 	display: inline-block;
 	vertical-align: baseline;
 }
+.refDetailsSlider-lft .video-play-main a,
 .categoty-meubilair-rgt-vdo .video-play-main a{
 	position: relative;
 	cursor: pointer;
 	display: block;
 	overflow:hidden;
 }
+.refDetailsSlider-lft .video-play-main a:after,
 .categoty-meubilair-rgt-vdo .video-play-main a:after{
 	content: '';
 	position: absolute;
@@ -48,34 +50,36 @@
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
 }
+.refDetailsSlider-lft .video-play-main a:hover:after,
 .categoty-meubilair-rgt-vdo .video-play-main a:hover:after{
 	opacity: .4;
 	background-color: #000;
 }
+.refDetailsSlider-lft .img-zoom > span,
 .categoty-meubilair-rgt-vdo .img-zoom > span{
 	background-repeat: no-repeat!important;
 	background-size: cover!important;
 	background-position: center center!important;
 	min-height: 625px;
 	display: block;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	height: 100%;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
 }
-
 #sub-cat-meubilair-sec .categoty-meubilair-rgt-vdo .img-zoom > span{
 	min-height: 480px;
 }
-
+.refDetailsSlider-lft .img-zoom > span{
+	min-height: 672px;
+}
+.refDetailsSlider-lft .img-zoom:hover > span,
 .categoty-meubilair-rgt-vdo .img-zoom:hover > span{
 	transform: scale(1.03);
 	-ms-transform: scale(1.03);
 	-webkit-transform: scale(1.03);
 }
+
 .categoty-meubilair-innr{
 	padding:60px 0 70px;
 }
@@ -171,6 +175,9 @@
 	background-size: cover!important;
 	background-position: center center!important;
 }
+
+
+.refDetailsSlider .slick-prev.slick-arrow,
 .catMeubilairSlider .slick-prev.slick-arrow {
 	background:url(../images/cat-prev-arrow.svg)no-repeat; 
 	background-size: 100% auto; 
@@ -182,6 +189,7 @@
 	-ms-transition: all .3s ease;
 	transition: all .3s ease;	
 }
+.refDetailsSlider .slick-next.slick-arrow,
 .catMeubilairSlider .slick-next.slick-arrow {
 	background:url(../images/cat-next-arrow.svg)no-repeat; 
 	background-size: 100% auto; 
@@ -193,14 +201,19 @@
 	-ms-transition: all .5s ease;
 	transition: all .5s ease;	
 }
+
+.refDetailsSlider .slick-prev.slick-arrow:hover,
 .catMeubilairSlider .slick-prev.slick-arrow:hover{
 	background:url(../images/cat-prev-arrow-ho.svg)no-repeat; 
 }
+.refDetailsSlider .slick-next.slick-arrow:hover,
 .catMeubilairSlider .slick-next.slick-arrow:hover {
 	background:url(../images/cat-next-arrow-ho.svg)no-repeat; 
 }
-.catMeubilairSlider .slick-prev::before, 
-.catMeubilairSlider .slick-next::before {
+.refDetailsSlider .slick-prev::before, 
+.refDetailsSlider .slick-next::before, 
+.catMeubilairSlider .slick-next::before,
+.catMeubilairSlider .slick-prev::before {
     content: none;
     display: none;
 }
@@ -549,8 +562,6 @@ a.subcat-meubilair-grd-lnc:hover{
 	.sub-cat-request-price p {
 	    font-size: 20px;
 	}
-
-
 }
 
 @media(max-width: 767px){
@@ -594,6 +605,9 @@ a.subcat-meubilair-grd-lnc:hover{
 	    margin-top: 15px;
 	    transform: initial;
 	}
+}
+
+@media(max-width: 639px){
 	.catMeubilairSlider .slick-next.slick-arrow:hover,
 	.catMeubilairSlider .slick-prev.slick-arrow:hover,
 	.catMeubilairSlider .slick-next.slick-arrow,
@@ -601,11 +615,6 @@ a.subcat-meubilair-grd-lnc:hover{
 	    width: 38px!important;
 	    height: 38px!important;
 	}
-
-}
-
-@media(max-width: 639px){
-
 }
 
 @media(max-width: 575px){
