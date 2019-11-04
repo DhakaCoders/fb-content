@@ -63,7 +63,7 @@ Category Overview
 	hover a icon ta scale hobe na just img ta hobe ---done
    ii) https://www.screencast.com/t/8EVaEEVnG
 2. https://www.screencast.com/t/NspRsdwXXgYd
-	ai code ta ki amader kaje lagteche? >>> (remove kore dicchi but flex er ei code golo apni dichilen "SDC" project e) ---done
+	ai code ta ki amader kaje lagteche? ---done
 3. https://www.screencast.com/t/AmX5ht5B
 	link hobe ---done
 4. https://www.screencast.com/t/4fWvWLXBzK
