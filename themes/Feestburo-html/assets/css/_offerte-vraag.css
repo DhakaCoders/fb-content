@@ -22,10 +22,15 @@ offter-vraag-content-sec-wrp
 	margin: 0;
 	font-size: 36px;
 	line-height: 38px;
-	font-weight: 200;
+	font-weight: 700;
 	color: #0C1421;
 	text-transform: uppercase;
 	margin-bottom: 20px;
+}
+.ov-enti-hdr-dsc h1 strong{
+	font-weight: 200;
+	display: inline-block;
+	vertical-align: baseline;
 }
 .ov-enti-hdr-dsc p a{
 	display: inline-block;
@@ -89,6 +94,9 @@ offter-vraag-content-sec-wrp
     align-items: center;
     height: 55px;
     justify-content: center;
+}
+.ov-checkmark-box-inr ul li:last-child .ov-checkmark-box-dsc span {
+    padding-bottom: 15px;
 }
 .ov-checkmark-box-dsc:hover h5{
 	color: #fff;
@@ -283,7 +291,11 @@ offter-vraag-content-sec-wrp
 Responsive Css
 ---------------------
 */
-
+@media(max-width: 1399px){
+	.inputtype-checkbox-wrp {
+	    padding: 15px 15px 0;
+	}
+}
 @media(max-width: 1199px){
 	.hide-md{
 		display: none!important;
@@ -291,6 +303,19 @@ Responsive Css
 	.show-md{
 		display: block!important;
 	}
+	.ov-enti-hdr-dsc h1{
+		font-size: 34px;
+		line-height: 36px;
+	}
+	.ov-checkmark-box-inr ul li {
+	    float: left;
+	    width: 25%;
+	    margin-bottom: 20px;
+	}
+	.offer-vrg-form-sec-wrp .contact-form-wrp {
+	    padding-bottom: 120px;
+	}
+	
 
 }
 
@@ -301,6 +326,19 @@ Responsive Css
 	}
 	.show-sm{
 		display: block!important;
+	}
+	.ov-enti-hdr-dsc h1{
+		font-size: 32px;
+		line-height: 34px;
+	}
+	.ov-checkmark-box-inr ul li {
+	    width: 33.3333%;
+	}
+	.offer-vrg-form-sec-wrp .contact-form-wrp {
+	    padding-bottom: 90px;
+	}
+	.ov-enti-hdr-dsc p br{
+		display: none;
 	}
 	
 
@@ -317,7 +355,36 @@ Responsive Css
 	.show-xs{
 		display: block!important;
 	}
-	
+	.ov-enti-hdr-dsc h1{
+		font-size: 30px;
+		line-height: 32px;
+	}
+	.ov-checkmark-box-inr ul li {
+	    width: 50%;
+	}
+	.ov-checkmark-box-wrp {
+	    padding-top: 30px;
+	    padding-bottom: 45px;
+	    margin-left: -15px;
+	    margin-right: -15px;
+	}
+	.ov-checkmark-box-inr{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.checkmark-btn a{
+		margin-top: 25px;
+	}
+	.offer-vrg-form-sec-wrp .contact-form-wrp {
+	    padding-bottom: 50px;
+	}
+	.contact-form .wpforms-submit-container button[type="submit"],
+	.contact-form .wpforms-submit-container input[type="submit"]{
+		margin-top: 25px;
+	}
+	.offter-vraag-content-sec-wrp {
+	    padding-top: 30px;
+	}
 }
 
 
@@ -329,13 +396,32 @@ Responsive Css
 
 
 @media(max-width: 575px){
-
+	.ov-enti-hdr-dsc p{
+		display: none;
+	}
+	.ov-enti-hdr-dsc h1 strong {
+	    display: block;
+	}
+	.ov-enti-hdr-wrp {
+	    padding-bottom: 0;
+	}
 
 }
 
 
 @media(max-width: 479px){
-	
+	.ov-checkmark-box-inr ul li {
+	    width:100%;
+	}
+	.ov-checkmark-box-grid {
+	    min-height: auto;
+	}
+	.inputtype-checkbox-wrp {
+	    padding: 15px 25px 5px;
+	}
+	.ov-checkmark-box-dsc {
+	    padding: 15px 10px 30px;
+	}
 
 }
 
