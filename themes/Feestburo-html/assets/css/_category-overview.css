@@ -96,11 +96,11 @@
 	order: 2;
 }
 .categoty-meubilair-lft-des h1{
-	font-weight: 700;
+	font-weight: 300;
 	line-height: 60px;
 	text-transform: uppercase;
 	color: #0C1421;
-	margin-bottom: 50px;
+	margin-bottom: 35px;
 }
 .categoty-meubilair-lft-des h1 span{
 	font-weight: 300;
@@ -168,14 +168,24 @@
 	padding-left: 12px;
 	padding-right: 12px;
 }
+.catMeubilairSlider-bg-wrp{
+	overflow:hidden;
+}
 .catMeubilairSlider-bg{
 	min-height: 325px;
 	position: relative;
 	background-repeat: no-repeat!important;
 	background-size: cover!important;
 	background-position: center center!important;
+	-webkit-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	transition: all .5s ease;
 }
-
+.catMeubilairSlider-bg-wrp:hover .catMeubilairSlider-bg{
+	-ms-transform: scale(1.03);
+	-webkit-transform: scale(1.03);
+	transform: scale(1.03);
+}
 
 .refDetailsSlider .slick-prev.slick-arrow,
 .catMeubilairSlider .slick-prev.slick-arrow {
@@ -201,7 +211,12 @@
 	-ms-transition: all .5s ease;
 	transition: all .5s ease;	
 }
-
+.refDetailsSlider .slick-prev.slick-arrow{
+	left: -78px;	
+}
+.refDetailsSlider .slick-next.slick-arrow{
+	right: -78px;	
+}
 .refDetailsSlider .slick-prev.slick-arrow:hover,
 .catMeubilairSlider .slick-prev.slick-arrow:hover{
 	background:url(../images/cat-prev-arrow-ho.svg)no-repeat; 
@@ -435,18 +450,33 @@ a.subcat-meubilair-grd-lnc:hover{
 	    right: 0;
 	    top: 115%;
 	}
+	.refDetailsSlider .slick-prev.slick-arrow{
+	    left: 0;
+	    top: 112%;
+	}
+	.refDetailsSlider .slick-next.slick-arrow{
+	    right: 0;
+	    top: 112%;
+	}
 	.catMeubilairSlider-wrp,
 	#sub-cat-meubilair-sec .catMeubilairSlider-wrp {
 	    padding-bottom: 110px;
 	}
-
+	.refDetailsSlider.slick-dotted.slick-slider,
 	.catMeubilairSlider.slick-dotted.slick-slider {
 	    margin-bottom: 0;
 	}
+	.refDetailsSlider .slick-dots,
 	.catMeubilairSlider .slick-dots {
 		bottom: 0;
 		top: 110%;
 	}
+	.refDetailsSlider .slick-dots,
+	.catMeubilairSlider .slick-dots {
+		bottom: 0;
+		top: 110%;
+	}	
+	.refDetailsSlider .slick-dots li,
 	.catMeubilairSlider .slick-dots li{
 		background-image: url(../images/black-pagi.svg);
 		background-size: 18px 18px;
@@ -460,9 +490,13 @@ a.subcat-meubilair-grd-lnc:hover{
 		-webkit-transition: all 0.5s;
 		transition: all 0.5s;
 	}
+	.refDetailsSlider .slick-dots li,
 	.catMeubilairSlider .slick-dots li{
 		clear: none!important;
 	}
+	.refDetailsSlider .slick-dots li,
+	.refDetailsSlider .slick-dots li button,
+	.refDetailsSlider .slick-dots li button:before,
 	.catMeubilairSlider .slick-dots li,
 	.catMeubilairSlider .slick-dots li button,
 	.catMeubilairSlider .slick-dots li button:before{
@@ -473,9 +507,13 @@ a.subcat-meubilair-grd-lnc:hover{
 		-webkit-transition: all 0.5s;
 		transition: all 0.5s;
 	}
+	.refDetailsSlider .slick-dots li button:before,
 	.catMeubilairSlider .slick-dots li button:before{
 		content: "";
 	}
+
+	.refDetailsSlider .slick-dots li.slick-active,
+	.refDetailsSlider .slick-dots li:hover,
 	.catMeubilairSlider .slick-dots li.slick-active,
 	.catMeubilairSlider .slick-dots li:hover{
 		background-image: url(../images/orange-pagi-active.svg);
@@ -508,6 +546,9 @@ a.subcat-meubilair-grd-lnc:hover{
 	.sub-cat-request-price p br{
 	    display: none;
 	}	
+	.refDetailsSlider-lft .img-zoom > span {
+	    min-height: 500px;
+	}
 }
 
 @media(max-width: 991px){
@@ -562,6 +603,9 @@ a.subcat-meubilair-grd-lnc:hover{
 	.sub-cat-request-price p {
 	    font-size: 20px;
 	}
+	.refDetailsSlider-lft .img-zoom > span {
+	    min-height: 358px;
+	}	
 }
 
 @media(max-width: 767px){
@@ -605,6 +649,19 @@ a.subcat-meubilair-grd-lnc:hover{
 	    margin-top: 15px;
 	    transform: initial;
 	}
+	.refDetailsSlider-lft .img-zoom > span {
+	    min-height: 300px;
+	}
+	.refDetailsSlider .slick-prev.slick-arrow,
+	.refDetailsSlider .slick-next.slick-arrow {
+	    top: 108%;
+	}
+	.refDetailsSlider .slick-dots{
+	    bottom: 0;
+	    top: 106%;
+	}
+
+
 }
 
 @media(max-width: 639px){

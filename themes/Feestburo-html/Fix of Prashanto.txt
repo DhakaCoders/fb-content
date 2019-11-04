@@ -47,7 +47,7 @@ Over Ons
 3. https://www.screencast.com/t/eKg2yin7g
 	matchHeightCol hobena . flex use korte hobe. bcoz top and bottom padding approx same --done --> <--ok
 4. https://www.screencast.com/t/SMRg0T7z
-	i) min-height aro besi hobe. bottom gap ta kom mone hosche.   ---done --> <--ok
+	i) min-height aro besi hobe. bottom gap ta kom mone hosche.   ---done --> <--ok 
 	ii) r heading ar margin na diye padding daw
 5. https://www.screencast.com/t/1HAT4vNg
 	ai gap r aktu besi hobe maybe ---done --> <<--ok
@@ -56,9 +56,9 @@ Over Ons
 7. https://www.screencast.com/t/7CQ1dSb4i
 	ata h1 hobena ---done --> <--ok
 8. https://www.screencast.com/t/9LF18EHLJe
-	ai type ar heading ar font-weight 200 dile mil thake.
+	ai type ar heading ar font-weight 200 dile mil thake. ---done
 9. https://www.screencast.com/t/AWr8BraV
-	ai text ta strong hobe
+	ai text ta strong hobe ---done
 
 
 Category Overview
@@ -72,7 +72,7 @@ Category Overview
 	link hobe ---done ->> <--ok
 
 
-	but hover korle img scale o hobe
+	but hover korle img scale o hobe ---done
 
 4. https://www.screencast.com/t/4fWvWLXBzK
 	hover korle logo ar red ta daw ---done --> <--ok
@@ -90,31 +90,30 @@ Sub-Category
 3. https://www.screencast.com/t/SnutsbOh
 	ai section ar fix ager motioi hobe ---done -->> <<--ok
 
-	but hover effect lagbe
+	but hover effect lagbe ---done
 
 4. https://www.screencast.com/t/bb0G7wrr
-	heading ar vitore ata strong tag a hobe . tomar onno page ao amon system thakle same korte hobe
+	heading ar vitore ata strong tag a hobe . tomar onno page ao amon system thakle same korte hobe ---done
 5. https://www.screencast.com/t/4GOt5l2HHC9
-	r aktu gap kom hobe
+	r aktu gap kom hobe ---done
 
 Referenties Details
 ----------------------
 1. https://www.screencast.com/t/4f6S0TOKCXm0
-	ata missing
+	ata missing ---done
 2. https://www.screencast.com/t/sA5D9yDfVVp
-	h1 hobe
+	h1 hobe ---done
 3. https://www.screencast.com/t/mR6237QDyT7L
-	gap ta besi mone hosche
+	gap ta besi mone hosche ---done
 4.	https://www.screencast.com/t/to3WVqHThttU
-	ai section ta missing
+	ai section ta missing ---done
 
 Referenties Overview
 ----------------------
 1. https://www.screencast.com/t/AzTDtwmn7N8
-	akta box shadow on hoye jay. ata hobena
+	akta box shadow on hoye jay. ata hobena ---done
 2. https://www.screencast.com/t/c1hJz5nfOU
-	ai gap kom hoiche
-3. https://www.screencast.com/t/ovjQ6AAUKRr 
-	atate hover dite hobe
+	ai gap kom hoiche ---done
+3.
 
 

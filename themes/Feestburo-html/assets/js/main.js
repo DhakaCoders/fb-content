@@ -59,7 +59,15 @@ if( $('.refDetailsSlider').length){
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    dots: false
+    dots: false,
+        responsive: [
+        {
+          breakpoint: 1599,
+          settings: {
+            dots: true,
+          }
+        }
+      ]
   });
 }
 
