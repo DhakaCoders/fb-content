@@ -151,9 +151,15 @@ hm-gallery-post-sec-wrp
 	margin-bottom: 12px;
 	font-size: 36px;
 	line-height: 38px;
-	font-weight: 200;
+	font-weight: 700;
 	color: #0C1421;
 	text-transform: uppercase;
+}
+.hm-enti-hdr-dsc h2 strong,
+.hm-enti-hdr-dsc h1 strong{
+	display: inline-block;
+	vertical-align: baseline;
+	font-weight: 200;
 }
 .hm-enti-hdr-dsc a{
 	display: inline-block;
@@ -240,12 +246,17 @@ hm-single-post-sec-wrp
 	margin: 0;
 	font-size: 36px;
 	line-height: 38px;
-	font-weight: 200;
+	font-weight: 700;
 	color: #0C1421;
 	text-transform: uppercase;
 	padding-left: 115px;
 	position: relative;
 	margin-bottom: 50px;
+}
+.hm-post-title h3 strong{
+	display: inline-block;
+	vertical-align: baseline;
+	font-weight: 200;
 }
 .hm-post-title h3:after{
 	content: "";
@@ -1031,10 +1042,14 @@ Responsive Csss
 	    width: 100%;
 	    padding: 11px 11px;
 	}
-	.hm-single-post-img-item {
+	.hm-single-post-sec-wrp .hm-single-post-img-item {
 	    background: #FFFFFF;
 	    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
 	    padding: 24px 20px;
+	}
+	.hm-single-post-sec-wrp .hm-single-post-img-item a.overlay-link{
+		position: static;
+		display: none;
 	}
 	.hm-single-post-img{
 		display: none;

@@ -419,7 +419,7 @@ contact-form-sec-wrp
 	    line-height: 32px;
 	}
 	.contact-form-sec-wrp {
-	    padding-top: 60px;
+	    padding-top: 50px;
 	}
 	.contact-form-offer-btn p {
 	    float: none;
@@ -487,6 +487,10 @@ contact-form-sec-wrp
 		max-width: 328px;
 		width: 100%;
 	}
+	.checkmark-btn a{
+		max-width: 328px;
+		width: 100%;
+	}
 
 
 }
@@ -506,11 +510,15 @@ contact-form-sec-wrp
 	.contact-form .wpforms-form .wpforms-field-container .wpforms-field textarea {
 	    height: 140px !important;
 	}
+
 }
 
 
 
 @media(max-width: 359px){
-
+	.checkmark-btn a{
+		max-width: 280px;
+		width: 100%;
+	}
 }
 
