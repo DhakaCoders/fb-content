@@ -156,28 +156,103 @@
 
 
 
+.ref-overview-filter-wrp{
+	position:relative;
+	padding: 60px 0;
+}
+.ref-overview-filter-wrp:after{
+	content: "";
+	position:absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	height: 2px;
+	background:#F0F0F0 ;
+	z-index: 1
+}
+.ref-overview-filter-main{
+	padding: 20px 35px;
+	border: 2px solid #F0F0F0;
+	max-width: 1135px;
+	margin: 0 auto;
+	background: #fff;
+	position: relative;
+	z-index: 2
+}
 
 
+.ref-overview-filter-main > form > ul > li:nth-child(1){
+	width:30.73%;
+	float: left;
+	padding-right: 15px;
+	border-right: 1px solid #F0F0F0;
+}
+.ref-overview-filter-main > form > ul > li:nth-child(2){
+	width:49.81%;
+	float: left;
+	padding-right: 46px;
+	padding-left: 55px;
+}
+.ref-overview-filter-main > form > ul > li:nth-child(3){
+	width:19.46%;
+	float: left;
+}
+.ref-overview-slct > label{
+	display: inline-block;
+	vertical-align: baseline;
+	font-size: 12px;
+	line-height: 20px;
+	color: #0C1421;
+	margin-bottom: 0;
+}
 
 
+.ref-overview-slct .bootstrap-select .dropdown-toggle .filter-option {
+    padding: 0
+}
+.ref-overview-slct .bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+	font-size: 18px;
+	line-height: 20px;
+	color: #B7B7B7;
+	text-transform: initial!important;
+}
 
 
+.ref-overview-filter-main form .bootstrap-select .caret::before {
+    color:#B7B7B7;
+}
 
+.ref-overview-filter-main form .dropdown-menu {
+    background-color:#B7B7B7;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.ref-overview-filter-main .dropdown-menu > .active > a, .dropdown-menu > .active > a:focus, .dropdown-menu > .active > a:hover {
+    background-color:#EB1C23;
+    color: #000;
+}
+.ref-overview-filter-main > form > ul > li:nth-child(3) button{
+	width:100%;
+	background: #EB1C23;
+	padding: 19px 5px;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	-ms-transition:all .5s ease;
+	-webkit-transition:all .5s ease;
+	transition:all .5s ease;
+}
+.ref-overview-filter-main > form > ul > li:nth-child(3) button:hover{
+	background: #BF0006;
+}
+.ref-overview-filter-main .ref-overview-slct{
+	position: relative;
+	top: 5px;
+}
 
 
 
