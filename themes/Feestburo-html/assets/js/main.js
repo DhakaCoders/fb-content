@@ -593,7 +593,16 @@ if( $('#googlemap').length ){
 /*Start code of Rannojit*/
 
 
-
+if( $('.woocommerce-product-gallery').length ){
+    $('.woocommerce-product-gallery').slick({
+      dots: false,
+      arrow: true,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
+}
 
 $('.hdr-search button').on('click', function(){
     $(this).parent().toggleClass('hdr-search-field-show');
