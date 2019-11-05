@@ -36,6 +36,11 @@ $(window).scroll(function() {
 });
 
 
+$('.ftr-xs-links > span').on('click', function(){
+    $(this).parent().toggleClass('non-expend');
+    $(this).parent().find('ul').slideToggle(500);
+});
+
 //match Height
 if (windowWidth > 768) {
   if($('.matchHeightCol').length){
@@ -46,9 +51,12 @@ if (windowWidth > 768) {
 if($('.subcatGrd-matchCol').length){
   $('.subcatGrd-matchCol').matchHeight();
 }
+
 if($('.refOvrGrd-matchCol').length){
   $('.refOvrGrd-matchCol').matchHeight();
 }
+
+
 
 if( $('.refDetailsSlider').length){
   $('.refDetailsSlider').slick({
