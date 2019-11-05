@@ -202,10 +202,6 @@
 	padding: 19px 0;
 	background: #EB1C23;
 }
-
-
-
-
 .hm-gallery-post-sec-wrp.overOns-gallery-post-sec {
     padding-top: 75px;
 }
@@ -218,13 +214,9 @@
     font-size: 36px;
     font-weight: 300;
 }
-
-
-
-
-
-
-
+.hm-gallery-post-sec-wrp.overOns-gallery-post-sec .hm-enti-hdr-dsc h2 strong{
+    font-weight: 700;
+}
 
 
 
@@ -243,7 +235,6 @@
 	    font-size: 22px;
 	}
 }
-
 
 @media(max-width: 1299px){
 	.over-ons-feest-buro-rgt {
