@@ -1,0 +1,43 @@
+//find scroll position
+$(window).scroll(function() {
+    //init
+    var that = $('#loadMore');
+    var page = $('#loadMore').data('page');
+    var catName = $('#loadMore').data('catname');
+    var newPage = page + 1;
+    var ajaxurl = $('#loadMore').data('url');
+    //check
+    if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+
+        //ajax call
+        $.ajax({
+            url: ajaxurl,
+            type: 'post',
+            data: {
+                page: page,
+                catname: catName,
+                action: 'ajax_script_load_more'
+            },
+            beforeSend: function ( xhr ) {
+                $('#ajaxloading').show();
+            },
+            error: function(response) {
+                console.log(response);
+            },
+            success: function(response) {
+                //check
+                if (response == 0) {
+                    //check
+                    if ($("#no-more").length == 0) {
+                        $('#ajax-content').append('<div id="no-more" class="text-center nomore-post clearfix"><h3>No more article to load.</h3></div>');
+                    }
+                    $('#ajaxloading').remove();
+                    $('#loadMore').hide();
+                } else {
+                    $('#loadMore').data('page', newPage);
+                    $('#ajax-content').append(response);
+                }
+            }
+        });
+    }
+});

@@ -44,15 +44,17 @@
 }
 .product-overview-cat-box:hover h5{
 	color: #fff;
-	font-size: 20px;
-
+	font-size: 17px;
 }
 .product-overview-cat-box i,
 .product-overview-cat-box em,
 .product-overview-cat-box em img{
-	transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	-webkit-transition: all 0.5s;	
+	transition: opacity 2s linear;	
+	-ms-transition: opacity 2s linear;	
+	-webkit-transition: opacity 2s linear;
+}
+.product-overview-cat-box em{
+	transform: scale3d(1,0,1);
 }
 .pocb-hover-images{
 	height: 60px;
@@ -66,13 +68,8 @@
 }
 .product-overview-cat-box em{
 	display: none;
-	height: 60px;
 	vertical-align: baseline;
-	transform: scale(0.0);
-	-ms-transform: scale(0.0);
-	-webkit-transform: scale(0.0);
-	-o-transform: scale(0.0);
-
+	height: 60px;
 }
 .product-overview-cat-box span{
 	display: block;
@@ -84,16 +81,12 @@
 .product-overview-cat-box:hover i{
 	display: none;
 }
-.product-overview-cat-box:hover em{
-	display: inline-block;
-	vertical-align: baseline;
 
-}
 .product-overview-cat-box:hover em{
-	transform: scale(1.3);
-	-ms-transform: scale(1.3);
-	-webkit-transform: scale(1.3);
-	-o-transform: scale(1.3);
+	transform: scale3d(1.2,1.2,1.2);
+	height: auto;
+	display: inline-block;
+	margin-bottom: 10px;
 }
 .product-overview-cat-box:hover em img{
 	width: 100%;
@@ -211,6 +204,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .product-overview-grds-controller .subcat-meubilair-grd  > span {
     display: inline-block;
@@ -522,6 +517,18 @@
 	.fl-product-summary-btns a{
 		margin-bottom: 10px;
 	}
+	.product-overview-grds-controller > ul > li{
+		width: 33.3333%;
+	}
+	.product-overview-grds-controller > ul > li:nth-child(4n+1){
+		clear: initial;
+	}
+	.product-overview-grds-controller > ul > li:nth-child(3n+1){
+		clear: left;
+	}
+	.product-overview-grds-wrap{
+		padding-top: 100px;
+	}
 }
 
 
@@ -588,6 +595,24 @@
 	.fl-product-specificaties ul li div{
 		background: #f6f6f6;
 	}
+	.product-overview-page-search{
+		display: none;
+	}
+	.product-overview-page-entry-sec{
+		padding-bottom: 50px;
+	}
+	.product-overview-grd-sec-hdr{
+		padding-bottom: 35px;
+	}
+	.product-overview-grds-controller > ul > li{
+		width: 50%;
+	}
+	.product-overview-grds-controller > ul > li:nth-child(3n+1){
+		clear: initial;
+	}
+	.product-overview-grds-controller > ul > li:nth-child(2n+1){
+		clear: left;
+	}
 
 }
 
@@ -615,7 +640,29 @@
 	.fl-product-specificaties ul li div strong{
 		font-size: 17px;
 	}
+	.product-overview-grds-wrap {
+	    padding-top: 30px;
+	}
+	.product-overview-grds-controller > ul > li{
+		width: 100%;
+	}
+	.product-overview-grds-controller .subcat-meubilair-grd{
+		max-width: 350px;
+		margin-right: auto;
+		margin-left: auto;
 
+	}
+	.po-more-btn a{
+		max-width: 350px;
+		width: 100%;
+	}
+	.product-overview-grds-wrap{
+		padding-bottom: 45px;
+	}
+	.product-overview-grd-sec-hdr p {
+	    font-size: 16px;
+	    line-height: 26px;
+	}
 }
 
 
