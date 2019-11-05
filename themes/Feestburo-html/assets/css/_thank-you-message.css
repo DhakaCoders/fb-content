@@ -79,10 +79,19 @@ thank-you-message-sec-wrp
 	right: -5px !important;
 }
 .thank-message-info-wrp .Contact-info-inr{
-	max-width: 720px;
+	max-width: 715px;
 	width: 100%;
 	margin: 0 auto;
 	padding-bottom: 70px;
+}
+.thank-message-info-wrp .Contact-info-img{
+	width: 40% !important;
+}
+.thank-message-info-wrp .Contact-info-dsc{
+	width: 60% !important;
+}
+.Contact-info-dsc h2{
+	font-size: 64px;
 }
 
 /*
@@ -117,6 +126,9 @@ Responsive Css
 		font-size: 32px;
 		line-height: 34px;
 	}
+	.Contact-info-dsc h2{
+		font-size: 50px;
+	}
 	
 
 
@@ -149,7 +161,20 @@ Responsive Css
 	    margin: 0 auto;
 	    padding-bottom: 20px;
 	}
-	
+	.Contact-info-dsc h2{
+		font-size: 40px;
+	}
+	.thank-message-info-wrp .Contact-info-img {
+	    width: 100% !important;
+	}
+	.thank-message-info-wrp .Contact-info-inr {
+	    max-width: 100%;
+	    width: 100%;
+	    margin: 0 auto;
+	}
+	.thank-message-info-wrp .Contact-info-dsc {
+	    width: 100% !important;
+	}
 		
 }
 
@@ -176,6 +201,22 @@ Responsive Css
 	}
 	.message-dsc-wrp .hm-single-post-img-item:hover{
 	    padding: 24px 20px;
+	}
+	.message-dsc-wrp .hm-single-post-img-item:hover .ty-hover-btn {
+	    position: static;
+	    transform: none;
+	}
+	.message-dsc-wrp .hm-single-post-img-item:hover .overlay-hover{
+		position: static;
+	}
+	.message-dsc-wrp .hm-single-post-img-item:hover a.hm-gallery-single-small-btn{
+		position: static !important;
+	}
+	.message-dsc-wrp .hm-single-post-img-item a.overlay-link{
+		display: none;
+	}
+	.message-dsc-wrp .hm-single-post-img-item .overlay-hover{
+		display: none;
 	}
 	
 	

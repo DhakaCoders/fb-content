@@ -1,7 +1,7 @@
 /**
 All Transitions
 */
-
+.pt-slider-wrp ul li:hover .pt-slider-img,
 .hm-gallery-top-img-item:hover  .hm-gallery-top-img,
 .hm-single-post-img-item:hover .hm-single-post-img,
 .hm-gallery-rgt-overflow:hover .hm-gallery-tp-rgt-img,
@@ -12,7 +12,7 @@ a,input,img,textarea,button,svg{
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
-
+.pt-slider-wrp ul li .pt-slider-img:hover,
 .hm-gallery-top-img-item:hover  .hm-gallery-top-img,
 .hm-single-post-img-item:hover .hm-single-post-img,
 .hm-gallery-rgt-overflow:hover .hm-gallery-tp-rgt-img,

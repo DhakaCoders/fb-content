@@ -61,15 +61,15 @@ offter-vraag-content-sec-wrp
 	width: 20%;
 	padding: 0 15px;
 }
-.ov-checkmark-box-grid{
+.inputtype-checkbox-wrp{
 	border: 2px solid #F0F0F0;
+	border-top: 0;
 	box-sizing: border-box;
-	min-height: 455px;
 }
 .ov-checkmark-box-dsc{
 	text-align: center;
 	padding:10px 10px 30px;
-	border-bottom: 2px solid #F0F0F0;
+	border: 2px solid #F0F0F0;
 	position: relative;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
@@ -96,7 +96,7 @@ offter-vraag-content-sec-wrp
     justify-content: center;
 }
 .ov-checkmark-box-inr ul li:last-child .ov-checkmark-box-dsc span {
-    padding-bottom: 15px;
+    padding-bottom: 17px;
 }
 .ov-checkmark-box-dsc:hover h5{
 	color: #fff;
@@ -108,6 +108,7 @@ offter-vraag-content-sec-wrp
 }
 .ov-checkmark-box-dsc:hover{
 	background: #EB1C23;
+	border-color: #EB1C23;
 }
 .offer-vrg-form-sec-wrp  .contact-form-wrp {
     padding-bottom: 155px;

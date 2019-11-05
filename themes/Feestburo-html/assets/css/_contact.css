@@ -11,30 +11,44 @@
 .Contact-info-wrp {
     position: absolute;
     left: 15px;
+    right: 15px;
     top: 85px;
     z-index: 5;
 }
 .Contact-info-img{
 	float: left;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	background-size: cover !important;
+	min-height: 264px !important;
+	width: 22%;
 }
 .Contact-info-dsc{
-	float: left;
+	float: right;
 	padding-left: 45px;
 	font-size: 18px;
 	font-weight: 500;
 	color: #000000;
+	width: 78%;
 }
 .Contact-info-dsc p{
 	margin-bottom: 0;
 	line-height: 20px;
 }
+.Contact-info-dsc h2,
 .Contact-info-dsc h1{
 	margin: 0;
-	font-weight: 200;
+	font-weight: 700;
 	color: #000000;
 	text-transform: uppercase;
 	margin-bottom: 15px;
 	margin-top: 5px;
+}
+.Contact-info-dsc h2 strong,
+.Contact-info-dsc h1 strong{
+	display: inline-block;
+	vertical-align: baseline;
+	font-weight: 200;
 }
 .Contact-info-dsc span{
 	display:block;

@@ -2,7 +2,7 @@ Contact
 -------------
 1. https://www.screencast.com/t/8XOvdU7NWc    <--ok
 	text mileni 
-2. https://www.screencast.com/t/tnbrNRwpiOvn  <---mistake
+2. https://www.screencast.com/t/tnbrNRwpiOvn  <---ok
 	strong a ai code gulo hobe
 
 3. https://www.screencast.com/t/bdUpBVsww  <--ok
@@ -20,23 +20,23 @@ Contact
 7. https://www.screencast.com/t/Jms2IBbfCl
 	atar positon change korte hobe.
 8. https://www.screencast.com/t/rvGUwamLu
-	strong ar design missing
+	strong ar design missing <---ok
 
 9. https://www.screencast.com/t/lRyJN6nxMaQ
-	ai img ta inline a daw
+	ai img ta inline a daw <-----ok
 
 Party Type
 ------------
 1. https://prnt.sc/pryt1p <---ok
 	h1 hobe
 2. https://www.screencast.com/t/ouSKg0Ja5WV
-	flex hobe. matchHeightCol js hobena
+	flex hobe. matchHeightCol js hobena <----ok
 
 3. https://www.screencast.com/t/ckngJhjc <--ok
 		h2 hobe
 4. https://www.screencast.com/t/falq1BNac
 		strong a ai code gulo hobe
-		amon aro kothao thakle same hobe
+		amon aro kothao thakle same hobe <----ok
 
 5. https://www.screencast.com/t/k6Ewi5IB <---ok
 		slider item show korena
@@ -47,15 +47,15 @@ Party Type
 7. https://prnt.sc/pryz5u
 		gap and text mileni
 			kotha thake copy korle update section ta pest koro.
-		ai section ta jekhan thake copy korcho setate gap kom ache. tomay new class niye update korte hobe
+		ai section ta jekhan thake copy korcho setate gap kom ache. tomay new class niye update korte hobe <----ok
 
 8. https://www.screencast.com/t/H331MMre0K
 	arrow and slide item box shadow kata porche
 9. https://www.screencast.com/t/r8D4Au13
-	ai slider ar item a link and img scale hover hobe. PD fixed kore felle dekhi j thik ache kina. or abar copy kore dio
+	ai slider ar item a link and img scale hover hobe. PD fixed kore felle dekhi j thik ache kina. or abar copy kore dio<---ok
 
 10. https://www.screencast.com/t/9EoQtQDimrs5
-	border missing
+	border missing <----ok
 
 
 
@@ -63,27 +63,27 @@ Party Type
 Offerte vraag
 ---------------------------------------
 1. https://www.screencast.com/t/Ez5y75KL9aK
-	textarea ar label ar top gap ta besi hobe
+	textarea ar label ar top gap ta besi hobe <---ok
 
 2. https://www.screencast.com/t/CFggiiLZm
-	ai 2 ta checked active thakbe. bakigulo thakbena
+	ai 2 ta checked active thakbe. bakigulo thakbena <---ok
 
 3. https://www.screencast.com/t/klLaJhASO
-	ata r aktu upore uthbe
+	ata r aktu upore uthbe <---ok
 
 4. https://www.screencast.com/t/AOdNwI6np1Vo
-	hover a border gulo o red hobe
+	hover a border gulo o red hobe <---ok
 
 Thank You Message
 ------------------------------
 1. https://www.screencast.com/t/oyNxXZDhi
-	text mileni
+	text mileni <---ok
 2. https://www.screencast.com/t/Egu2p2KGT
-	ata black thakbe normaly
+	ata black thakbe normaly <---ok
 3. https://www.screencast.com/t/xFfgg70a5lBR
-	ai img ta inline a daw
+	ai img ta inline a daw <---ok
 4. https://www.screencast.com/t/bjPthsBf
-	ai page a ata h1 hobena
+	ai page a ata h1 hobena <---ok
 
 
 
