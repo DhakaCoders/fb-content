@@ -518,6 +518,10 @@
 	.ftr-btm {
 	    padding: 44px 0 80px;
 	}
+	.ftr-head h3 {
+	    font-size: 28px;
+	    line-height: 35px;
+	}
 
 }
 
@@ -533,6 +537,10 @@
 	}
 	.ftr-top-newsletter .from-group:nth-child(3){
 		width:100%;
+	}
+	.ftr-head h3 {
+	    font-size: 25px;
+	    line-height: 30px;
 	}
 }
 
@@ -554,7 +562,9 @@
 	.ftr-top-newsletter-innr-wrp {
 	    padding-top: 35px;
 	}
-
+	.ftr-head h3 {
+	    font-size: 22px;
+	}
 }
 
 @media(max-width: 359px){

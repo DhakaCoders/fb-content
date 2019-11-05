@@ -12,7 +12,7 @@
 	width:51%;
 	order:1;
 	min-height: 480px;
-}
+} 
 .over-ons-feest-buro-lft-bg{
 	background-repeat: no-repeat!important;
 	background-size: cover!important;
@@ -307,7 +307,10 @@
 	    line-height:55px;
 	    margin-bottom: 12px;
 	}
-
+	.overOns-howWeWork-head h1 {
+	    font-size: 28px;
+	    line-height: 40px;
+	}
 }
 
 @media(max-width: 767px){
@@ -340,6 +343,14 @@
 	.over-ons-feest-buro-sec {
 	    padding: 60px 0;
 	}
+	.overOns-howWeWork-bloc p,
+	.over-ons-feest-buro-rgt p {
+	    margin-bottom: 20px;
+	}
+	.overOns-howWeWork-head h1 {
+	    font-size: 25px;
+	    line-height: 35px;
+	}
 }
 
 @media(max-width: 639px){
@@ -355,6 +366,9 @@
 	}
 	.overOns-howWeWork-bloc-wrp li:last-child{
 	    margin-bottom: 45px;
+	}
+	.overOns-howWeWork-bloc-head {
+	    min-height: 85px;
 	}
 }
 
@@ -376,7 +390,23 @@
 	.over-ons-feest-buro-sec {
 	    padding: 50px 0;
 	}
-
+	.overOns-howWeWork-head h1 {
+	    font-size: 22px;
+	    line-height: 30px;
+	}
+	.overOns-howWeWork-bloc-wrp {
+	    padding-top: 65px;
+	}
+	.overOns-howWeWork-no span {
+	    font-size: 25px;
+	    line-height: 34px;
+	    width: 60px;
+	    height: 60px;
+	    padding: 13px 0;
+	}
+	.overOns-howWeWork-bloc-wrp li .overOns-howWeWork-bloc {
+	    padding: 25px 0 10px;
+	}
 }
 
 @media(max-width: 359px){

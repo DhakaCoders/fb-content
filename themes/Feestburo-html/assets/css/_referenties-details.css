@@ -15,7 +15,7 @@
 	color: #0C1421;
 	position: relative;
 	padding-left: 35px;
-}
+} 
 .ref-del-back a:after{
 	content:"";
 	position: absolute;
@@ -316,16 +316,19 @@
 	    margin-bottom: 25px;
 	}
 	.ref-del-des-two-part h3 {
-	}
-
-	.ref-del-des-two-part h3 {
-	    font-size: 27px;
-	    line-height: 35px;
+	    font-size: 25px;
+	    line-height: 30px;
 	    margin-bottom: 10px;
 	}
 	#refDel-subcat-meubilair-grd {
 	    padding: 50px 0 40px;
 	}
+	.ref-del-des-two-part .ref-del-des-two-part-lft p {
+	    line-height: 25px;
+	    margin-bottom: 20px;
+	}
+
+
 }
 
 @media(max-width: 639px){
@@ -340,6 +343,9 @@
 	.ref-del-des-two-part .ref-del-des-two-part-lft ul {
 	    padding-left: 10px;
 	}
+	.ref-del-des-two-part .ref-del-des-two-part-lft ul li {
+	    padding-bottom: 12px;
+	}	
 }
 
 
@@ -351,11 +357,38 @@
 
 
 @media(max-width: 479px){
+	.ref-del-head h1 {
+	    font-size: 25px;
+	    line-height: 30px;
+	}
+	.ref-del-des-two-part h3 {
+	    font-size: 22px;
+	    line-height: 30px;
+	    margin-bottom: 10px;
+	}
+	.ref-del-data strong {
+	    font-size: 16px;
+	    line-height: 20px;
+	}	
+	.ref-del-data span {
+	    font-size: 14px;
+	    line-height: 25px;
+	}
+	.ref-del-data ul li:first-child {
+	    padding-left: 20px;
+	}
+	.ref-del-data ul li:last-child {
+	    padding-right: 20px;
+	}
 
 }
 
 @media(max-width: 359px){
-
+	.ref-del-data-hdr, 
+	.ref-del-data-ftr,
+	.ref-del-data-bdy {
+	    padding: 15px 0;
+	}
 }
 
 

@@ -5,7 +5,7 @@
 	float: left;
 	position: relative;
 	order:1;
-}
+} 
 .refDetailsSlider-lft .video-play-main,
 .categoty-meubilair-rgt-vdo .video-play-main{
 	position: relative;
@@ -606,6 +606,9 @@ a.subcat-meubilair-grd-lnc:hover{
 	.refDetailsSlider-lft .img-zoom > span {
 	    min-height: 358px;
 	}	
+	.categoty-meubilair-rgt-vdo .img-zoom > span {
+	    min-height: 560px;
+	}
 }
 
 @media(max-width: 767px){
@@ -660,7 +663,9 @@ a.subcat-meubilair-grd-lnc:hover{
 	    bottom: 0;
 	    top: 106%;
 	}
-
+	.categoty-meubilair-lft-des {
+	    padding-bottom: 0;
+	}
 
 }
 
@@ -685,6 +690,14 @@ a.subcat-meubilair-grd-lnc:hover{
 		max-width: 420px;
 		margin: 0 auto;
 	}
+	.catMeubilairSlider-bg {
+	    min-height: 280px;
+	}
+	a.subcat-meubilair-grd-lnc {
+		display: block;
+	    max-width: 420px;
+	    margin: 0 auto;
+	}
 }
 
 @media(max-width: 479px){
@@ -700,6 +713,21 @@ a.subcat-meubilair-grd-lnc:hover{
 	    padding: 45px 10px 50px;
 	    text-align: center;
 	}	
+	#sub-cat-meubilair-sec .categoty-meubilair-rgt-vdo .img-zoom > span {
+	    min-height: 420px;
+	}
+	.refDetailsSlider-lft .video-play-main a i, 
+	.categoty-meubilair-rgt-vdo .video-play-main a i {
+	    width: 60px;
+	    height: 60px;
+	}
+.ftr-top-newsletter-head h3, 
+.sub-cat-request-price h3 {
+    font-size: 22px;
+    line-height: 30px;
+}
+
+
 }
 
 @media(max-width: 359px){
