@@ -21,6 +21,13 @@
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
+.hdr-topbar-tel:hover em svg,
+.hdr-topbar-social ul li a:hover em svg{
+	fill: #EB1C23!important
+}
+.hdr-topbar-tel:hover a{
+	color: #EB1C23;
+}
 .hdr-topbar-lft ul li{
 	display: inline-block;
 	vertical-align: baseline;
@@ -377,4 +384,7 @@ a.main-bnr-rgt-btn{
 	font-size: 14px;
 	line-height: 16px;
 	font-weight: 700;
+}
+a.main-bnr-rgt-btn:hover{
+	background: #e7070f;
 }
