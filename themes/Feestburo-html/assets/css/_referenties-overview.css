@@ -265,7 +265,28 @@
 	    line-height: 30px;
 	    margin-bottom: 12px;
 	}
+	.ref-overview-pagi {
+	    margin-top: 20px;
+	}
+	.ref-overview-filter-main > form > ul > li:nth-child(1) {
+	    width: 25%;
+	    padding-right: 20px;
+	}
 
+	.ref-overview-filter-main > form > ul > li:nth-child(2) {
+	    width: 57%;
+	    padding-right: 20px;
+	    padding-left: 26px;
+	}
+	.ref-overview-filter-main > form > ul > li:nth-child(3) {
+	    width: 18%;
+	}
+	.ref-overview-filter-main {
+	    padding: 20px 15px;
+	}
+	.ref-overview-slct .bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+	    font-size: 17px;
+	}
 }
 
 @media(max-width: 767px){
@@ -277,22 +298,85 @@
 	    line-height: 25px;
 	    margin-bottom: 10px;
 	}
+	.ref-overview-filter-main > form > ul > li:nth-child(1) {
+	    width: 35%;
+	    padding-right: 20px;
+	}
+
+	.ref-overview-filter-main > form > ul > li:nth-child(2) {
+	    width: 65%;
+	    padding-right: 0;
+	    padding-left: 26px;
+	}
+	.ref-overview-filter-main > form > ul > li:nth-child(3) {
+	    width: 100%;
+	    margin-top: 20px;
+	}
+
+}
+
+@media(max-width: 699px){
+	.ref-overview-grd-bg-wrp {
+	    min-height: 310px;
+	}
+	.ref-overview-filter-wrp {
+	    padding: 50px 0;
+	}
 }
 
 @media(max-width: 639px){
+	.ref-overview-grd-wrp ul li {
+	    width: 100%;
+	}
+	.ref-overview-grd{
+		max-width: 400px;
+		margin: 0 auto;
+	}
+	.ref-overview-filter-main > form > ul > li:nth-child(1) {
+	    width: 100%;
+	    padding-right: 0;
+	    padding-left: 0;
+	}
+	.ref-overview-filter-main > form > ul > li:nth-child(2) {
+	    width: 100%;
+	    padding-right: 0;
+	    padding-left: 0;
+	    margin-top: 10px;
+	}
+	.ref-overview-filter-main > form > ul > li:nth-child(3) {
+	    width: 100%;
+	}
 
 }
 
 @media(max-width: 575px){
-
+	.ref-overview-slct .bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+	    font-size: 15px;
+	}
 
 }
 
 @media(max-width: 479px){
-
+	.ref-overview-grd-bg-wrp {
+	    min-height: 280px;
+	}
+	.ref-overview-grd-des {
+	    padding: 18px 0 50px;
+	    position: relative;
+	}
+	.ref-overview-grd-des h4 {
+	    font-size: 18px;
+	    line-height: 24px;
+	}
+	.bootstrap-select .dropdown-menu li a span.text {
+	    display: inline-block;
+	    font-size: 10px;
+	}	
 }
 
 @media(max-width: 359px){
-
+	.ref-overview-slct .bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+	    font-size: 13px;
+	}
 }
 
