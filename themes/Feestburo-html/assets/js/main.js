@@ -593,6 +593,29 @@ if( $('#googlemap').length ){
 /*Start code of Rannojit*/
 
 
+
+
+if( $('.dftImgTitleGrdSlider').length ){
+    $('.dftImgTitleGrdSlider').slick({
+      dots: false,
+      arrow: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+             dots: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+}
+
 if( $('.woocommerce-product-gallery').length ){
     $('.woocommerce-product-gallery').slick({
       dots: false,
@@ -609,6 +632,23 @@ $('.hdr-search button').on('click', function(){
 });
 
 
+
+$('.scrollto').on('click', function(e){
+  e.preventDefault();
+  var togo = $(this).data('to');
+  goToByScroll(togo, 0);
+});
+
+function goToByScroll(id, offset){
+  if(id){
+      // Remove "link" from the ID
+    id = id.replace("link", "");
+      // Scroll
+    $('html,body').animate(
+        {scrollTop: $(id).offset().top - offset},
+      500);
+  }
+}
 
 
 /*End code of Rannojit*/
