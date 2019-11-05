@@ -257,7 +257,7 @@ if( $('#PtBtmSlider').length){
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1,
-            dots: true,
+            dots: false,
           }
         },
         {
@@ -265,7 +265,7 @@ if( $('#PtBtmSlider').length){
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1,
-            dots: true,
+            dots: false,
           }
         },
         {
@@ -273,7 +273,7 @@ if( $('#PtBtmSlider').length){
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
-            dots: true,
+            dots: false,
           }
         },
         {
@@ -281,7 +281,7 @@ if( $('#PtBtmSlider').length){
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            dots: true,
+            dots: false,
           }
         }
         // You can unslick at a given breakpoint now by adding:
