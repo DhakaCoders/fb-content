@@ -1076,7 +1076,14 @@ Responsive Csss
 	    background: url(../images/xs-single-brn-arry.svg);
 	    background-repeat: no-repeat;
 	    background-size: 20px 17px;
-	    background-position: right;
+	    background-position:top 2px right 5px;
+	    padding-right: 35px;
+	}
+	a.hm-gallery-single-small-btn:hover{
+		background: url(../images/xs-single-brn-arry-orange-h.svg);
+		background-position: right 0px top 2px;
+		background-repeat: no-repeat;
+	    background-size: 20px 17px;
 	}
 	a.hm-gallery-single-small-btn:after{
 		content: none;
@@ -1169,6 +1176,12 @@ Responsive Csss
 	.hm-post-title h3 {
 	    font-size: 28px;
 	    line-height: 34px;
+	}
+	.hm-gallery-middel-btn a {
+	    font-size: 16px;
+	    line-height: 18px;
+	    padding-right: 0;
+	    text-align: center;
 	}
 
 }

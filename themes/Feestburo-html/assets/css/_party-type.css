@@ -60,12 +60,22 @@ pt-slider-sec-wrp
 	float: left;
 	padding: 0 12px;
 }
+.pt-slider-img-controller{
+	position: relative;
+	overflow: hidden;
+}
 .pt-slider-img{
 	background-repeat: no-repeat !important;
 	background-size: cover !important;
 	background-position: center center !important;
 	height: 324px !important;
 	width: 100%;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.pt-slider-img a{
+	display:block;
 }
 /*
 -----------------------------
@@ -152,6 +162,9 @@ pt-btm-slider-sec-wrp
 .pt-btm-slider-wrp ul li {
     float: left;
     padding: 35px 12px;
+}
+.pt-btm-slider-wrp ul .slick-active:nth-child(1) li{
+	padding-left: 24px;
 }
 .pt-btm-slide-item{
 	position: relative;
@@ -300,6 +313,11 @@ pt-btm-slider-sec-wrp
 	margin-bottom: 30px !important;
 }
 
+.party-b2b-sec{
+	padding-bottom: 100px;
+}
+
+
 /*
 -------------------
  Responsive Css
@@ -396,11 +414,14 @@ pt-btm-slider-sec-wrp
 	    padding-bottom:80px;
 	}
 	.pt-slider-sec-wrp {
-	    padding: 70px 0 50px;
+	    padding: 70px 0 40px;
 	}
 	.pt-meets-title h3{
 		font-size: 30px;
 		line-height: 32px;
+	}
+	.pt-btm-slider-sec-wrp {
+	    padding-bottom: 60px;
 	}
 		
 }

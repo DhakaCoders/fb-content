@@ -265,7 +265,7 @@ if( $('#PtBtmSlider').length){
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1,
-            dots: true,
+            dots: false,
           }
         },
         {
@@ -273,7 +273,7 @@ if( $('#PtBtmSlider').length){
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1,
-            dots: true,
+            dots: false,
           }
         },
         {
@@ -281,7 +281,7 @@ if( $('#PtBtmSlider').length){
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
-            dots: true,
+            dots: false,
           }
         },
         {
@@ -289,7 +289,7 @@ if( $('#PtBtmSlider').length){
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            dots: true,
+            dots: false,
           }
         }
         // You can unslick at a given breakpoint now by adding:
@@ -601,7 +601,16 @@ if( $('#googlemap').length ){
 /*Start code of Rannojit*/
 
 
-
+if( $('.woocommerce-product-gallery').length ){
+    $('.woocommerce-product-gallery').slick({
+      dots: false,
+      arrow: true,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
+}
 
 $('.hdr-search button').on('click', function(){
     $(this).parent().toggleClass('hdr-search-field-show');
