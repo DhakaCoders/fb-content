@@ -198,9 +198,8 @@
 .ftr-top-newsletter-con{
 	padding-bottom: 92px;
 }
-
 .ftr-top-newsletter-innr-wrp{
-	padding-top:70px;
+	padding-top:65px;
 	border-top: 2px solid #F0F0F0;
 }
 .ftr-top-newsletter-innr{
@@ -257,7 +256,7 @@
 	opacity: 1;
 }
 
-.from-group button {
+.ftr-top-newsletter .from-group button {
 	width: 100%;
 	padding: 22px 30px;
 	font-weight: 700;
@@ -270,7 +269,7 @@
 	position: relative;
 }
 
-.from-group button:after {
+.ftr-top-newsletter .from-group button:after {
 	content:"";
 	position: absolute;
 	top:50%;
@@ -285,15 +284,12 @@
 	-ms-transition: all .3s ease;
 	transition: all .3s ease;
 }
-
-.from-group button:hover:after {
+.ftr-top-newsletter .from-group button:hover:after {
 	right: 28px;
 }
-.from-group button:hover{
+.ftr-top-newsletter .from-group button:hover{
 	background: #BF0006;
 }
-
-
 
 
 
@@ -626,7 +622,7 @@
 .party-type-two-grid-sec-wrp .feest-buro-rgt h1,
 .feest-buro-rgt h3{
 	font-size: 64px;
-	font-weight: 300;
+	font-weight: 200;
 	line-height:70px;
 	text-transform: uppercase;
 	color: #0C1421;
@@ -706,7 +702,7 @@
 	color: #FFFFFF;
 	background: #EB1C23;
 	min-width: 270px;
-	padding: 21px 55px 21px 20px;
+	padding: 21px 55px 21px 30px;
 	position: relative;
 }
 .home-b2b-lft a:hover{
