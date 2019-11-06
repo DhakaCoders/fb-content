@@ -232,7 +232,9 @@
 #refDel-subcat-meubilair-grd .subcat-meubilair-grd-head h2 {
     margin-bottom: 40px;
 }
-
+.ftr-top-newsletter-con.ref-del-newsletter .ftr-top-newsletter-innr-wrp {
+    border-top: 0;
+}
 
 
 

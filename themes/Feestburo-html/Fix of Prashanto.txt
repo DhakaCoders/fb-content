@@ -27,10 +27,10 @@ home fix 2
 	atar font-weight 200 dile mil thake ---done--> <----ok
 
 2. https://www.screencast.com/t/mq6icLMHejs
-	ai button ar gap thik nai
+	ai button ar gap thik nai  ---done
 
 3. https://www.screencast.com/t/XOAzsY4zbe
-	font-weight 200 hobe
+	font-weight 200 hobe  ---done
 
 Footer
 ------------
@@ -44,7 +44,7 @@ Footer
 	font-size mil nai ---done -> <----ok
 
 4. https://www.screencast.com/t/iuVRyVvbW
-	ata hover hoyna. problem hole ager project thake icon nite paro
+	ata hover hoyna. problem hole ager project thake icon nite paro ---done
 
 Over Ons
 ------------------
@@ -93,7 +93,7 @@ Category Overview
 	but hover korle img scale o hobe ---done ->> <--ok
 
 4. https://www.screencast.com/t/4fWvWLXBzK
-	hover korle logo ar red ta daw ---done --> <--ok
+	hover korle logo ar color ta daw ---done --> <--ok
 
 5. https://www.screencast.com/t/3Qt0xN4GHB
 	akta item barale lege jay ---done --> <--ok
@@ -102,13 +102,13 @@ Category Overview
 	ai img gulo img tag a hobe. milon ar page thake idea nite paro ---done --> <--ok
 
 7. https://www.screencast.com/t/fLwgaldia
-	ai button ar width ta aro boro hobe
+	ai button ar width ta aro boro hobe  ---done
 
 8. https://www.screencast.com/t/2em7FHhH
-	ai line a 4 ta word ache design a
+	ai line a 4 ta word ache design a  ---done
 
 9. https://www.screencast.com/t/KI9qEfMZZ
-	ai grd ar p ar text thik nai
+	ai grd ar p ar text thik nai  ---done
 
 
 Sub-Category
@@ -131,7 +131,7 @@ Sub-Category
 	r aktu gap kom hobe ---done -> <<--ok
 
 6. https://www.screencast.com/t/XNIPyB3H
-	font-weight 200 hobe
+	font-weight 200 hobe ---done 
 
 Referenties Details
 ----------------------
@@ -148,7 +148,7 @@ Referenties Details
 	ai section ta missing ---done
 
 5. https://www.screencast.com/t/gjxwbeXpebF
-		ai page ai border ta hobena
+		ai page ai border ta hobena ---done
 
 Referenties Overview
 ----------------------
