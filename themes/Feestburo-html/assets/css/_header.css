@@ -509,6 +509,10 @@ a.main-bnr-rgt-btn:hover{
 	    font-size: 41px;
 	    line-height: 50px;
 	}
+	.main-bnr-des a{
+		font-size: 14px;
+		line-height: 20px;
+	}
 
 }
 

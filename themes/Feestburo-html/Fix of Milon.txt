@@ -136,7 +136,31 @@ Home
 	ai khane akta border missing
 4. https://www.screencast.com/t/PKtMZmpB
 	ata strong hobe. then same hobe nicher section ar title ta . sob section ar title a ai system ta apply korte bolchilam.
+5. https://www.screencast.com/t/66rlN4sez5h
+	ai box ar height 670 px daw
 
+
+
+
+
+Responsive
+----------------------------------------------------------
+
+home
+----------------
+1. https://www.screencast.com/t/Nvq3PTV39
+	shadow mileni
+2. https://www.screencast.com/t/P6isypOP4Gr7
+	ai text gulo 2 line a thakbe tai ai max width ta dite paro
+3. https://www.screencast.com/t/4Wj55aEUJ5
+	991px to 768 px ai link ar font size komale valo lagbe
+
+
+
+Contact
+----------------
+1. http://screencast.com/t/9mVxxM0w60
+	991px thake 768 pojonto ai box ar font size and gap komate hobe sob gulor. dimention anujayi
 
 
 

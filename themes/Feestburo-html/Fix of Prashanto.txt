@@ -160,3 +160,64 @@ Referenties Overview
 
 
 
+
+
+Responsive
+---------------------------------------------
+
+home
+----------------
+1. https://www.screencast.com/t/vQeF0YVU
+991 px p ar br none kore daw
+
+2. https://www.screencast.com/t/HUDzSRvhr
+	767 te ai img ta 2 pase laga hobe
+
+3. https://www.screencast.com/t/l9lC3Dre6
+	767 ai text ta 2 line a jeno thake . left and right a padding diye korte paro. akta time niche padding off kore dila
+
+4. https://www.screencast.com/t/H0opWGHJ60xm
+	767 te ai button a ai code gulo add koro. then text aline ta thik koro
+
+5. https://www.screencast.com/t/sy4q308Dz
+	991px thake 768px pojonoto left a padding daw. jate motamoti right ar moto dekha jay
+
+6. https://www.screencast.com/t/Lx7cEJfBI
+	navigate a click korle dhakka dische ai code 2 ta off koro.
+
+7. https://www.screencast.com/t/MLviqxJL
+	ai button ar design mileni. arrow ta missing.
+	r ai button ar kaj kore mone kore amy pore ask kore nio.
+
+8. https://www.screencast.com/t/CAgkMxw5H
+	top 39px and bottom 38 hobe
+
+
+Over Ons
+--------------------
+1. https://www.screencast.com/t/TJreMBwc
+	i) 1199px ai padding ar code ta tule daw. besi gap korlam keno amra? 576px porjonto desktop ar padding tai diye to hoye jabe
+	ii) https://www.screencast.com/t/FkMkTRx1j7CQ
+		575 thake airokom gap dite hobe. 575px ao dekhlam design ar moto gap ta dawni
+2. https://www.screencast.com/t/GZomsc1kki6l
+	1199px thake 992 pojonto ai 2 ta button ak line a rakho. dorkar porle last button ar padding komao.
+
+3. https://www.screencast.com/t/zvdnR1Sgqho
+	break hoye geche . kharap lagteche. 1199px font size ata daw. r 991 px 44 daw
+
+4. https://www.screencast.com/t/fbjaYoxzFk
+	ai 2 ta code tule daw. 767 ar tai thak
+
+5. https://www.screencast.com/t/hJMObrvZo
+	767 thake 1 kore diye maje rakho box ta
+
+
+
+
+
+
+
+
+
+
+
