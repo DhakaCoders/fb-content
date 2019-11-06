@@ -532,8 +532,15 @@
 		padding-right: 0;
 		padding-bottom: 20px;
 	}
+	.ftr-top-newsletter-con {
+	    padding-bottom: 60px;
+	}
+	.ftr-top-newsletter-con{
+	    border-top: 2px solid #F0F0F0;
+	}
 	.ftr-top-newsletter-innr-wrp {
 	    padding-top: 50px;
+	    border-top: 0;
 	}
 	.ftr-top-newsletter .from-group:nth-child(3){
 		width:100%;
