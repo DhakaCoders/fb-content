@@ -208,6 +208,7 @@
 	display: inline-block;
 	vertical-align: baseline;
 	max-width: 211px;
+	margin-left: -5px;
 }
 .logo a img{
 	width: 100%;
@@ -354,6 +355,9 @@ nav.main-nav > ul > li.current-menu-item > a:before{
 	text-transform: uppercase;
 	padding: 20px 10px 0;
 	font-weight: 700;
+}
+.main-bnr-des a:hover{
+	background: #e90810;
 }
 .main-bnr-bg{
 	background-size: cover!important;

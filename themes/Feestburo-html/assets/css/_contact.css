@@ -385,6 +385,12 @@ contact-form-sec-wrp
 	    font-size: 32px;
 	    line-height: 34px;
 	}
+	.Contact-info-img{
+		width: 30%;
+	}
+	.Contact-info-dsc{
+		width: 70%;
+	}
 	
 
 

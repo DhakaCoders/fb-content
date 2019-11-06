@@ -21,12 +21,16 @@ Home
 7. https://www.screencast.com/t/1NEwg5YM
 	full stop missing ---done --> <-- ok
 
-
-
 home fix 2
 ------------
 1. https://www.screencast.com/t/gpjEmE20gY
 	atar font-weight 200 dile mil thake ---done--> <----ok
+
+2. https://www.screencast.com/t/mq6icLMHejs
+	ai button ar gap thik nai
+
+3. https://www.screencast.com/t/XOAzsY4zbe
+	font-weight 200 hobe
 
 Footer
 ------------
@@ -35,30 +39,42 @@ Footer
 
 2. https://www.screencast.com/t/cxz8BkYAr
 	gap , font-weight thik nai. mileni ---done
+
 3. https://www.screencast.com/t/64Fptu0MQx
 	font-size mil nai ---done -> <----ok
+
+4. https://www.screencast.com/t/iuVRyVvbW
+	ata hover hoyna. problem hole ager project thake icon nite paro
 
 Over Ons
 ------------------
 1. https://www.screencast.com/t/6UuwtZMb
 	Banner a img scale effect ta hobe ---done --> <--ok
+
 2. https://www.screencast.com/t/94o6shScvXxK
 	ata fixed hobe --> <--ok
+
 3. https://www.screencast.com/t/eKg2yin7g
 	matchHeightCol hobena . flex use korte hobe. bcoz top and bottom padding approx same --done --> <--ok
+
 4. https://www.screencast.com/t/SMRg0T7z
 	i) min-height aro besi hobe. bottom gap ta kom mone hosche.   ---done --> <--ok 
 	ii) r heading ar margin na diye padding daw
+
 5. https://www.screencast.com/t/1HAT4vNg
 	ai gap r aktu besi hobe maybe ---done --> <<--ok
+
 6. https://www.screencast.com/t/QkZ59TUAOt
-	ata h1 use korte pari  ---done
+	ata h1 use korte pari  ---done ->> <<--ok
+
 7. https://www.screencast.com/t/7CQ1dSb4i
 	ata h1 hobena ---done --> <--ok
+
 8. https://www.screencast.com/t/9LF18EHLJe
-	ai type ar heading ar font-weight 200 dile mil thake. ---done
+	ai type ar heading ar font-weight 200 dile mil thake. ---done --> <--ok
+
 9. https://www.screencast.com/t/AWr8BraV
-	ai text ta strong hobe ---done
+	ai text ta strong hobe ---done --> <---ok
 
 
 Category Overview
@@ -66,54 +82,81 @@ Category Overview
 1. i ) https://www.screencast.com/t/flNFN2BE
 	hover a icon ta scale hobe na just img ta hobe ---done ->> <-ok
    ii) https://www.screencast.com/t/8EVaEEVnG
+
 2. https://www.screencast.com/t/NspRsdwXXgYd
 	ai code ta ki amader kaje lagteche? ---done -->> <-ok
+
 3. https://www.screencast.com/t/AmX5ht5B
 	link hobe ---done ->> <--ok
 
 
-	but hover korle img scale o hobe ---done
+	but hover korle img scale o hobe ---done ->> <--ok
 
 4. https://www.screencast.com/t/4fWvWLXBzK
 	hover korle logo ar red ta daw ---done --> <--ok
+
 5. https://www.screencast.com/t/3Qt0xN4GHB
 	akta item barale lege jay ---done --> <--ok
+
 6. https://www.screencast.com/t/g9Z82yOq
 	ai img gulo img tag a hobe. milon ar page thake idea nite paro ---done --> <--ok
+
+7. https://www.screencast.com/t/fLwgaldia
+	ai button ar width ta aro boro hobe
+
+8. https://www.screencast.com/t/2em7FHhH
+	ai line a 4 ta word ache design a
+
+9. https://www.screencast.com/t/KI9qEfMZZ
+	ai grd ar p ar text thik nai
+
 
 Sub-Category
 --------------------
 1. https://www.screencast.com/t/b7V4jQNM
 	ai div ar fix ager motoi img just scale hobe icon ta na r img ta main img ta inline a hobe ---done --> <--ok
+
 2. https://www.screencast.com/t/gofAXGrGgud
 	gap besi hobe ---done
+
 3. https://www.screencast.com/t/SnutsbOh
 	ai section ar fix ager motioi hobe ---done -->> <<--ok
 
-	but hover effect lagbe ---done
+	but hover effect lagbe ---done -->> <<--ok
 
 4. https://www.screencast.com/t/bb0G7wrr
-	heading ar vitore ata strong tag a hobe . tomar onno page ao amon system thakle same korte hobe ---done
+	heading ar vitore ata strong tag a hobe . tomar onno page ao amon system thakle same korte hobe ---done --> <<---ok
+
 5. https://www.screencast.com/t/4GOt5l2HHC9
-	r aktu gap kom hobe ---done
+	r aktu gap kom hobe ---done -> <<--ok
+
+6. https://www.screencast.com/t/XNIPyB3H
+	font-weight 200 hobe
 
 Referenties Details
 ----------------------
 1. https://www.screencast.com/t/4f6S0TOKCXm0
 	ata missing ---done
+
 2. https://www.screencast.com/t/sA5D9yDfVVp
 	h1 hobe ---done
+
 3. https://www.screencast.com/t/mR6237QDyT7L
 	gap ta besi mone hosche ---done
+
 4.	https://www.screencast.com/t/to3WVqHThttU
 	ai section ta missing ---done
+
+5. https://www.screencast.com/t/gjxwbeXpebF
+		ai page ai border ta hobena
 
 Referenties Overview
 ----------------------
 1. https://www.screencast.com/t/AzTDtwmn7N8
-	akta box shadow on hoye jay. ata hobena ---done
+	akta box shadow on hoye jay. ata hobena ---done --> <<--ok
+
 2. https://www.screencast.com/t/c1hJz5nfOU
-	ai gap kom hoiche ---done
-3.
+	ai gap kom hoiche ---done --> <--ok
+
 
 
