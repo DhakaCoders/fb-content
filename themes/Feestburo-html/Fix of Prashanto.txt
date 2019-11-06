@@ -212,6 +212,40 @@ Over Ons
 	767 thake 1 kore diye maje rakho box ta
 
 
+Category Overview
+---------------------
+1. https://www.screencast.com/t/6ZHVpRkhxX
+	desktop fix ata. ai button a click korle product section a jabe
+
+2. https://www.screencast.com/t/966ihMF1A
+	click korle kata pore jay
+
+3. https://www.screencast.com/t/cxgkEfp3zNb
+	991 px a 2 ta kore daw
+
+4. https://www.screencast.com/t/ONxansktncKv
+	575px thake ai img ar  height aro komao besi lomba hoye jasche
+
+Sub-Category
+---------------
+1. https://www.screencast.com/t/mVyqIjp7
+	575px thake ai img ar  height aro komao besi lomba hoye jasche
+
+
+Referenties Overview
+----------------------
+1. https://prnt.sc/ptefl5
+	ai border ta hobena
+
+Referenties Details
+-------------------
+1. https://www.screencast.com/t/n4TpGH2G
+	991 thake ai grd ta full width koro
+	
+
+	
+
+
 
 
 
