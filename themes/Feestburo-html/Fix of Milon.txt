@@ -164,6 +164,28 @@ Contact
 
 
 
+Offerte vraag
+-----------------
+1. https://www.screencast.com/t/d5rSVOkrXGG
+	767px thake ai border left and right a laga thakbe
+2. https://www.screencast.com/t/SCc1N1vLfzez
+	ai media thake 2ta grd ar bodole akta kore grd daw. r akta max width diye maje ane rakho
+4. https://www.screencast.com/t/Ud9mAqw1
+	i) select ar text kata porche.. ata patoto thak. pore change korte bolle kora jabe
+	ii) lage geche
+
+
+Party Type
+-----------------
+1. https://www.screencast.com/t/79nOEO3rp
+	ai slider ar img fate geche. akta max-width diye maje ane rakho
+2. https://www.screencast.com/t/79vD7j0fb
+	jkhan thake ai arrow gulo lage jasche. sei media thake ai arrow niche daw. r pagi add kore daw. PD ar page thakeo design ta copy korte paro.
+
+
+Thank You Message
+------------------------------
+grd ar shadow gulo just fix korte hobe
 
 
 
