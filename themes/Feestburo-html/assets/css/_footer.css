@@ -545,6 +545,15 @@
 	    font-size: 25px;
 	    line-height: 30px;
 	}
+	.ftr-top-newsletter-head p {
+	    max-width: 450px;
+	}
+	.ftr-head a {
+	    height: 60px;
+	    width: 100%;
+	    max-width: 330px;
+	    padding: 22px 28px 22px 30px;
+	}
 }
 
 @media(max-width: 639px){
@@ -781,6 +790,9 @@
 	.feest-buro-rgt p {
 	    margin-bottom: 20px;
 	}
+	.home-b2b-lft p br{
+	   display: none;
+	}
 }
 
 @media(max-width: 767px){
@@ -825,6 +837,11 @@
 	}
 	.feest-buro-lft > i {
 	    max-width: 290px;
+		right: 35px;
+	}
+	.feest-buro-lft-bg {
+	    left: -15px;
+	    right: -15px;
 	}
 }
 
@@ -841,7 +858,7 @@
 	}
 	.feest-buro-lft > i {
 		max-width: 220px;
-		right: 35px;
+		right: 25px;
 		bottom: 18px;
 	}
 }
@@ -860,7 +877,7 @@
 	}
 	.feest-buro-lft > i {
 	    max-width: 190px;
-	    right: 25px;
+	    right: 15px;
 	    bottom: 12px;
 	}
 	.feest-buro-lft {
