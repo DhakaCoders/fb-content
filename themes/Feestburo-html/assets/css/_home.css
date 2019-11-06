@@ -84,6 +84,9 @@ hm-catagorys-sec-wrp
 .hm-catagory-dsc h5:hover a{
 	color: #eb1c23;
 }
+.hm-catagory-dsc span:last-of-type{
+	display: none;
+}
 
 
 /*
@@ -669,6 +672,10 @@ Responsive Csss
 	    float: right;
 	    margin-top: 3px;
 	}
+	.hm-catagory-wrp ul li:nth-child(2) .hm-catagory-dsc h5,
+	.hm-catagory-wrp ul li:nth-child(1) .hm-catagory-dsc h5{
+		margin-top: 0 !important;
+	}
 	.hm-catagory-dsc span {
 	    position: static;
 	    height: auto;
@@ -1014,6 +1021,15 @@ Responsive Csss
 	}
 	.hm-post-title h3{
 		margin-bottom: 30px;
+	}
+	.hm-catagory-innr:hover span:first-of-type{
+		display: none;
+	}
+	.hm-catagory-innr:hover span:last-of-type{
+		display: block;
+	}
+	.hm-catagory-innr:hover h5 a {
+	    color:#eb1c23;
 	}
 
 
