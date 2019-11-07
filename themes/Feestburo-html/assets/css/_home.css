@@ -761,11 +761,7 @@ Responsive Csss
 	.hm-catagory-wrp ul li:nth-child(5){
 		padding-bottom: 24px;
 	}
-	.hm-gallery-item-top-wrp {
-	    max-width: 530px;
-	    width: 100%;
-	    margin: 0 auto;
-	}
+	
 
 
 	/*
@@ -911,6 +907,9 @@ Responsive Csss
 	    position: relative;
 	    padding-left: 15px;
 	    padding-right: 15px;
+	    max-width: 530px;
+	    margin: 0 auto !important;
+	    float: none;
 	}
 	.hm-gallery-top-lft-img {
 	    height: 280px !important;
