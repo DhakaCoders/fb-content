@@ -6,9 +6,12 @@
 	.show-md{
 		display: block!important;
 	}
+	h1{
+		font-size:57px;
+	}
 
 }
-
+ 
 
 @media(max-width: 991px){
 	.hide-sm{
@@ -18,7 +21,7 @@
 		display: block!important;
 	}
 	h1{
-		font-size:50px;
+		font-size:44px;
 	}
 	h2{
 		font-size: 35px ;
