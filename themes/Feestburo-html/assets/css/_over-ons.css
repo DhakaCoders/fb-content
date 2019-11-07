@@ -271,6 +271,9 @@
 		font-size: 57px;
 		line-height:65px;
 	}
+	.over-ons-feest-buro-rgt a {
+	    padding: 18px 35px;
+	}
 }
 
 @media(max-width: 991px){
@@ -346,7 +349,6 @@
 	    font-size: 25px;
 	    line-height: 35px;
 	}
-
 	.overOns-howWeWork-bloc-wrp li:nth-child(2n+1) {
 	    clear: initial;
 	}
@@ -377,6 +379,11 @@
 	    max-width: 175px;
 	}
 
+	.over-ons-feest-buro-rgt a {
+	    display: block;
+	    margin-right: 0;
+	    text-align: center;
+	}
 }
 
 @media(max-width: 479px){
