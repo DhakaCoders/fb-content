@@ -528,7 +528,9 @@ a.main-bnr-rgt-btn:hover{
 	.hdr-btmbar {
 	    padding: 20px 0 25px;
 	}
-
+	.hdr-lft{
+		width: 50%;
+	}
 
 	/*------- xs menu -------*/
 	.home-bnr-xs-nav-bar-controller{
@@ -536,8 +538,18 @@ a.main-bnr-rgt-btn:hover{
 		width: 55px;
 		height: 55px;
 		position: relative;
-		margin-top: 30px;
 		cursor: pointer;
+		position: absolute;
+		right: 15px;
+		top: 50%;
+		transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+
+	}
+	.home-bnr-xs-nav-bar-controller > div{
+		width: 55px;
+		height: 55px;
 	}
 	.home-bnr-xs-nav-bar-controller .xs-menu-humberger-btn{
 		position: absolute;
