@@ -658,6 +658,20 @@ function goToByScroll(id, offset){
   }
 }
 
+//sm-popup-main-menu
+
+if (windowWidth <= 991) {
+    $('.home-bnr-xs-nav-bar-controller').on('click', function(){
+      $('.xs-popup-main-menu-wrap').fadeIn(500);
+      $('.xs-popup-main-menu-wrap').addClass('add-cls-show');
+      $('body').addClass('pop-up-menu-active');
+    });
+    $('.xs-menu-popup-close-btn').on('click', function(){
+      $('.xs-popup-main-menu-wrap').fadeOut(500);
+      $('.xs-popup-main-menu-wrap').removeClass('add-cls-show');
+      $('body').removeClass('pop-up-menu-active');
+    });
+}
 
 /*End code of Rannojit*/
 
