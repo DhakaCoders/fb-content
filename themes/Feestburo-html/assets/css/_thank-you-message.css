@@ -74,7 +74,7 @@ thank-you-message-sec-wrp
 	z-index: 2;
 	text-align: center;
 }
-.message-dsc-wrp  .hm-single-post-img-item:hover a.hm-gallery-single-small-btn:hover:after{
+.message-dsc-wrp .message-dsc-wrp  .hm-single-post-img-item:hover a.hm-gallery-single-small-btn:hover:after{
 	background: url(../images/gallery-arry-icon.svg);
 	right: -5px !important;
 }
