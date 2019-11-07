@@ -93,6 +93,9 @@ thank-you-message-sec-wrp
 .Contact-info-dsc h2{
 	font-size: 64px;
 }
+.thank-message-info-wrp{
+	border-bottom: 2px solid #F0F0F0;
+}
 
 /*
 ------------------------
