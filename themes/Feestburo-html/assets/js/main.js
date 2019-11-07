@@ -38,7 +38,12 @@ $(window).scroll(function() {
 
 $('.ftr-xs-links > span').on('click', function(){
     $(this).parent().toggleClass('non-expend');
-    $(this).parent().find('ul').slideToggle(500);
+    $(this).parent().find('ul').slideToggle();
+});
+
+$('.ftr-xs-contact-spn-wrp').on('click', function(){
+    $(this).parent().toggleClass('expend');
+    $(this).parent().find('ul').slideToggle();
 });
 
 //match Height
@@ -130,14 +135,17 @@ if( $('.catMeubilairSlider').length){
   });
 }
 
-
-
+// go to functoion
+$(".categoty-meubilair-lft-des > a").click(function(e) {
+    e.preventDefault();
+    var goto = $(this).attr('href');
+    $('html, body').animate({
+        scrollTop: $(goto).offset().top - 0
+    }, 800);
+});
 
 
 /*End code of Prashanto*/
-
-
-
 
 
 /*Start code of Milon*/
@@ -176,6 +184,7 @@ if (windowWidth <= 767) {
       });
   }
 }
+
 if (windowWidth <= 575) {
   if( $('#HmGalleryBtmLft').length ){
       $('#HmGalleryBtmLft').slick({
@@ -651,6 +660,20 @@ function goToByScroll(id, offset){
   }
 }
 
+//sm-popup-main-menu
+
+if (windowWidth <= 991) {
+    $('.home-bnr-xs-nav-bar-controller').on('click', function(){
+      $('.xs-popup-main-menu-wrap').fadeIn(500);
+      $('.xs-popup-main-menu-wrap').addClass('add-cls-show');
+      $('body').addClass('pop-up-menu-active');
+    });
+    $('.xs-menu-popup-close-btn').on('click', function(){
+      $('.xs-popup-main-menu-wrap').fadeOut(500);
+      $('.xs-popup-main-menu-wrap').removeClass('add-cls-show');
+      $('body').removeClass('pop-up-menu-active');
+    });
+}
 
 /*End code of Rannojit*/
 

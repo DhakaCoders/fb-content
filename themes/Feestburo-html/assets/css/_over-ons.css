@@ -1,7 +1,7 @@
 
 
 .over-ons-feest-buro-sec{
-	padding: 80px 0;
+	padding: 80px 0; 
 }
 .over-ons-feest-buro-innr > ul > li{
 	display: flex;
@@ -267,7 +267,13 @@
 	.over-ons-feest-buro-innr > ul > li {
 	    padding-bottom: 50px;
 	}
-
+	.over-ons-feest-buro-rgt h3{
+		font-size: 57px;
+		line-height:65px;
+	}
+	.over-ons-feest-buro-rgt a {
+	    padding: 18px 35px;
+	}
 }
 
 @media(max-width: 991px){
@@ -294,14 +300,15 @@
 	    line-height: 27px;
 	}	
 	.over-ons-feest-buro-rgt h3 {
-	    font-size: 50px;
-	    line-height:55px;
+	    font-size: 44px;
+	    line-height:52px;
 	    margin-bottom: 12px;
 	}
 	.overOns-howWeWork-head h1 {
 	    font-size: 28px;
 	    line-height: 40px;
 	}
+
 }
 
 @media(max-width: 767px){
@@ -342,9 +349,6 @@
 	    font-size: 25px;
 	    line-height: 35px;
 	}
-}
-
-@media(max-width: 639px){
 	.overOns-howWeWork-bloc-wrp li:nth-child(2n+1) {
 	    clear: initial;
 	}
@@ -361,6 +365,13 @@
 	.overOns-howWeWork-bloc-head {
 	    min-height: 85px;
 	}
+	.overOns-howWeWork-innr {
+	    padding: 50px 0 20px;
+	}
+}
+
+@media(max-width: 639px){
+
 }
 
 @media(max-width: 575px){
@@ -368,6 +379,11 @@
 	    max-width: 175px;
 	}
 
+	.over-ons-feest-buro-rgt a {
+	    display: block;
+	    margin-right: 0;
+	    text-align: center;
+	}
 }
 
 @media(max-width: 479px){
@@ -380,10 +396,6 @@
 	}
 	.over-ons-feest-buro-sec {
 	    padding: 50px 0;
-	}
-	.overOns-howWeWork-head h1 {
-	    font-size: 22px;
-	    line-height: 30px;
 	}
 	.overOns-howWeWork-bloc-wrp {
 	    padding-top: 65px;
