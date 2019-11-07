@@ -195,8 +195,9 @@ if (windowWidth <= 575) {
   }
 }
 
-if( $('#PtSlider').length){
-  $('#PtSlider').slick({
+
+if( $('#PtBtmSlider').length){
+  $('#PtBtmSlider').slick({
     pauseOnHover: false,
     autoplay: false,
     infinite: true,
@@ -205,11 +206,19 @@ if( $('#PtSlider').length){
     slidesToScroll: 1,
     arrows: true,
     dots: false,
-    prevArrow: $('.PtSliderArrow .leftArrow'),
-    nextArrow: $('.PtSliderArrow .rightArrow'),
+    prevArrow: $('.PtBtmSliderArrow .leftArrow'),
+    nextArrow: $('.PtBtmSliderArrow .rightArrow'),
     responsive: [
         {
           breakpoint: 1599,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots: false,
+          }
+        },
+        {
+          breakpoint: 1499,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1,
@@ -247,57 +256,41 @@ if( $('#PtSlider').length){
   });
 }
 
-if( $('#PtBtmSlider').length){
-  $('#PtBtmSlider').slick({
-    pauseOnHover: false,
-    autoplay: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: true,
-    dots: false,
-    prevArrow: $('.PtBtmSliderArrow .leftArrow'),
-    nextArrow: $('.PtBtmSliderArrow .rightArrow'),
-    responsive: [
-        {
-          breakpoint: 1599,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            dots: false,
-          }
-        },
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            dots: false,
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            dots: false,
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: false,
-          }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-      ]
-  });
+$('.scrolltobtn').on('click', function(e){
+  e.preventDefault();
+  var togo = $(this).data('to');
+  goToByScroll(togo, 0);
+});
+
+function goToByScroll(id, offset){
+  if(id){
+      // Remove "link" from the ID
+    id = id.replace("link", "");
+      // Scroll
+    $('html,body').animate(
+        {scrollTop: $(id).offset().top - offset},
+      500);
+  }
 }
+
+$('.checkmarkbtn').on('click', function(e){
+  e.preventDefault();
+  var togo = $(this).data('to');
+  goToByScroll(togo, 0);
+});
+
+function goToByScroll(id, offset){
+  if(id){
+      // Remove "link" from the ID
+    id = id.replace("link", "");
+      // Scroll
+    $('html,body').animate(
+        {scrollTop: $(id).offset().top - offset},
+      500);
+  }
+}
+
+
 
 
 /*

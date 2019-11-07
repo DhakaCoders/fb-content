@@ -27,11 +27,11 @@ Contact
 9. https://www.screencast.com/t/lRyJN6nxMaQ
 	ai img ta inline a daw ---done --> <--ok
 
-10. https://www.screencast.com/t/sh6keDyS
+10. https://www.screencast.com/t/sh6keDyS<---ok
 	i) ata strong tag a hobe 
 	ii) 2 ta word ar maje kono gap thakbena
 
-11. https://www.screencast.com/t/AjCu8z8qp2b
+11. https://www.screencast.com/t/AjCu8z8qp2b <---ok
  	focus a ai color ta daw #C4C2C2
 
 Party Type
@@ -69,7 +69,7 @@ Party Type
 10. https://www.screencast.com/t/9EoQtQDimrs5
 	border missing ---done --> <--ok
 
-11. https://www.screencast.com/t/v3uYyWSvlf
+11. https://www.screencast.com/t/v3uYyWSvlf <---ok
 	ai section ta PD ar page thake copy kora hole abar copy koro. xs design a missing ache maybe
 
 12. https://www.screencast.com/t/FBAIjDqf3m
@@ -90,7 +90,7 @@ Offerte vraag
 4. https://www.screencast.com/t/AOdNwI6np1Vo
 	hover a border gulo o red hobe ---done --> <--ok
 
-5. https://www.screencast.com/t/NaURjy6Fw
+5. https://www.screencast.com/t/NaURjy6Fw <---ok
 	focus a border ar color #C4C2C2 ata daw
 
 6. https://prnt.sc/pt94qs
@@ -129,7 +129,7 @@ Thank You Message
 Home
 -----------------------
 1. https://www.screencast.com/t/zLr4XYiC
-	shadow mileni
+	shadow mileni <---ok
 2. https://www.screencast.com/t/gEiLg7RR4m
 	ata strong hobe
 3. https://www.screencast.com/t/9tg3S5N2Z
@@ -159,27 +159,27 @@ home
 
 Contact
 ----------------
-1. http://screencast.com/t/9mVxxM0w60
+1. http://screencast.com/t/9mVxxM0w60 <---ok
 	991px thake 768 pojonto ai box ar font size and gap komate hobe sob gulor. dimention anujayi
 
 
 
 Offerte vraag
 -----------------
-1. https://www.screencast.com/t/d5rSVOkrXGG
+1. https://www.screencast.com/t/d5rSVOkrXGG<---ok
 	767px thake ai border left and right a laga thakbe
-2. https://www.screencast.com/t/SCc1N1vLfzez
+2. https://www.screencast.com/t/SCc1N1vLfzez<---ok
 	ai media thake 2ta grd ar bodole akta kore grd daw. r akta max width diye maje ane rakho
-4. https://www.screencast.com/t/Ud9mAqw1
+4. https://www.screencast.com/t/Ud9mAqw1<---ok
 	i) select ar text kata porche.. ata patoto thak. pore change korte bolle kora jabe
 	ii) lage geche
 
 
 Party Type
 -----------------
-1. https://www.screencast.com/t/79nOEO3rp
+1. https://www.screencast.com/t/79nOEO3rp<---ok
 	ai slider ar img fate geche. akta max-width diye maje ane rakho
-2. https://www.screencast.com/t/79vD7j0fb
+2. https://www.screencast.com/t/79vD7j0fb<---ok
 	jkhan thake ai arrow gulo lage jasche. sei media thake ai arrow niche daw. r pagi add kore daw. PD ar page thakeo design ta copy korte paro.
 
 
