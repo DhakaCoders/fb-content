@@ -150,6 +150,7 @@
 	float: left;
 	width:20%;
 }
+
 .ftr-btm span,
 .ftr-btm a{
 	color: #929292;
@@ -160,6 +161,9 @@
 }
 .ftr-btm a:hover{
 	color: #EB1C23;
+}
+.ftr-btm-lft span p {
+    margin: 0;
 }
 .ftr-btm-lft > span{
 	padding-right: 18px;

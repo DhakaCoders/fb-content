@@ -114,6 +114,28 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php 
+  $logoObj = get_field('logo_header', 'options');
+  if( is_array($logoObj) ){
+    $logo_tag = '<img src="'.$logoObj['url'].'" alt="'.$logoObj['alt'].'" title="'.$logoObj['title'].'">';
+  }else{
+    $logo_tag = '';
+  }
+
+  $ftlogoObj = get_field('logo_footer', 'options');
+  if( is_array($ftlogoObj) ){
+    $ftlogo_tag = '<img src="'.$ftlogoObj['url'].'" alt="'.$ftlogoObj['alt'].'" title="'.$ftlogoObj['title'].'">';
+  }else{
+    $ftlogo_tag = '';
+  }
+
+ $spacialArry = array(".", "/", "+", " ");$replaceArray = '';
+
+  $show_telefoon = get_field('telephone', 'options');
+  $telefoon = trim(str_replace($spacialArry, $replaceArray, $show_telefoon));
+  $fburl = get_field('facebook_url', 'options');
+  $insturl = get_field('instagram_url', 'options');
+?>
 <div class="body-overlay"></div>
 <header class="header">
   <div class="hdr-topbar">
@@ -150,8 +172,9 @@
             <div class="hdr-topbar-rgt clearfix">
               <div class="hdr-topbar-social">
                 <ul class="clearfix ulc">
+                  <?php if(!empty($fburl)): ?>
                   <li>
-                    <a href="#">
+                    <a href="<?php echo esc_url($fburl); ?>">
                       <em> 
                         <svg class="hdr-fb-icon-svg" width="10" height="16" viewBox="0 0 10 16" fill="#919499">
                           <use xlink:href="#hdr-fb-icon-svg"></use>
@@ -159,8 +182,9 @@
                       </em>
                     </a>
                   </li>
+                  <?php endif; if(!empty($insturl)): ?>
                   <li>
-                    <a href="#">
+                    <a href="<?php echo esc_url($insturl); ?>">
                       <em> 
                         <svg class="hdr-instagram-icon-svg" width="16" height="16" viewBox="0 0 16 16" fill="#919499">
                           <use xlink:href="#hdr-instagram-icon-svg"></use>
@@ -168,16 +192,19 @@
                       </em>
                     </a>
                   </li>
+                  <?php endif; ?>
                 </ul>
               </div>
+              <?php if( !empty( $show_telefoon ) ): ?>
               <div class="hdr-topbar-tel">
                 <em> 
                   <svg class="hdr-tel-icon-svg" width="16" height="24" viewBox="0 0 16 24" fill="#919499">
                     <use xlink:href="#hdr-tel-icon-svg"></use>
                   </svg> 
                 </em>
-                <a href="tel:0472 97 40 57">0472 97 40 57</a>
+                <?php printf('<a href="tel:%s">%s</a>', $telefoon, $show_telefoon); ?>
               </div>
+              <?php endif; ?>
               <div class="hdr-topbar-nav">
                 <?php 
                   $cmenuOptions = array( 
@@ -202,7 +229,9 @@
             <div class="header-inr clearfix">
               <div class="hdr-lft">
                 <div class="logo">
-                  <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/logo.svg"></a>
+                  <a href="<?php echo esc_url(home_url('/')); ?>">
+                    <?php echo $logo_tag; ?>
+                  </a>
                 </div>
               </div>
               <div class="hdr-rgt clearfix">
@@ -246,8 +275,8 @@
 <div class="show-sm">
   <div class="xs-popup-main-menu-wrap">
     <div class="xs-popup-logo">
-      <a href="#">
-        <img src="<?php echo THEME_URI; ?>/assets/images/ftr-logo.svg" alt="">
+      <a href="<?php echo esc_url(home_url('/')); ?>">
+        <?php echo $ftlogo_tag; ?>
       </a>
     </div>
     <nav class="xs-popup-main-nav clearfix">
@@ -264,7 +293,8 @@
     <div class="xs-popup-main-menu-ftr">
       <div class="xs-popup-social">
         <ul class="clearfix ulc">
-          <li><a href="#">
+          <?php if(!empty($fburl)): ?>
+          <li><a href="<?php echo esc_url($fburl); ?>">
             <i>
               <svg class="hdr-fb-icon" width="20" height="20" viewBox="0 0 20 20" fill="#fff">
                 <use xlink:href="#hdr-fb-icon-svg"></use>
@@ -272,8 +302,9 @@
             </i>
           </a>
           </li>
+          <?php endif; if(!empty($insturl)): ?>
           <li>
-            <a href="#">
+            <a href="<?php echo esc_url($insturl); ?>">
               <i>
                 <svg class="hdr-instagram-icon" width="20" height="20" viewBox="0 0 20 20" fill="#fff">
                   <use xlink:href="#hdr-instagram-icon-svg"></use>
@@ -281,18 +312,19 @@
               </i>
             </a>
           </li>
+          <?php endif; ?>
         </ul>
       </div>
-
+      <?php if( !empty( $show_telefoon ) ): ?>
       <div class="hdr-topbar-tel">
         <em> 
           <svg class="hdr-tel-icon-svg" width="16" height="24" viewBox="0 0 16 24" fill="#919499">
             <use xlink:href="#hdr-tel-icon-svg"></use>
           </svg> 
         </em>
-        <a href="tel:0472 97 40 57">0472 97 40 57</a>
+        <?php printf('<a href="tel:%s">%s</a>', $telefoon, $show_telefoon); ?>
       </div>
-
+      <?php endif; ?>
       <div class="xs-menu-popup-close-btn">
         <span><img src="<?php echo THEME_URI; ?>/assets/images/close-icon.png"></span>
         <span>SLUIT</span>
