@@ -41,9 +41,7 @@ if( !function_exists('cbv_theme_setup') ){
 		register_nav_menus( array(
 			'cbv_top_menu' => __( 'Top Menu', THEME_NAME ),
 			'cbv_main_menu' => __( 'Hoofdmenu', THEME_NAME ),
-			'cbv_ftr_menu' => __( 'Footer Menu', THEME_NAME ),
-			'cbv_sp_menu' => __( 'Services & Products Menu', THEME_NAME ),
-			'cbv_pc_menu' => __( 'Product Categories Menu', THEME_NAME ),
+			'cbv_mobile_menu' => __( 'Mobile Menu', THEME_NAME ),
 			'cbv_ftb_menu' => __( 'Copyright Menu', THEME_NAME ),
 		) );
 
@@ -127,7 +125,7 @@ if ( ! is_admin() ) {
     add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
 }
 
-add_filter('wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2);
+//add_filter('wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2);
 function my_wp_nav_menu_objects( $items, $args ) {
 	// loop
 	foreach( $items as &$item ) {

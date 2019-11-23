@@ -16,36 +16,26 @@
                 </a>
               </div>
               <div class="ftr-col-2 ftr-col">
-                <ul class="ulc">
-                  <li>
-                    <a href="#">Meubilair</a>
-                  </li>
-                  <li>
-                    <a href="#">Fotografie</a>
-                  </li>
-                  <li>
-                    <a href="#">Drank / Catering</a>
-                  </li>
-                  <li>
-                    <a href="#">Decoratie</a>
-                  </li>
-                  <li>
-                    <a href="#">Vervoer</a>
-                  </li>
-                </ul>
+              <?php 
+                $fmenuOptions = array( 
+                    'theme_location' => 'cbv_main_menu', 
+                    'menu_class' => 'ulc',
+                    'container' => 'fnav',
+                    'container_class' => 'fnav'
+                  );
+                wp_nav_menu( $fmenuOptions ); 
+              ?>
               </div>
               <div class="ftr-col-3 ftr-col">
-                <ul class="ulc">
-                  <li>
-                    <a href="#">Home</a>
-                  </li>
-                  <li>
-                    <a href="#">over ons</a>
-                  </li>
-                  <li>
-                    <a href="#">Contact</a>
-                  </li>                  
-                </ul>
+                <?php 
+                  $fpmenuOptions = array( 
+                      'theme_location' => 'cbv_top_menu', 
+                      'menu_class' => 'ulc clearfix',
+                      'container' => 'spnav',
+                      'container_class' => 'spnav'
+                    );
+                  wp_nav_menu( $fpmenuOptions ); 
+                ?>
                 <div class="ftr-social">
                   <ul class="ulc clearfix">
                     <li>
@@ -94,17 +84,16 @@
                 </a>
               </div>
               <div class="ftr-xs-links">
-                <span>Navigatie</span>
-                <ul class="ulc">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">over ons</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">Meubilair</a></li>
-                  <li><a href="#">Fotografie</a></li>
-                  <li><a href="#">Drank / Catering</a></li>
-                  <li><a href="#">Decoratie</a></li>
-                  <li><a href="#">Vervoer</a></li>
-                </ul>
+                <?php
+                _e( '<span>Navigatie</span>', THEME_NAME ); 
+                  $mbmenuOptions = array( 
+                      'theme_location' => 'cbv_mobile_menu', 
+                      'menu_class' => 'ulc',
+                      'container' => 'mbnav',
+                      'container_class' => 'mbnav'
+                    );
+                  wp_nav_menu( $mbmenuOptions ); 
+                ?>
               </div>
               <div class="ftr-xs-contact">
                 <div class="ftr-xs-contact-spn-wrp">
@@ -154,17 +143,15 @@
         <div class="ftr-btm clearfix">
           <div class="ftr-btm-lft">        
             <span> © 2019 Feestburo. All rights reserved.</span>
-            <ul class="ulc clearfix">           
-              <li>
-                <a href="#">Sitemap</a>
-              </li>
-              <li>
-                <a href="#">Cookie Policy </a>
-              </li>
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-            </ul>
+            <?php 
+              $ftmenuOptions = array( 
+                  'theme_location' => 'cbv_ftb_menu', 
+                  'menu_class' => 'ulc clearfix',
+                  'container' => 'ftbnav',
+                  'container_class' => 'ftbnav'
+                );
+              wp_nav_menu( $ftmenuOptions ); 
+            ?>  
           </div>
           <div class="sm-ftr-copyright show-sm">
             <span>© 2019 Feestburo. All rights reserved.</span>

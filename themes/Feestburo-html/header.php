@@ -179,11 +179,15 @@
                 <a href="tel:0472 97 40 57">0472 97 40 57</a>
               </div>
               <div class="hdr-topbar-nav">
-                <ul class="clearfix ulc">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Over Ons</a></li>
-                  <li><a href="#">Contact</a></li>
-                </ul>
+                <?php 
+                  $cmenuOptions = array( 
+                      'theme_location' => 'cbv_top_menu', 
+                      'menu_class' => 'clearfix ulc',
+                      'container' => 'topnav',
+                      'container_class' => 'topnav'
+                    );
+                  wp_nav_menu( $cmenuOptions ); 
+                ?>
               </div>
             </div>
           </div>
@@ -222,13 +226,15 @@
                   </button>
                 </div>
                 <nav class="main-nav">
-                  <ul class="clearfix">
-                    <li class="current-menu-item"><a href="#">Meubilair</a></li>
-                    <li><a href="#">Fotografie</a></li>
-                    <li><a href="#">Drank / Catering</a></li>
-                    <li><a href="#">Decoratie</a></li>
-                    <li><a href="#">Vervoer</a></li>
-                  </ul>
+                  <?php 
+                    $cmenuOptions = array( 
+                        'theme_location' => 'cbv_main_menu', 
+                        'menu_class' => 'clearfix',
+                        'container' => 'cmnav',
+                        'container_class' => 'cmainnav'
+                      );
+                    wp_nav_menu( $cmenuOptions ); 
+                  ?>
                 </nav>
               </div>
             </div>
@@ -245,16 +251,15 @@
       </a>
     </div>
     <nav class="xs-popup-main-nav clearfix">
-      <ul class="clearfix ulc">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">over ons</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Meubilair</a></li>
-        <li><a href="#">Fotografie</a></li>
-        <li><a href="#">Drank / Catering</a></li>
-        <li><a href="#">Decoratie</a></li>
-        <li><a href="#">Vervoer</a></li>
-      </ul>
+      <?php
+        $mbmenuOptions = array( 
+            'theme_location' => 'cbv_mobile_menu', 
+            'menu_class' => 'clearfix ulc',
+            'container' => 'mbnav',
+            'container_class' => 'mbnav'
+          );
+        wp_nav_menu( $mbmenuOptions ); 
+      ?>
     </nav>
     <div class="xs-popup-main-menu-ftr">
       <div class="xs-popup-social">
