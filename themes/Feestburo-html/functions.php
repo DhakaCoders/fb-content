@@ -71,7 +71,7 @@ Includes->>
 include_once(THEME_DIR .'/inc/widgets-area.php');
 include_once(THEME_DIR .'/inc/cbv-functions.php');
 include_once(THEME_DIR .'/inc/breadcrumbs.php');
-//include_once(THEME_DIR .'/inc/woo-functions.php');
+include_once(THEME_DIR .'/inc/product-loadmore.php');
 
 /**
 ACF Option pages->>
@@ -153,19 +153,6 @@ function custom_body_classes($classes){
 }
 // call the filter for the body class
 add_filter('body_class', 'custom_body_classes');
-
-
-function get_custom_excerpt($limit = 12) {
-  $excerpt = explode(' ', get_the_content(), $limit);
-  if (count($excerpt)>=$limit) {
-    array_pop($excerpt);
-    $excerpt = implode(" ",$excerpt);
-  } else {
-    $excerpt = implode(" ",$excerpt);
-  }	
-  //$excerpt = preg_replace('`\[[^\]]*\]`',$dot,$excerpt);
-  return $excerpt;
-}
 
 /**
 ACF - Custom rule for WOO attribues

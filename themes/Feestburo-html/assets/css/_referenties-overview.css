@@ -103,6 +103,9 @@
 	display: table;
 	margin: 0 auto;
 }
+ul.page-numbers {
+    list-style: none;
+}
 .ref-overview-pagi ul li{
 	float: left;
 	padding-left: 4px;
@@ -131,7 +134,8 @@
 	color: #EB1C23;
 	border-color: #EB1C23;
 }
-.ref-overview-pagi ul li.active span{
+.ref-overview-pagi ul li.active span,
+.ref-overview-pagi ul li span.current{
 	display: inline-block;
 	vertical-align: baseline;
 	font-weight: 600;

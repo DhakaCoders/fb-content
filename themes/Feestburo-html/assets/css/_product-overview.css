@@ -505,6 +505,14 @@
 }
 
 
+div#ajxaloader {
+    text-align: center;
+}
+
+div#ajxaloader img {
+    width: 100px;
+    height: 100px;
+}
 
 @media(max-width: 1199px){
 	.fl-product .summary {

@@ -324,3 +324,64 @@ function downloadTag( $dfile ){
     else
         echo "<a>";
 }
+
+
+function cbv_get_related_category_posts($taxno= 'product_cat', $perpage = 4)
+{
+    // Check if we are on a single page, if not, return false
+    if ( !is_single() )return false;
+
+    // Get the current post id
+    $post_id = get_queried_object_id();
+
+    // Get the post categories
+    $categories = get_the_terms( $post_id, $taxno );
+    //return $categories;
+
+    // Lets build our array
+    // If we don't have categories, bail
+    if ( !$categories )
+        return false;
+
+    foreach ( $categories as $category ) {
+        if ( $category->parent == 0 ) {
+            $term_ids[] = $category->term_id;
+        } else {
+            $term_ids[] = $category->parent;
+            $term_ids[] = $category->term_id;
+        }
+    }
+
+    // Remove duplicate values from the array
+    $unique_array = array_unique( $term_ids );
+
+    // Lets build our query
+    $args = [
+        'post__not_in' => [$post_id],
+        'posts_per_page' => $perpage, // Note: showposts is depreciated in favor of posts_per_page
+        'ignore_sticky_posts' => 1, // Note: caller_get_posts is depreciated
+        'orderby' => 'title',
+        'no_found_rows' => true, // Skip pagination, makes the query faster
+        'tax_query' => [
+            [
+                'taxonomy' => $taxno,
+                'terms' => $unique_array,
+                'include_children' => false,
+            ],
+        ],
+    ];
+    $q = new WP_Query( $args );
+    return $q;
+}
+
+function cbv_excerpt($limit = 10) {
+  $excerpt = explode(' ', get_field('product_excerpt'), $limit);
+  if (count($excerpt)>=$limit) {
+    array_pop($excerpt);
+    $excerpt = implode(" ",$excerpt);
+  } else {
+    $excerpt = implode(" ",$excerpt);
+  } 
+  //$excerpt = preg_replace('`\[[^\]]*\]`',$dot,$excerpt);
+  return $excerpt;
+}

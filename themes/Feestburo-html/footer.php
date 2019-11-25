@@ -1,4 +1,5 @@
 <?php 
+  $cproposal = get_field('custom_proposal', 'options');
   $logoObj = get_field('logo_footer', 'options');
   if( is_array($logoObj) ){
     $logo_tag = '<img src="'.$logoObj['url'].'" alt="'.$logoObj['alt'].'" title="'.$logoObj['title'].'">';
@@ -26,11 +27,18 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="ftr-main">
+            <?php if($cproposal && !empty($cproposal)): ?>
             <div class="ftr-head">
-              <h3><strong>Offerte</strong> Aanvragen</h3>
-              <p>Suspendisse sem dui, blandit eget est ac, ullamcorper pellentesque dolor. Etiam blandit sit amet arcu id egestas.</p>
-              <a href="#"><span>Offerte aanvragen</span></a>
-            </div>            
+              <?php 
+              if(!empty($cproposal['titel'])) printf('<h3>%s</h3>', $cproposal['titel']);
+              if(!empty($cproposal['beschrijving'])) echo wpautop( $cproposal['beschrijving'], true );
+              $link = $cproposal['knop'];
+              if( is_array( $link ) &&  !empty( $link['url'] ) ){
+               printf('<a class="requestbtn" href="%s" target="%s"><span>%s</span></a>', $link['url'], $link['target'], $link['title']);
+              }
+              ?>
+            </div>  
+            <?php endif; ?>          
             <div class="ftr-col-wrp hide-xs clearfix">
               <div class="ftr-col-1 ftr-col">
                 <a href="<?php echo esc_url(home_url('/')); ?>">

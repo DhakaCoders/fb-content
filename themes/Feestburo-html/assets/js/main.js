@@ -312,7 +312,7 @@ if( $('#googlemap').length ){
     var longitude = $('#googlemap').data('longitude');
 
     var myCenter= new google.maps.LatLng(latitude,  longitude);
-    var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+    var iconBase = $('#googlemap').data('homeurl');
     function initialize(){
         var mapProp = {
           center:myCenter,
@@ -577,7 +577,7 @@ if( $('#googlemap').length ){
 
         var marker= new google.maps.Marker({
           position:myCenter,
-          icon:'assets/images/map-marker.png'
+          icon: iconBase + '/assets/images/map-marker.png'
           });
         marker.setMap(map);
     }
@@ -724,6 +724,63 @@ if( $('.responsive-slider').length ){
 }
 
     new WOW().init();
+
+  if( $('#go-spacification').length ){
+    $('#go-spacification').on('click', function(e){
+      e.preventDefault();
+      $('html, body').animate({
+          scrollTop: $("#specificaties").offset().top
+      }, 100);
+    })
+
+  }
+
+if($("#catID").length){
+  var catID = $("#catID").data('id');
+}
+
+$("#loadMore").on('click', function(e) {
+    e.preventDefault();
+    var catid = '';
+    if(catID != ''){
+      catid = catID;
+    }
+    //init
+    var that = $(this);
+    var page = $(this).data('page');
+    var newPage = page + 1;
+    var ajaxurl = that.data('url');
+    console.log(newPage);
+    //ajax call
+    $.ajax({
+        url: ajaxurl,
+        type: 'post',
+        data: {
+            page: page,
+            catid: catid,
+            action: 'ajax_product_script_load_more'
+        },
+        beforeSend: function ( xhr ) {
+            $('#ajxaloader').show();
+        },
+        error: function(response) {
+            console.log(response);
+        },
+        success: function(response) {
+            console.log(response);
+            //check
+            if (response == 0) {
+                $('#ajax-content').append('<div class="clearfix"></div><div class="text-center"><p>No more products to load.</p></div>');
+                $('#loadMore').hide();
+                $('#ajxaloader').hide();
+            } else {
+                $('#ajxaloader').hide();
+                that.data('page', newPage);
+                $('#ajax-content').append(response.substr(response.length-1, 1) === '0'? response.substr(0, response.length-1) : response);
+            }
+        }
+    });
+});
 
 })(jQuery);
 
