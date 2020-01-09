@@ -130,8 +130,20 @@ h1.banner-page-title,
 	display: none;
 }
 
-
-
+.sitemap{
+	padding: 50px;
+}
+.sitemap ol{
+	padding: 10px;
+	padding-left: 50px;
+}
+.sitemap ol li{
+	padding-bottom: 10px;
+	text-transform: capitalize;
+}
+.sitemap ol li a:focus{
+	text-decoration: underline;
+}
 
 
 /*
