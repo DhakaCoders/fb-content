@@ -360,7 +360,10 @@ h1.banner-page-title,
 }
 
 @media(max-width: 991px){
-
+	.page-banner a.main-bnr-rgt-btn,
+	a.main-bnr-rgt-btn{
+		display: none;
+	}
 }
 
 @media(max-width: 767px){

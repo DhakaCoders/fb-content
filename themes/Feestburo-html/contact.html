@@ -74,6 +74,7 @@
 
 </head>
 <body>
+<div class="body-overlay"></div>
 <header class="header">
   <div class="hdr-topbar">
     <div class="container">
@@ -161,6 +162,13 @@
                 </div>
               </div>
               <div class="hdr-rgt clearfix">
+                <div class="home-bnr-xs-nav-bar-controller show-sm">
+                  <div style="position: relative;">
+                    <div class="xs-menu-humberger-btn">
+                      <img src="assets/images/humberger-icon.png" alt="">
+                    </div>
+                  </div>
+                </div>
                 <div class="hdr-search">
                   <form>
                     <input type="search" name="" placeholder="Search">
@@ -175,7 +183,7 @@
                 </div>
                 <nav class="main-nav">
                   <ul class="clearfix">
-                    <li><a href="#">Meubilair</a></li>
+                    <li class="current-menu-item"><a href="#">Meubilair</a></li>
                     <li><a href="#">Fotografie</a></li>
                     <li><a href="#">Drank / Catering</a></li>
                     <li><a href="#">Decoratie</a></li>
@@ -188,8 +196,69 @@
         </div>
     </div>
   </div>
-</header>
 
+<div class="show-sm">
+  <div class="xs-popup-main-menu-wrap">
+    <div class="xs-popup-logo">
+      <a href="#">
+        <img src="assets/images/ftr-logo.svg" alt="">
+      </a>
+    </div>
+    <nav class="xs-popup-main-nav clearfix">
+      <ul class="clearfix ulc">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">over ons</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Meubilair</a></li>
+        <li><a href="#">Fotografie</a></li>
+        <li><a href="#">Drank / Catering</a></li>
+        <li><a href="#">Decoratie</a></li>
+        <li><a href="#">Vervoer</a></li>
+      </ul>
+    </nav>
+    <div class="xs-popup-main-menu-ftr">
+      <div class="xs-popup-social">
+        <ul class="clearfix ulc">
+          <li><a href="#">
+            <i>
+              <svg class="hdr-fb-icon" width="20" height="20" viewBox="0 0 20 20" fill="#fff">
+                <use xlink:href="#hdr-fb-icon-svg"></use>
+              </svg>  
+            </i>
+          </a>
+          </li>
+          <li>
+            <a href="#">
+              <i>
+                <svg class="hdr-instagram-icon" width="20" height="20" viewBox="0 0 20 20" fill="#fff">
+                  <use xlink:href="#hdr-instagram-icon-svg"></use>
+                </svg>  
+              </i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hdr-topbar-tel">
+        <em> 
+          <svg class="hdr-tel-icon-svg" width="16" height="24" viewBox="0 0 16 24" fill="#919499">
+            <use xlink:href="#hdr-tel-icon-svg"></use>
+          </svg> 
+        </em>
+        <a href="tel:0472 97 40 57">0472 97 40 57</a>
+      </div>
+
+      <div class="xs-menu-popup-close-btn">
+        <span><img src="assets/images/close-icon.png"></span>
+        <span>SLUIT</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- - end of xs menu bar and pop up menu -- -->
+
+</header>
 
 <section class="page-banner">
   <a class="main-bnr-rgt-btn" href="#">Offerte aanvragen</a>
