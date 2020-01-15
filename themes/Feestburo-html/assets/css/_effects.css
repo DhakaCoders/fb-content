@@ -7,7 +7,7 @@ All Transitions
 .hm-gallery-rgt-overflow:hover .hm-gallery-tp-rgt-img,
 .hm-gallery-overflow:hover .hm-gallery-top-lft-img,
 .hm-catagory-innr:hover .hm-catagory-img,
-a,input,img,textarea,button,svg{
+a,input,img,textarea,button,svg,.fb-proover-categories ul li{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;

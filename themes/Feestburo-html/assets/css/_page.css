@@ -43,6 +43,11 @@ h1.banner-page-title,
     position: fixed;
 }
 
+.page-banner.page-banner-small .page-banner-des-innr{
+	padding-top: 37px;
+	padding-bottom: 35px;
+}
+
 
 /*breadcrumbs*/
 
