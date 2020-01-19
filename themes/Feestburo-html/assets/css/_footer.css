@@ -893,7 +893,7 @@
 	    width: 100%;
 	}
 	.home-b2b-rgt {
-		background: none!important;
+		height: 280px;
 	    float: left;
 	    width: 100%;
 	}
@@ -938,7 +938,9 @@
 }
 
 @media(max-width: 639px){
-
+	.home-b2b-rgt {
+		height: 220px;
+	}
 }
 
 @media(max-width: 575px){

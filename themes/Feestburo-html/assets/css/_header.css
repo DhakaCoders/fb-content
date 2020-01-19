@@ -240,9 +240,10 @@ nav.main-nav > ul > li{
 	padding: 0 13px;
 	font-size: 16px;
 	line-height: 18px;
+	position: relative;
 }
 nav.main-nav > ul > li:last-child{
-	padding-right: 34px;
+	margin-right: 21px;
 }
 nav.main-nav > ul > li > a{
 	font-weight: 600;
@@ -265,16 +266,17 @@ nav.main-nav > ul > li.current-menu-item > a{
 nav.main-nav > ul > li.current-menu-item{
 	position: relative;
 }
-nav.main-nav > ul > li.current-menu-item:after{
+nav.main-nav > ul > li:after{
 	content: "";
 	position: absolute;
 	right: 11px;
 	width: 2px;
 	top: 0;
 	bottom: 0;
-	background: #f58d91
+	background: #f58d91;
+	opacity: 0;
 }
-nav.main-nav > ul > li.current-menu-item > a:after{
+nav.main-nav > ul > li > a:after{
 	content: "";
 	position: absolute;
 	top: 0;
@@ -282,8 +284,9 @@ nav.main-nav > ul > li.current-menu-item > a:after{
 	height: 2px;
 	background: #f58d91;
 	width: 50%;
+	opacity: 0;
 }
-nav.main-nav > ul > li.current-menu-item > a:before{
+nav.main-nav > ul > li > a:before{
 	content: "";
 	position: absolute;
 	bottom: 0;
@@ -291,8 +294,13 @@ nav.main-nav > ul > li.current-menu-item > a:before{
 	height: 2px;
 	background: #f58d91;
 	width: 82%;
+	opacity: 0;
 }
-
+nav.main-nav > ul > li.current-menu-item:after,
+nav.main-nav > ul > li.current-menu-item > a:after,
+nav.main-nav > ul > li.current-menu-item > a:before{
+	opacity: 1;
+}
 
 .hdr-search{
 	position: relative;
@@ -359,11 +367,11 @@ nav.main-nav > ul > li.current-menu-item > a:before{
 	color: #fff;
 	background: #EB1C23;
 	text-transform: uppercase;
-	padding: 20px 10px 0;
+	padding: 18px 10px 0;
 	font-weight: 700;
 }
 .main-bnr-des a:hover{
-	background: #e90810;
+	background: #d50910;
 }
 .main-bnr-bg{
 	background-size: cover!important;
@@ -385,7 +393,7 @@ a.main-bnr-rgt-btn{
 	-ms-transform: rotate(-90deg);
 	-webkit-transform: rotate(-90deg);
 	background: #EB1C23;
-	z-index: 10;
+	z-index: 31;
 	display: inline-block;
 	vertical-align: baseline;
 	color: #fff;
@@ -399,7 +407,7 @@ a.main-bnr-rgt-btn:hover{
 	background: #e7070f;
 }
 
-.main-bnr-des span{
+.slick-current .main-bnr-des span{
   -webkit-animation-name: fadeInUpShort;
   animation-name: fadeInUpShort;
   -webkit-animation-duration: 1s;
@@ -409,7 +417,7 @@ a.main-bnr-rgt-btn:hover{
   -webkit-animation-delay: 0.7s;
   animation-delay: 0.7s;
 }
-.main-bnr-des p{
+.slick-current .main-bnr-des p{
   -webkit-animation-name: fadeInUpShort;
   animation-name: fadeInUpShort;
   -webkit-animation-duration: 1s;
@@ -419,7 +427,7 @@ a.main-bnr-rgt-btn:hover{
   -webkit-animation-delay: 1.2s;
   animation-delay: 1.2s;	
 }
-.main-bnr-des a{
+.slick-current .main-bnr-des a{
   -webkit-animation-name: fadeInUpShort;
   animation-name: fadeInUpShort;
   -webkit-animation-duration: 1s;
@@ -702,8 +710,8 @@ a.main-bnr-rgt-btn:hover{
 	}
 	.xs-menu-popup-close-btn {
 		position: fixed;
-		top: 24px;
-		right: 15px;
+		top: 0;
+		right: 0;
 		width: 60px;
 		height: 60px;
 		text-align: center;

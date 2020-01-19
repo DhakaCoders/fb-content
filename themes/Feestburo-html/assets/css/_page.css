@@ -115,10 +115,11 @@ h1.banner-page-title,
 	padding-left: 0;
 }
 .breadcrumbs ul li:first-child:before{
+	display: none;
 	content: "";
 	height: 24px;
 	width: 24px;
-	background: url(../images/page-bnr-home-inc.svg);
+	/*background: url(../images/page-bnr-home-inc.svg);*/
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	position: absolute;
