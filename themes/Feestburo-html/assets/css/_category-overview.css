@@ -424,7 +424,10 @@ a.subcat-meubilair-grd-lnc:hover{
 
 
 
-
+.subcat-meubilair-grd-sec.subcat-meubilair-grd-sec-new .fb-proover-categories{
+	padding-top: 30px;
+	padding-bottom: 40px;
+}
 
 
 
@@ -689,7 +692,9 @@ a.subcat-meubilair-grd-lnc:hover{
 	#sub-cat-meubilair-sec .categoty-meubilair-rgt-vdo .img-zoom > span {
 	    min-height: 400px;
 	}
-
+	.subcat-meubilair-grd-sec.subcat-meubilair-grd-sec-new .fb-proover-categories{
+		padding-bottom: 20px;
+	}
 }
 
 @media(max-width: 479px){

@@ -7,7 +7,7 @@ All Transitions
 .hm-gallery-rgt-overflow:hover .hm-gallery-tp-rgt-img,
 .hm-gallery-overflow:hover .hm-gallery-top-lft-img,
 .hm-catagory-innr:hover .hm-catagory-img,
-a,input,img,textarea,button,svg{
+a,input,img,textarea,button,svg,.fb-proover-categories ul li{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
@@ -26,7 +26,7 @@ a,input,img,textarea,button,svg{
 }
 .pt-btm-slide-item:hover .pt-btm-slide-item-img a span,
 .hm-gallery-btm-img-inr:hover .hm-gallery-btm-img,
-.hm-gallery-btm-lft:hover .hm-gallery-btm-lft-img,
+.hm-gallery-btm-lft-item:hover .hm-gallery-btm-lft-img,
 .hm-gallery-rgt-overflow:hover .hm-gallery-tp-rgt-img,
 .hm-catagory-innr:hover .hm-catagory-img,
 a,input,img,textarea,button{
@@ -36,14 +36,14 @@ a,input,img,textarea,button{
 }
 .pt-btm-slide-item:hover .pt-btm-slide-item-img a span,
 .hm-gallery-btm-img-inr:hover .hm-gallery-btm-img,
-.hm-gallery-btm-lft:hover .hm-gallery-btm-lft-img,
+.hm-gallery-btm-lft-item:hover .hm-gallery-btm-lft-img,
 .hm-gallery-rgt-overflow:hover .hm-gallery-tp-rgt-img,
 .hm-catagory-innr:hover .hm-catagory-img,
 .scale{
-	transform: scale(1.03);
-	-ms-transform: scale(1.03);
-	-webkit-transform: scale(1.03);
-	-o-transform: scale(1.03);
+	transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-o-transform: scale(1.1);
 }
 
 /**

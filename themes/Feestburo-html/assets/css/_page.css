@@ -43,6 +43,11 @@ h1.banner-page-title,
     position: fixed;
 }
 
+.page-banner.page-banner-small .page-banner-des-innr{
+	padding-top: 37px;
+	padding-bottom: 35px;
+}
+
 
 /*breadcrumbs*/
 
@@ -110,10 +115,11 @@ h1.banner-page-title,
 	padding-left: 0;
 }
 .breadcrumbs ul li:first-child:before{
+	display: none;
 	content: "";
 	height: 24px;
 	width: 24px;
-	background: url(../images/page-bnr-home-inc.svg);
+	/*background: url(../images/page-bnr-home-inc.svg);*/
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	position: absolute;
@@ -130,8 +136,20 @@ h1.banner-page-title,
 	display: none;
 }
 
-
-
+.sitemap{
+	padding: 50px;
+}
+.sitemap ol{
+	padding: 10px;
+	padding-left: 50px;
+}
+.sitemap ol li{
+	padding-bottom: 10px;
+	text-transform: capitalize;
+}
+.sitemap ol li a:focus{
+	text-decoration: underline;
+}
 
 
 /*
@@ -348,7 +366,10 @@ h1.banner-page-title,
 }
 
 @media(max-width: 991px){
-
+	.page-banner a.main-bnr-rgt-btn,
+	a.main-bnr-rgt-btn{
+		display: none;
+	}
 }
 
 @media(max-width: 767px){

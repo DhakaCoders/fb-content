@@ -681,6 +681,23 @@ if (windowWidth <= 991) {
 
 //$("[data-fancybox]").fancybox({});
 
+/**
+Banner slider
+*/
+if( $('.bannerSlider').length ){
+    $('.bannerSlider').slick({
+      pauseOnHover: false,
+      autoplay: false,
+      autoplaySpeed: 5000,
+      arrows:false,
+      dots: false,
+      infinite: false,
+      speed: 1000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: true,
+    });
+}
 
 /**
 Slick slider
