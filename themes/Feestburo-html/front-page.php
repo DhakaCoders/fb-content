@@ -1,7 +1,11 @@
-<?php get_header(); 
+<?php 
+get_header(); 
+?>
+  
+<?php  
   $hshowhide_slide = get_field('showhide_slider', HOMEID);
   $hslides = get_field('home_slider', HOMEID);
-  if($hshowhide_slide){
+  if($hshowhide_slide):
 ?>
 <section class="main-banner">
   <?php if($hslides){ ?>
@@ -35,10 +39,13 @@
   </div>  
   <?php } ?>    
 </section>
-<?php } 
+<?php endif; ?>
+
+
+<?php
   $hshowhide_diensten = get_field('showhide_diensten', HOMEID);
   $hdienstens = get_field('home_diensten', HOMEID);
-  if($hshowhide_diensten){
+  if($hshowhide_diensten):
 ?>
 <section class="hm-catagorys-sec-wrp">
   <?php if($hdienstens){ ?>
@@ -58,10 +65,10 @@
             <?php if( !empty($hdiensten['icon']) ): ?>
             <span><i><img src="<?php echo $hdiensten['icon']; ?>" alt="<?php echo cbv_get_image_alt($hdiensten['icon']); ?>"></i></span>
             <span><em><img src="<?php echo THEME_URI; ?>/assets/images/chair-table-icon-hover.svg"></em></span>
-            <?php 
-            endif;
+            <?php endif;
+
              $knop2 = $hdiensten['knop'];
-             $knopurl2= (is_array( $knop ) &&  !empty( $knop['url'] ))?  $knop['url']: '#';
+             $knopurl2 = (is_array( $knop ) &&  !empty( $knop['url'] ))?  $knop['url']: 'javascript:void(0)';
               if( !empty($hdiensten['titel']) ) printf(' <h5 class="hide-xs"><a href="%s">%s</a></h5>', $knopurl2, $hdiensten['titel']);
               if( is_array( $knop2 ) &&  !empty( $knop2['url'] ) ){
                   printf('<h5 class="show-xs"><a href="%s" target="%s">%s</a></h5>', $knop2['url'], $knop2['target'], $knop2['title']); 
@@ -74,11 +81,14 @@
     </ul>
   </div> 
   <?php } ?>     
-</section><!-- end of hm-catagorys-sec-wrp-->
-<?php } 
+</section>
+<?php endif; ?>
+
+
+<?php
   $hshowhide_usp = get_field('showhide_usp', HOMEID);
   $husps = get_field('home_usps', HOMEID);
-  if( $hshowhide_usp ){
+  if( $hshowhide_usp ):
 ?>
 <section class="hm-service-sec-wrp">
   <?php if( $husps ){ ?>
@@ -105,12 +115,15 @@
     </div>
   </div>
   <?php } ?>
-</section><!-- end of hm-service-sec-wrp -->
-<?php } 
+</section>
+<?php endif; ?>
+
+
+<?php
   $hshowhide_cases = get_field('showhide_cases', HOMEID);
   $hcasesgrp = get_field('cases_in_de_kijker', HOMEID);
   $hcasesids = $hcasesgrp['cases'];
-  if( $hshowhide_cases ){
+  if( $hshowhide_cases ):
 ?>
 <section class="hm-gallery-post-sec-wrp">
   <div class="container">
@@ -203,12 +216,15 @@
       </div>
     </div>
   </div>
-</section><!-- end of hm-gallery-post-sec-wrp -->
-<?php } 
+</section>
+<?php endif; ?>
+
+
+<?php
   $hshowhide_feesten = get_field('showhide_feesten', HOMEID);
   $hfeesten = get_field('home_feesten', HOMEID);
   $allfeestens = $hfeesten['all_feesten'];
-  if( $hshowhide_feesten ){
+  if( $hshowhide_feesten ):
 ?>
 <section class="hm-single-post-sec-wrp">
   <div class="container">
@@ -249,12 +265,15 @@
       </div>
     </div>
   </div>
-</section><!-- end of hm-single-post-sec-wrp -->
-<?php } 
+</section>
+<?php endif; ?>
+
+
+<?php
   $hshowhide_producten = get_field('showhide_producten', HOMEID);
   $ptitel = get_field('ptitel', HOMEID);
   $fproducts = get_field('featured_producten', HOMEID);
-  if( $hshowhide_producten ){
+  if( $hshowhide_producten ):
 ?>
 <section class="hm-gallery-btm-sec-wrp">
   <div class="container">
@@ -330,12 +349,14 @@
       </div>
     </div>
   </div>
-</section><!--end of hm-gallery-btm-sec-wrp -->
+</section>
+<?php endif; ?>
 
-<?php }
+
+<?php
   $hshowhide_b2bp = get_field('showhide_b2bp', HOMEID);
   $hb2bp = get_field('home_b2b_partner', HOMEID);
-  if( $hshowhide_b2bp ){
+  if( $hshowhide_b2bp ):
     $hb2bsrc = '';
     if(!empty($hb2bp['afbeelding']))
       $hb2bsrc = cbv_get_image_src($hb2bp['afbeelding'], 'hb2b');
@@ -362,10 +383,13 @@
     </div>
   </div>    
 </section>
-<?php } 
+<?php endif; ?>
+
+
+<?php
   $hshowhide_overons = get_field('showhide_overons', HOMEID);
   $hoverons = get_field('home_overons', HOMEID);
-  if( $hshowhide_overons ){
+  if( $hshowhide_overons ):
     $hoversrc = '';
     if(!empty($hoverons['afbeelding']))
       $hoversrc = cbv_get_image_src($hoverons['afbeelding'], 'hovers');
@@ -374,7 +398,6 @@
     if( !empty($hoverons['logo']) ) 
       $hovertag = cbv_get_image_tag($hoverons['logo']);
 ?>
-
 <section class="home-feest-buro-sec">
   <div class="container">
     <div class="row">
@@ -382,9 +405,7 @@
         <div class="feest-buro-innr clearfix"> 
           <div class="feest-buro-lft matchHeightCol">
             <div class="feest-buro-lft-bg" style="background:url(<?php echo $hoversrc; ?>);"></div>
-            <i>
-              <?php echo $hovertag; ?>
-            </i>
+            <i><?php echo $hovertag; ?></i>
           </div>
           <div class="feest-buro-rgt matchHeightCol">
             <?php
@@ -401,7 +422,7 @@
     </div>
   </div>    
 </section>
-<?php } ?>
+<?php endif; ?>
 
 <section class="ftr-top-newsletter-con"> 
   <div class="container">
