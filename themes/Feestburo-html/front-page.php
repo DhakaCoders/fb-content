@@ -141,10 +141,9 @@
             'order'=> 'DESC',
           ));
         }
-        if( $refQuery->have_posts() ):
-
         ?>
         <div class="hm-gallery-item-top-wrp clearfix">
+          <?php if( $refQuery->have_posts() ){ ?>
           <div class="hm-gallery-item-top-lft">
             <div class="HmGalleryItem">
               <span class="leftArrow"></span>
@@ -152,6 +151,9 @@
             </div>
             <ul id="HmGalleryItemTopLft">
               <?php
+                $pcount = $refQuery->found_posts;
+                $getid = 0;
+                $i = 1;
                 while($refQuery->have_posts()): $refQuery->the_post(); 
                 $refImage = get_post_thumbnail_id(get_the_ID());
                 if(!empty($refImage)){
@@ -168,19 +170,36 @@
                   <a href="<?php the_permalink(); ?>" class="hm-gallery-small-btn"><?php the_title(); ?></a>
                 </div>
               </li>
-              <?php endwhile; ?>
+              <?php if($pcount == $i) $getid = get_the_ID(); $i++; endwhile; ?>
             </ul>
           </div>
+          <?php wp_reset_postdata(); } 
+          if( $getid > 0 ){
+            $refQuery2 = new WP_Query(array(
+              'post_type' => 'referentie',
+              'posts_per_page'=> 1,
+              'post__in' => array($getid)
+            ));
+            if( $refQuery2->have_posts() ){
+              while($refQuery2->have_posts()): $refQuery2->the_post(); 
+                $refImage2 = get_post_thumbnail_id(get_the_ID());
+              if(!empty($refImage2)){
+                $refImgsrc2 = cbv_get_image_src($refImage2);
+              }else{
+                $refImgsrc2 = THEME_URI.'/assets/images/hm-tp-gallery-small-img-1.png';
+              }
+          ?>
           <div class="hm-gallery-item-top-rgt hide-xs">
             <div class="hm-gallery-rgt-overflow">
-              <a href="#" class="overlay-link"></a>
-              <div class="hm-gallery-tp-rgt-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-gallery-tp-rgt-img.png);">
+              <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
+              <div class="hm-gallery-tp-rgt-img" style="background: url(<?php echo $refImgsrc; ?>);">
               </div>
-              <a href="#" class="hm-gallery-big-btn">Lorem ipsum</a>
+              <a href="<?php the_permalink(); ?>" class="hm-gallery-big-btn"><?php the_title(); ?></a>
             </div>
           </div>
+         <?php endwhile; wp_reset_postdata(); } } ?>
         </div>
-        <?php wp_reset_postdata(); endif; ?>
+        
       </div>
     </div>
   </div>
@@ -231,17 +250,20 @@
     </div>
   </div>
 </section><!-- end of hm-single-post-sec-wrp -->
-<?php } ?>
-
-
-
+<?php } 
+  $hshowhide_producten = get_field('showhide_producten', HOMEID);
+  $ptitel = get_field('ptitel', HOMEID);
+  $fproducts = get_field('featured_producten', HOMEID);
+  if( $hshowhide_producten ){
+?>
 <section class="hm-gallery-btm-sec-wrp">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
         <div class="hm-post-title">
-          <h3><strong>Producten</strong> Spotlight</h3>
+          <?php if( !empty($ptitel) ) printf('<h3>%s</h3>', $ptitel); ?>
         </div>
+        <?php if($fproducts): ?>
         <div class="hm-gallery-btm-wrp clearfix">
           <div class="hm-gallery-btm-lft">
             <div class="HmGalleryBtmPagi">
@@ -249,54 +271,26 @@
                 <span class="rightArrow"></span>
             </div>
             <div id="HmGalleryBtmLft">
+              <?php 
+                foreach($fproducts as $fproduct): 
+                  $fpimagesrc = '';
+                  if(!empty($fproduct['afbeelding']))
+                    $fpimagesrc = cbv_get_image_src($fproduct['afbeelding'], 'hovers');
+                  $knop6 = $fproduct['knop'];
+              ?>
               <div class="hm-gallery-btm-lft-item">
-                <a href="#" class="overlay-link"></a>
-                <div class="hm-gallery-btm-lft-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-gallery-btm-lft-img.png);">
+                <?php if( is_array( $knop6 ) &&  !empty( $knop6['url'] ) ){ ?>
+                <a href="<?php echo $knop6['url']; ?>" class="overlay-link"></a>
+                <?php } ?>
+                <div class="hm-gallery-btm-lft-img" style="background: url(<?php echo $fpimagesrc; ?>);">
                 </div>
-                <a href="#" class="hm-gallery-btm-lft-btn">feestmeubilair</a>
+                <?php 
+                  if( is_array( $knop5 ) &&  !empty( $knop5['url'] ) ){
+                    printf('<a class="hm-gallery-btm-lft-btn" href="%s" target="%s">%s</a>', $knop5['url'], $knop5['target'], $knop5['title']); 
+                  }
+                ?>
               </div>
-              <div class="hm-gallery-btm-lft-item">
-                <a href="#" class="overlay-link"></a>
-                <div class="hm-gallery-btm-lft-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-gallery-btm-lft-img.png);">
-                </div>
-                <a href="#" class="hm-gallery-btm-lft-btn">feestmeubilair</a>
-              </div>
-              <div class="hm-gallery-btm-lft-item">
-                <a href="#" class="overlay-link"></a>
-                <div class="hm-gallery-btm-lft-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-gallery-btm-lft-img.png);">
-                </div>
-                <a href="#" class="hm-gallery-btm-lft-btn">feestmeubilair</a>
-              </div>
-              <div class="hm-gallery-btm-lft-item">
-                <a href="#" class="overlay-link"></a>
-                <div class="hm-gallery-btm-lft-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-gallery-btm-lft-img.png);">
-                </div>
-                <a href="#" class="hm-gallery-btm-lft-btn">feestmeubilair</a>
-              </div>
-              <div class="hm-gallery-btm-lft-item">
-                <a href="#" class="overlay-link"></a>
-                <div class="hm-gallery-btm-lft-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-gallery-btm-lft-img.png);">
-                </div>
-                <a href="#" class="hm-gallery-btm-lft-btn">feestmeubilair</a>
-              </div>
-              <div class="hm-gallery-btm-lft-item show-xs">
-                <a href="#" class="overlay-link"></a>
-                <div class="hm-gallery-btm-lft-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/gallery-btm-tp-img-1.png);">
-                </div>
-                <a href="#" class="hm-gallery-btm-lft-btn">feestmeubilair</a>
-              </div>
-              <div class="hm-gallery-btm-lft-item show-xs">
-                <a href="#" class="overlay-link"></a>
-                <div class="hm-gallery-btm-lft-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/gallery-btm-tp-img-2.png);">
-                </div>
-                <a href="#" class="hm-gallery-btm-lft-btn">feestmeubilair</a>
-              </div>
-              <div class="hm-gallery-btm-lft-item show-xs">
-                <a href="#" class="overlay-link"></a>
-                <div class="hm-gallery-btm-lft-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-gallery-btm-img.png);">
-                </div>
-                <a href="#" class="hm-gallery-btm-lft-btn">feestmeubilair</a>
-              </div>
+              <?php endforeach; ?>
             </div>
           </div>
           <div class="hm-gallery-btm-rgt">
@@ -332,30 +326,54 @@
             </div>
           </div>
         </div>
+        <?php endif; ?>
       </div>
     </div>
   </div>
 </section><!--end of hm-gallery-btm-sec-wrp -->
 
-
+<?php }
+  $hshowhide_b2bp = get_field('showhide_b2bp', HOMEID);
+  $hb2bp = get_field('home_b2b_partner', HOMEID);
+  if( $hshowhide_b2bp ){
+    $hb2bsrc = '';
+    if(!empty($hb2bp['afbeelding']))
+      $hb2bsrc = cbv_get_image_src($hb2bp['afbeelding'], 'hb2b');
+?>
 <section class="home-b2b-sec">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
         <div class="home-b2b-innr clearfix">
-          <div class="home-b2b-rgt matchHeightCol" style="background:url(<?php echo THEME_URI; ?>/assets/images/b2b-rgt-img.jpg);">
+          <div class="home-b2b-rgt matchHeightCol" style="background:url(<?php echo $hb2bsrc; ?>);">
           </div> 
           <div class="home-b2b-lft matchHeightCol" style="background:url(<?php echo THEME_URI; ?>/assets/images/b2b-left-bg.jpg);">
-            <h3><strong>b2b</strong> partner</h3>
-            <p>Bent je event- of weddingplanner, heb je een feestzaal of evenementenhal en nog op zoek naar een partner? <br/>Neem dan hier contact op en ontdek onze pattneroplossingen</p>
-            <a href="#">Contacteer ons</a>
+            <?php
+              if( !empty($hb2bp['titel']) ) printf('<h3>%s</h3>', $hb2bp['titel']);
+              if( !empty($hb2bp['beschrijving']) ) echo wpautop( $hb2bp['beschrijving'] );
+              $knop8 = $hb2bp['knop'];
+              if( is_array( $knop8 ) &&  !empty( $knop8['url'] ) ){
+                  printf('<a href="%s" target="%s">%s</a>', $knop8['url'], $knop8['target'], $knop8['title']); 
+              }
+            ?>
           </div>
         </div>
       </div>
     </div>
   </div>    
 </section>
+<?php } 
+  $hshowhide_overons = get_field('showhide_overons', HOMEID);
+  $hoverons = get_field('home_overons', HOMEID);
+  if( $hshowhide_overons ){
+    $hoversrc = '';
+    if(!empty($hoverons['afbeelding']))
+      $hoversrc = cbv_get_image_src($hoverons['afbeelding'], 'hovers');
 
+    $hovertag = '';
+    if( !empty($hoverons['logo']) ) 
+      $hovertag = cbv_get_image_tag($hoverons['logo']);
+?>
 
 <section class="home-feest-buro-sec">
   <div class="container">
@@ -363,23 +381,27 @@
       <div class="col-sm-12">
         <div class="feest-buro-innr clearfix"> 
           <div class="feest-buro-lft matchHeightCol">
-            <div class="feest-buro-lft-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/feest-buro-img.jpg);"></div>
+            <div class="feest-buro-lft-bg" style="background:url(<?php echo $hoversrc; ?>);"></div>
             <i>
-              <img src="<?php echo THEME_URI; ?>/assets/images/logo-fb-icon.png" alt="">
+              <?php echo $hovertag; ?>
             </i>
           </div>
           <div class="feest-buro-rgt matchHeightCol">
-            <h3><strong>Feest</strong>buro</h3>
-            <p>Suspendisse sem dui, blandit eget est ac, ullamcorper pellentesque dolor. Etiam blandit sit amet arcu id egestas. Mauris eleifend nunc in nibh consequat tincidunt. Duis tristique ante vitae ex cursus, in interdum arcu feugiat. </p>
-            <p>Nulla in arcu vel neque lobortis aliquet sit amet at nibh. Sed ut dui et tortor finibus sagittis. Nam interdum lacus a leo tempor porta. Nam finibus elementum tortor non sodales. Vivamus tincidunt urna vitae diam venenatis, non rhoncus ex lobortis.</p>
-            <a href="#">Over Ons</a>           
+            <?php
+              if( !empty($hoverons['titel']) ) printf('<h3>%s</h3>', $hoverons['titel']);
+              if( !empty($hoverons['beschrijving']) ) echo wpautop( $hoverons['beschrijving'] );
+              $knop9 = $hoverons['knop'];
+              if( is_array( $knop9 ) &&  !empty( $knop9['url'] ) ){
+                  printf('<a href="%s" target="%s">%s</a>', $knop9['url'], $knop9['target'], $knop9['title']); 
+              }
+            ?>         
           </div>
         </div>
       </div>
     </div>
   </div>    
 </section>
-
+<?php } ?>
 
 <section class="ftr-top-newsletter-con"> 
   <div class="container">
