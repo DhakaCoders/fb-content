@@ -205,7 +205,7 @@ get_header();
           <div class="hm-gallery-item-top-rgt hide-xs">
             <div class="hm-gallery-rgt-overflow">
               <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
-              <div class="hm-gallery-tp-rgt-img" style="background: url(<?php echo $refImgsrc; ?>);">
+              <div class="hm-gallery-tp-rgt-img" style="background: url(<?php echo $refImgsrc2; ?>);">
               </div>
               <a href="<?php the_permalink(); ?>" class="hm-gallery-big-btn"><?php the_title(); ?></a>
             </div>
