@@ -315,34 +315,63 @@ get_header();
           <div class="hm-gallery-btm-rgt">
             <div class="hm-gallery-top-img-wrp">
               <ul>
+                <?php 
+                  $i = 1;
+                  foreach($fproducts as $fproduct): 
+                    $fpimagesrc_2 = '';
+                    if(!empty($fproduct['afbeelding']))
+                      $fpimagesrc_2 = cbv_get_image_src($fproduct['afbeelding'], 'hprod2');
+                      $knop_2 = $fproduct['knop'];
+                      if(($i == 2) OR $i == 3){
+                ?>
                 <li>
                   <div class="hm-gallery-top-img-item">
-                    <a href="#" class="overlay-link"></a>
-                    <div class="hm-gallery-top-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/gallery-btm-tp-img-1.png);">
+                    <?php if( is_array( $knop_2 ) &&  !empty( $knop_2['url'] ) ){ ?>
+                      <a href="<?php echo $knop_2['url']; ?>" class="overlay-link"></a>
+                    <?php } ?>
+                    <div class="hm-gallery-top-img" style="background: url(<?php echo $fpimagesrc_2; ?>);">
                     </div>
-                    <a href="#" class="hm-gallery-big-btn">Feestbusje</a>
+                    <?php 
+                      if( is_array( $knop_2 ) &&  !empty( $knop_2['url'] ) ){
+                        printf('<a class="hm-gallery-big-btn" href="%s" target="%s">%s</a>', $knop_2['url'], $knop_2['target'], $knop_2['title']); 
+                      }
+                    ?>
                   </div>
                 </li>
-                <li>
-                  <div class="hm-gallery-top-img-item">
-                    <a href="#" class="overlay-link"></a>
-                    <div class="hm-gallery-top-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/gallery-btm-tp-img-2.png);">
-                    </div>
-                    <a href="#" class="hm-gallery-big-btn">Feestinstabox</a>
-                  </div>
-                </li>
+                <?php } $i++; endforeach; ?>
               </ul>
             </div>
             <div class="hm-gallery-middel-btn">
-              <a href="#" class="hide-xs">Bekijk onze online catalogus voor feestmaterialen</a>
-              <a href="#" class="show-xs">Bekijk de product catalogus</a>
+              <?php 
+                $knop_7 = get_field('featured_producten', HOMEID);
+                if( is_array( $knop_7 ) &&  !empty( $knop_7['url'] ) ){
+                  printf('<a class="hide-xs" href="%s" target="%s">%s</a>', $knop_7['url'], $knop_7['target'], $knop_7['title']); 
+                  printf('<a class="show-xs" href="%s" target="%s">%s</a>', $knop_7['url'], $knop_7['target'], $knop_7['title']); 
+                }
+              ?>
             </div>
+            <?php 
+              $i = 1;
+              foreach($fproducts as $fproduct): 
+                $fpimagesrc_4 = '';
+                if(!empty($fproduct['afbeelding']))
+                  $fpimagesrc_4 = cbv_get_image_src($fproduct['afbeelding'], 'hprod4');
+                  $knop_4 = $fproduct['knop'];
+                  if(($i == 4)){
+            ?>
             <div class="hm-gallery-btm-img-inr">
-              <a href="#" class="overlay-link"></a>
-              <div class="hm-gallery-btm-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-gallery-btm-img.png);">
+              <?php if( is_array( $knop_4 ) &&  !empty( $knop_4['url'] ) ){ ?>
+                <a href="<?php echo $knop_4['url']; ?>" class="overlay-link"></a>
+              <?php } ?>
+              <div class="hm-gallery-btm-img" style="background: url(<?php echo $fpimagesrc_2; ?>);">
               </div>
-              <a href="#" class="hm-gallery-big-btn">Feestlichtbox</a>
+              <?php 
+                if( is_array( $knop_4 ) &&  !empty( $knop_4['url'] ) ){
+                  printf('<a class="hm-gallery-big-btn" href="%s" target="%s">%s</a>', $knop_4['url'], $knop_4['target'], $knop_4['title']); 
+                }
+              ?>
             </div>
+            <?php } $i++; endforeach; ?>
           </div>
         </div>
         <?php endif; ?>

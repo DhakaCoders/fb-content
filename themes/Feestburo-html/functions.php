@@ -25,6 +25,8 @@ if( !function_exists('cbv_theme_setup') ){
 		add_image_size( 'feestengrid', 306, 210, true );
 		add_image_size( 'hovers', 672, 802, true );
 		add_image_size( 'hb2b', 646, 472, true );
+		add_image_size( 'hprod2', 318, 400, true );
+		add_image_size( 'hprod4', 662, 400, true );
 		
 
 		
