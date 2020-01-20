@@ -1,144 +1,149 @@
-<?php get_header(); ?>
-
+<?php get_header(); 
+  $hshowhide_slide = get_field('showhide_slider', HOMEID);
+  $hslides = get_field('home_slider', HOMEID);
+  if($hshowhide_slide){
+?>
 <section class="main-banner">
-  <a class="main-bnr-rgt-btn" href="#">Offerte aanvragen</a>
-  <div class="main-bnr-bg" style="background: url(<?php echo THEME_URI; ?>/assets/images/home-bnr-img.jpg);"></div>
-  <div class="main-bnr-des-controller">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="main-bnr-des">
-            <span><strong>Feest</strong>buro</span>
-            <p>Uw partner voor originele feestconcepten.</p>
-            <a href="#">Prijs aanvragen</a>
+  <?php if($hslides){ ?>
+  <div class="bannerSlider">
+    <?php 
+      foreach( $hslides as $hslide ): 
+      $slideposter = !empty($hslide['afbeelding'])? $hslide['afbeelding']: '';
+    ?>
+    <div class="bannerSliderItem">
+      <div class="main-bnr-bg" style="background: url(<?php echo $slideposter; ?>);"></div>
+      <div class="main-bnr-des-controller">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="main-bnr-des">
+                <?php 
+                  if( !empty($hslide['titel']) ) printf('<span>%s</span>', $hslide['titel']);
+                  if( !empty($hslide['subtitel']) ) printf('<p>%s</p>', $hslide['subtitel']);
+                  $knop = $hslide['knop'];
+                  if( is_array( $knop ) &&  !empty( $knop['url'] ) ){
+                      printf('<a href="%s" target="%s">%s</a>', $knop['url'], $knop['target'], $knop['title']); 
+                  }
+                ?>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>    
+      </div>    
+    </div> 
+    <?php endforeach; ?>
+  </div>  
+  <?php } ?>    
 </section>
-
+<?php } 
+  $hshowhide_diensten = get_field('showhide_diensten', HOMEID);
+  $hdienstens = get_field('home_diensten', HOMEID);
+  if($hshowhide_diensten){
+?>
 <section class="hm-catagorys-sec-wrp">
+  <?php if($hdienstens){ ?>
   <div class="hm-catagory-wrp">
     <ul>
+    <?php 
+      foreach( $hdienstens as $hdiensten ): 
+      $hdienposter = !empty($hdiensten['afbeelding'])? $hdiensten['afbeelding']: '';
+    ?>
       <li>
         <div class="hm-catagory-innr clearfix">
           <a href="#" class="overlay-link"></a>
           <div class="hm-catagory-img-controller">
-            <div class="hm-catagory-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-catagory-img-1.png);"></div>
+            <div class="hm-catagory-img" style="background: url(<?php echo $hdienposter; ?>);"></div>
           </div>
           <div class="hm-catagory-dsc">
-            <span><i><img src="<?php echo THEME_URI; ?>/assets/images/chair-table-icon.svg"></i></span>
+            <?php if( !empty($hdiensten['icon']) ): ?>
+            <span><i><img src="<?php echo $hdiensten['icon']; ?>" alt="<?php echo cbv_get_image_alt($hdiensten['icon']); ?>"></i></span>
             <span><em><img src="<?php echo THEME_URI; ?>/assets/images/chair-table-icon-hover.svg"></em></span>
-            <h5 class="hide-xs"><a href="#">Meubilair & Feestmaterialen</a></h5>
-            <h5 class="show-xs"><a href="#">meubilair</a></h5>
+            <?php 
+            endif;
+             $knop2 = $hdiensten['knop'];
+             $knopurl2= (is_array( $knop ) &&  !empty( $knop['url'] ))?  $knop['url']: '#';
+              if( !empty($hdiensten['titel']) ) printf(' <h5 class="hide-xs"><a href="%s">%s</a></h5>', $knopurl2, $hdiensten['titel']);
+              if( is_array( $knop2 ) &&  !empty( $knop2['url'] ) ){
+                  printf('<h5 class="show-xs"><a href="%s" target="%s">%s</a></h5>', $knop2['url'], $knop2['target'], $knop2['title']); 
+              }
+            ?>
           </div>
         </div>
       </li>
-      <li>
-        <div class="hm-catagory-innr clearfix">
-           <a href="#" class="overlay-link"></a>
-          <div class="hm-catagory-img-controller">
-            <div class="hm-catagory-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-catagory-img-2.png);"></div>
-          </div>
-          <div class="hm-catagory-dsc">
-            <span><i><img src="<?php echo THEME_URI; ?>/assets/images/camera-icon.svg"></i></span>
-            <span><em><img src="<?php echo THEME_URI; ?>/assets/images/camera-icon-hover.svg"></em></span>
-            <h5 class="hide-xs"><a href="#">Photobooth's & </a></h5>
-            <h5 class="show-xs"><a href="#">Fotografie</a></h5>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="hm-catagory-innr clearfix">
-          <a href="#" class="overlay-link"></a>
-          <div class="hm-catagory-img-controller">
-            <div class="hm-catagory-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-catagory-img-3.png);"></div>
-          </div>
-          <div class="hm-catagory-dsc">
-            <span><i><img src="<?php echo THEME_URI; ?>/assets/images/drinks-icon.svg"></i></span>
-            <span><em><img src="<?php echo THEME_URI; ?>/assets/images/drinks-icon-hover.svg"></em></span>
-            <h5 class="hide-xs"><a href="#">Mobiele bars & catering</a></h5>
-            <h5 class="show-xs"><a href="#">drank / catering</a></h5>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="hm-catagory-innr clearfix">
-          <a href="#" class="overlay-link"></a>
-          <div class="hm-catagory-img-controller">
-            <div class="hm-catagory-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-catagory-img-4.png);"></div>
-          </div>
-          <div class="hm-catagory-dsc">
-            <span><i><img src="<?php echo THEME_URI; ?>/assets/images/birthday-party-icon.svg"></i></span>
-            <span><em><img src="<?php echo THEME_URI; ?>/assets/images/birthday-party-icon-hover.svg"></em></span>
-            <h5 class="hide-xs"><a href="#">Party Rentals & Animatie</a></h5>
-            <h5 class="show-xs"><a href="#">decoratie</a></h5>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="hm-catagory-innr clearfix">
-          <a href="#" class="overlay-link"></a>
-          <div class="hm-catagory-img-controller">
-            <div class="hm-catagory-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-catagory-img-5.png);"></div>
-          </div>
-          <div class="hm-catagory-dsc">
-            <span><i><img src="<?php echo THEME_URI; ?>/assets/images/car-icon.svg"></i></span>
-            <span><em><img src="<?php echo THEME_URI; ?>/assets/images/car-icon-hover.svg"></em></span>
-            <h5><a href="#">vervoer</a></h5>
-          </div>
-        </div>
-      </li>
+      <?php endforeach; ?>
     </ul>
-  </div>      
+  </div> 
+  <?php } ?>     
 </section><!-- end of hm-catagorys-sec-wrp-->
-
-
+<?php } 
+  $hshowhide_usp = get_field('showhide_usp', HOMEID);
+  $husps = get_field('home_usps', HOMEID);
+  if( $hshowhide_usp ){
+?>
 <section class="hm-service-sec-wrp">
+  <?php if( $husps ){ ?>
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
         <div class="hm-service-wrp clearfix">
           <ul id="HmServiceSlider">
+            <?php foreach( $husps as $husp ): ?>
             <li>
               <div class="hm-service-dsc">
-                <i><img src="<?php echo THEME_URI; ?>/assets/images/hm-service-map.svg"></i>
-                <h5>Centrale ligging</h5>
-                <p>Quisque euismod nulla a tortor mattis, in laoreet ex luctus magna commodo.</p>
+                <?php if( !empty($husp['icon']) ): ?>
+                <i><img src="<?php echo $husp['icon']; ?>" alt="<?php echo cbv_get_image_alt( $husp['icon'] ); ?>"></i>
+                <?php endif; 
+                  if( !empty($husp['titel']) ) printf('<h5>%s</h5>', $husp['titel']);
+                  if( !empty($husp['beschrijving']) ) echo wpautop( $husp['beschrijving'] );
+                ?>
               </div>
             </li>
-            <li>
-              <div class="hm-service-dsc">
-                <i><img src="<?php echo THEME_URI; ?>/assets/images/hm-service-man.svg"></i>
-                <h5>Makkelijk aanspreekpunt</h5>
-                <p>Quisque euismod nulla a tortor mattis, in laoreet ex luctus magna commodo.</p>
-              </div>
-            </li>
-            <li>
-              <div class="hm-service-dsc">
-                <i><img src="<?php echo THEME_URI; ?>/assets/images/hm-service-medal-icon.svg"></i>
-                <h5>Uniek en evoluerend aanbod</h5>
-                <p>Quisque euismod nulla a tortor mattis, in laoreet ex luctus magna commodo.</p>
-              </div>
-            </li>
+            <?php endforeach; ?>
           </ul>
         </div>
       </div>
     </div>
   </div>
+  <?php } ?>
 </section><!-- end of hm-service-sec-wrp -->
-
-
+<?php } 
+  $hshowhide_cases = get_field('showhide_cases', HOMEID);
+  $hcasesgrp = get_field('cases_in_de_kijker', HOMEID);
+  $hcasesids = $hcasesgrp['cases'];
+  if( $hshowhide_cases ){
+?>
 <section class="hm-gallery-post-sec-wrp">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
         <div class="hm-enti-hdr-dsc">
-          <h1><strong>Onze</strong> Cases</h1>
-          <p>Suspendisse sem dui, blandit eget est ac, ullamcorper pellentesque dolor. Etiam blandit sit amet arcu id egestas. Mauris eleifend nunc in nibh consequat tincidunt. Duis tristique ante vitae ex cursus, in interdum arcu feugiat.</p>
-          <a href="#">Catalogus</a>
+          <?php
+            if( !empty($hcasesgrp['titel']) ) printf('<h1>%s</h1>', $hcasesgrp['titel']);
+            if( !empty($hcasesgrp['beschrijving']) ) echo wpautop( $hcasesgrp['beschrijving'] );
+            $knop3 = $hcasesgrp['knop'];
+            if( is_array( $knop3 ) &&  !empty( $knop3['url'] ) ){
+                printf('<a href="%s" target="%s">%s</a>', $knop3['url'], $knop3['target'], $knop3['title']); 
+            }
+          ?>
         </div>
+        <?php 
+        if( is_array( $hcasesids ) ){
+          $refQuery = new WP_Query(array(
+            'post_type' => 'referentie',
+            'posts_per_page'=> count($hcasesids),
+            'order'=> 'ASC',
+            'post__in' => $hcasesids
+          ));
+        }else{
+          $refQuery = new WP_Query(array(
+            'post_type' => 'referentie',
+            'posts_per_page'=> 7,
+            'order'=> 'DESC',
+          ));
+        }
+        if( $refQuery->have_posts() ):
+
+        ?>
         <div class="hm-gallery-item-top-wrp clearfix">
           <div class="hm-gallery-item-top-lft">
             <div class="HmGalleryItem">
@@ -146,62 +151,24 @@
               <span class="rightArrow"></span>
             </div>
             <ul id="HmGalleryItemTopLft">
+              <?php
+                while($refQuery->have_posts()): $refQuery->the_post(); 
+                $refImage = get_post_thumbnail_id(get_the_ID());
+                if(!empty($refImage)){
+                  $refImgsrc = cbv_get_image_src($refImage);
+                }else{
+                  $refImgsrc = THEME_URI.'/assets/images/hm-tp-gallery-small-img-1.png';
+                }        
+              ?>
               <li>
                 <div class="hm-gallery-top-lft-item">
-                  <a href="#" class="overlay-link"></a>
-                  <div class="hm-gallery-top-lft-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-tp-gallery-small-img-1.png);">
+                  <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
+                  <div class="hm-gallery-top-lft-img" style="background: url(<?php echo $refImgsrc; ?>);">
                   </div>
-                  <a href="#" class="hm-gallery-small-btn">Lorem ipsum</a>
+                  <a href="<?php the_permalink(); ?>" class="hm-gallery-small-btn"><?php the_title(); ?></a>
                 </div>
               </li>
-              <li>
-                <div class="hm-gallery-top-lft-item">
-                  <a href="#" class="overlay-link"></a>
-                  <div class="hm-gallery-top-lft-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-tp-gallery-small-img-2.png);">
-                  </div>
-                   <a href="#" class="hm-gallery-small-btn">Lorem ipsum</a>
-                </div>
-              </li>
-              <li>
-                <div class="hm-gallery-top-lft-item">
-                  <a href="#" class="overlay-link"></a>
-                  <div class="hm-gallery-top-lft-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-tp-gallery-small-img-3.png);">
-                  </div>
-                   <a href="#" class="hm-gallery-small-btn">Lorem ipsum</a>
-                </div>
-              </li>
-              <li>
-                <div class="hm-gallery-top-lft-item">
-                  <a href="#" class="overlay-link"></a>
-                  <div class="hm-gallery-top-lft-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-tp-gallery-small-img-4.png);">
-                  </div>
-                   <a href="#" class="hm-gallery-small-btn">Lorem ipsum</a>
-                </div>
-              </li>
-              <li>
-                <div class="hm-gallery-top-lft-item">
-                  <a href="#" class="overlay-link"></a>
-                  <div class="hm-gallery-top-lft-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-tp-gallery-small-img-5.png);">
-                  </div>
-                   <a href="#" class="hm-gallery-small-btn">Lorem ipsum</a>
-                </div>
-              </li>
-              <li>
-                <div class="hm-gallery-top-lft-item">
-                  <a href="#" class="overlay-link"></a>
-                  <div class="hm-gallery-top-lft-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-tp-gallery-small-img-6.png);">
-                  </div>
-                  <a href="#" class="hm-gallery-small-btn">Lorem ipsum</a>
-                </div>
-              </li>
-              <li class="show-xs">
-                <div class="hm-gallery-top-lft-item">
-                  <a href="#" class="overlay-link"></a>
-                  <div class="hm-gallery-top-lft-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-gallery-tp-rgt-img.png);">
-                  </div>
-                  <a href="#" class="hm-gallery-small-btn">Lorem ipsum</a>
-                </div>
-              </li>
+              <?php endwhile; ?>
             </ul>
           </div>
           <div class="hm-gallery-item-top-rgt hide-xs">
@@ -213,60 +180,58 @@
             </div>
           </div>
         </div>
+        <?php wp_reset_postdata(); endif; ?>
       </div>
     </div>
   </div>
 </section><!-- end of hm-gallery-post-sec-wrp -->
-
-
+<?php } 
+  $hshowhide_feesten = get_field('showhide_feesten', HOMEID);
+  $hfeesten = get_field('home_feesten', HOMEID);
+  $allfeestens = $hfeesten['all_feesten'];
+  if( $hshowhide_feesten ){
+?>
 <section class="hm-single-post-sec-wrp">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
         <div class="hm-post-title">
-          <h3>voor welke feesten kan <strong>je bij ons terecht</strong></h3>
+          <?php if( !empty($hfeesten['titel']) ) printf('<h3>%s</h3>', $hfeesten['titel']); ?>
         </div>
+        <?php if( $allfeestens ): ?>
         <div class="hm-single-post-wrp clearfix">
           <ul>
+            <?php 
+              foreach( $allfeestens as $afeestens ): 
+                $feeImgsrc = '';
+                if(!empty($afeestens['afbeelding'])){
+                  $feeImgsrc = cbv_get_image_src($afeestens['afbeelding'], 'feestengrid');
+                }
+                $knop5 = $afeestens['knop'];
+            ?>
             <li>
               <div class="hm-single-post-img-item">
-                <a href="#" class="overlay-link"></a>
-                <div class="hm-single-post-img" style="background:url(<?php echo THEME_URI; ?>/assets/images/hm-single-post-img-1.png);">
+                <?php if( is_array( $knop5 ) &&  !empty( $knop5['url'] ) ){ ?>
+                  <a href="<?php echo $knop5['url']; ?>" class="overlay-link"></a>
+                <?php } ?>
+                <div class="hm-single-post-img" style="background:url(<?php echo $feeImgsrc; ?>);">
                 </div>
-                <a href="#" class="hm-gallery-single-small-btn">Huwelijken</a>
+                <?php 
+                  if( is_array( $knop5 ) &&  !empty( $knop5['url'] ) ){
+                      printf('<a class="hm-gallery-single-small-btn" href="%s" target="%s">%s</a>', $knop5['url'], $knop5['target'], $knop5['title']); 
+                  }
+                ?>
               </div>
             </li>
-            <li>
-             <div class="hm-single-post-img-item">
-               <a href="#" class="overlay-link"></a>
-                <div class="hm-single-post-img" style="background:url(<?php echo THEME_URI; ?>/assets/images/hm-single-post-img-2.png);">
-                </div>
-                <a href="#" class="hm-gallery-single-small-btn">Verjaardagen</a>
-             </div>
-            </li>
-            <li>
-              <div class="hm-single-post-img-item">
-                <a href="#" class="overlay-link"></a>
-                <div class="hm-single-post-img" style="background:url(<?php echo THEME_URI; ?>/assets/images/hm-single-post-img-3.png);">
-                </div>
-                <a href="#" class="hm-gallery-single-small-btn">recepties</a>
-              </div>
-            </li>
-            <li>
-              <div class="hm-single-post-img-item">
-                <a href="#" class="overlay-link"></a>
-                <div class="hm-single-post-img" style="background:url(<?php echo THEME_URI; ?>/assets/images/hm-single-post-img-4.png);">
-                </div>
-                <a href="#" class="hm-gallery-single-small-btn">bedrijfsfeesten</a>
-              </div>
-            </li>
+            <?php endforeach; ?>
           </ul>
         </div>
+        <?php endif; ?>
       </div>
     </div>
   </div>
 </section><!-- end of hm-single-post-sec-wrp -->
-
+<?php } ?>
 
 
 

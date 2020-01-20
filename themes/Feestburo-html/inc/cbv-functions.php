@@ -35,7 +35,25 @@ function cbv_get_image_src( $id, $size = 'full' ){
   }
   return false;
 }
+/**
+* Get the image tag with alt/title tag
+*/
+function cbv_get_image_alt( $url ){
+  if( isset( $url ) ){
+    $output = '';
+    $id = attachment_url_to_postid($url);
+    $image_title = get_the_title($id);
+    $image_alt = get_post_meta( $id, '_wp_attachment_image_alt', true);
+    if( empty( $image_alt ) ){
+      $image_alt = $image_title;
+    }
+    $image_alt = str_replace('-', ' ', $image_alt);
+    $output = $image_alt;
 
+    return $output;
+  }
+  return false;
+}
 function cbv_gallery( $gallery = null, $col = 2, $lightbox = false ){
 	$output = '';
     if( is_array( $gallery ) ){

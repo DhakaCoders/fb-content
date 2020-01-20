@@ -22,7 +22,7 @@ if( !function_exists('cbv_theme_setup') ){
 		if(function_exists('add_theme_support')) {
 			add_theme_support('category-thumbnails');
 		}
-		//add_image_size( 'srchgrid', 324, 206, true );
+		add_image_size( 'srchgrid', 306, 210, true );
 		
 
 		
