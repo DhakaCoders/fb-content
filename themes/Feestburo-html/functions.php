@@ -29,7 +29,8 @@ if( !function_exists('cbv_theme_setup') ){
 		add_image_size( 'hprod2', 318, 400, true );
 		add_image_size( 'hprod4', 662, 400, true );
 		add_image_size( 'galerij', 424, 325, true );
-		add_image_size( 'vposter', 646, 672, true );
+		add_image_size( 'rvposter', 646, 672, true );
+		add_image_size( 'rvgalerij', 312, 324, true );
 		
 
 		

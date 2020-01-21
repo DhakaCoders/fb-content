@@ -70,7 +70,7 @@ $informat = get_field('informatie', $thisID);
                     $rimages = $lftpart['images'];
                     if( $lptype ): 
                       if(!empty($vposter['url'])){
-                        $vthumb = $vposter['sizes']['vposter'];
+                        $vthumb = $vposter['sizes']['rvposter'];
                       }
                       $vtag = '';
                       if(!empty($vurl)){
@@ -97,7 +97,7 @@ $informat = get_field('informatie', $thisID);
                         $rgimage = '';
                         $rgimagefull = '';
                         if(!empty($rimage)){
-                          $rgimage = cbv_get_image_src($rimage, 'hb2b');
+                          $rgimage = cbv_get_image_src($rimage, 'rvgalerij');
                           $rgimagefull = cbv_get_image_src($rimage);
                         }
                   ?>
@@ -128,7 +128,7 @@ $informat = get_field('informatie', $thisID);
                     if( $rgptype ): 
                       
                       if(!empty($rvposter)){
-                        $rvthumb = cbv_get_image_src($rvposter, 'vposter');;
+                        $rvthumb = cbv_get_image_src($rvposter, 'rvposter');;
                       }
                       $rvtag = '';
                       if(!empty($rvurl)){
@@ -155,7 +155,7 @@ $informat = get_field('informatie', $thisID);
                         $rrgimage = '';
                         $rrgimagefull = '';
                         if(!empty($rrimage)){
-                          $rrgimage = cbv_get_image_src($rrimage, 'hb2b');
+                          $rrgimage = cbv_get_image_src($rrimage, 'rvgalerij');
                           $rrgimagefull = cbv_get_image_src($rrimage);
                         }
                   ?>
