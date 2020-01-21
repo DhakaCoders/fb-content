@@ -79,7 +79,7 @@ Includes->>
 include_once(THEME_DIR .'/inc/widgets-area.php');
 include_once(THEME_DIR .'/inc/cbv-functions.php');
 include_once(THEME_DIR .'/inc/breadcrumbs.php');
-include_once(THEME_DIR .'/inc/product-loadmore.php');
+//include_once(THEME_DIR .'/inc/product-loadmore.php');
 
 /**
 ACF Option pages->>
@@ -200,4 +200,3 @@ function printr($args){
 	print_r ($args);
 	echo '</pre>';
 }
-
