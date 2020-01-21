@@ -217,7 +217,8 @@
 	line-height: 30px;
 	color: #0C1421;
 }
-.ref-del-data span{
+.ref-del-data span,
+.ref-del-data p{
 	display: block;
 	font-size: 16px;
 	line-height: 30px;
@@ -391,7 +392,8 @@
 	    font-size: 16px;
 	    line-height: 20px;
 	}	
-	.ref-del-data span {
+	.ref-del-data span,
+	.ref-del-data p{
 	    font-size: 14px;
 	    line-height: 25px;
 	}
