@@ -1,13 +1,13 @@
-
-
 <?php
 /*
  * initial posts dispaly
  */
 
 function product_script_load_more($args = array()) {
+  $ccat = get_queried_object();
+
   echo '<ul class="ulc clearfix" id="ajax-content">';
-      ajax_product_script_load_more($args);
+      ajax_product_script_load_more($args, $ccat->slug);
   echo '</ul>';
  
   echo '<div class="nba-mlb-grid-btm-lnc">
@@ -25,7 +25,8 @@ add_shortcode('ajax_product_posts', 'product_script_load_more');
 /*
  * load more script call back
  */
-function ajax_product_script_load_more($args, $termID = '') {
+function ajax_product_script_load_more($args, $term_slug='') {
+  
     //init ajax
     $ajax = false;
     //check ajax call or not
@@ -37,14 +38,14 @@ function ajax_product_script_load_more($args, $termID = '') {
     $num =1;
     //page number
     $paged = 1;
-    if(isset($_POST['catid']) && !empty($_POST['catid'])){
-        $termID = $_POST['catid'];
+    if(isset($_POST['cat_slug']) && !empty($_POST['cat_slug'])){
+        $term_slug = $_POST['cat_slug'];
     }
     
     if(isset($_POST['page']) && !empty($_POST['page'])){
         $paged = $_POST['page'] + $paged;
     }
-     if(!empty($termID)){
+     if(!empty($term_slug)){
         $query = new WP_Query(array( 
             'post_type'=> 'product',
             'post_status' => 'publish',
@@ -55,10 +56,10 @@ function ajax_product_script_load_more($args, $termID = '') {
             'tax_query' => array(
               array(
                 'taxonomy' => 'product_cat',
-                'field' => 'term_id',
-                'terms' => $termID
+                'field' => 'slug',
+                'terms' => $term_slug
               )
-            ),
+            )
           ) 
         );
      }else{
@@ -76,7 +77,7 @@ function ajax_product_script_load_more($args, $termID = '') {
     if($query->have_posts()):
 
     while($query->have_posts()): $query->the_post();
-     $relexcerpt = get_field('product_excerpt', get_the_ID()); 
+     //$relexcerpt = get_field('product_excerpt', get_the_ID()); 
         ?>
         <li>
           <div class="subcat-meubilair-grd">
@@ -106,3 +107,16 @@ function ajax_product_script_load_more($args, $termID = '') {
  */
 add_action('wp_ajax_nopriv_ajax_product_script_load_more', 'ajax_product_script_load_more');
 add_action('wp_ajax_ajax_product_script_load_more', 'ajax_product_script_load_more');
+
+
+
+/*
+ * enqueue js script
+ */
+add_action( 'wp_enqueue_scripts', 'ajax_enqueue_script' );
+/*
+ * enqueue js script call back
+ */
+function ajax_enqueue_script() {
+    wp_enqueue_script( 'script_ajax', get_theme_file_uri( '/assets/js/ajax-script.js' ), array( 'jquery' ), '1.0', true );
+}

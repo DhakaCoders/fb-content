@@ -2,9 +2,12 @@
 /*
   Template Name: Contact
 */
-get_header(); 
+  get_header(); 
   $thisID = get_the_ID();
+  get_template_part( 'templates/page', 'banner' );
+?>
 
+<?php 
   $spacialArry = array(".", "/", "+", " ");$replaceArray = '';
   $adres = get_field('address', 'options');
   $gmapsurl = get_field('google_maps', 'options');
@@ -22,31 +25,6 @@ get_header();
     $contimg = '';
   }
 ?>
-<section class="page-banner">
-  <a class="main-bnr-rgt-btn" href="#">Offerte aanvragen</a>
-  <div class="page-banner-con">
-    <div class="page-banner-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/page-banner-bg.jpg);"></div>
-    <div class="page-banner-des">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="page-banner-des-innr">
-              <strong class="banner-page-title">Contact</strong>
-              <div class="breadcrumbs">
-                <ul>           
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Binnenpagina</a></li>
-                  <li><a href="#">Binnenpagina</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <section class="google-map-sec-wrp">
   <div class="container">
@@ -105,9 +83,9 @@ $cta = get_field('cta', $thisID);
             ?>
           </div>
           <div class="contact-form">
-            <?php 
-              if( !empty( $contacteer['form_shortcode'] ) ) echo do_shortcode($contacteer['form_shortcode']); 
-            ?>
+          <?php 
+          if( !empty( $contacteer['form_shortcode'] ) ) echo do_shortcode($contacteer['form_shortcode']); 
+          ?>
           </div>
         </div>
       </div>

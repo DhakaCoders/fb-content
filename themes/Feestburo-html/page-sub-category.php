@@ -1,9 +1,8 @@
-<?php
+<?php 
 /*
-  Template Name: Category Overview
+  Template Name: Sub-category
 */
 get_header(); 
-
 $thisID = get_the_ID();
 get_template_part( 'templates/page', 'banner' );
 ?>
@@ -15,7 +14,7 @@ get_template_part( 'templates/page', 'banner' );
   $vurl = $video['video_url'];
   $vthumb = '';
   if(!empty($video['poster'])){
-    $vthumb = cbv_get_image_src($video['poster'], 'rvposter');
+    $vthumb = cbv_get_image_src($video['poster'], 'scatvposter');
   }
   $vtag = '';
   if(!empty($vurl)){
@@ -29,7 +28,7 @@ get_template_part( 'templates/page', 'banner' );
     $vtag .= '</a>';
   }
 ?>
-<section class="categoty-meubilair-sec">
+<section class="categoty-meubilair-sec" id="sub-cat-meubilair-sec">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
@@ -41,22 +40,26 @@ get_template_part( 'templates/page', 'banner' );
                     <?php echo $vtag; ?>
                 </div>
               </div>
-            </div>
+            </div>          
             <div class="categoty-meubilair-lft-des">
               <?php
                 $intcontent = $intro['content'];
                 if( !empty($intcontent['titel']) ) printf('<h1>%s</h1>', $intcontent['titel']);
                 if( !empty($intcontent['beschrijving']) ) echo wpautop( $intcontent['beschrijving'] );
               ?>
-              <a href="#subcat-meubilair-grd-sec"><span>Alle producten</span></a>
-            </div>            
+            </div>
+          </div>        
+          <div class="categoty-meubilair-full-des">
+            <?php
+              if( !empty($intro['beschrijving']) ) echo wpautop( $intro['beschrijving'] );
+            ?>
           </div>
         </div>
         <?php
           $gimages = get_field('slider', $thisID);
           if( $gimages ): 
         ?>
-        <div class="catMeubilairSlider-wrp" >
+        <div class="catMeubilairSlider-wrp">
           <div class="clearfix catMeubilairSlider">
             <?php 
               foreach( $gimages as $gimage ):
@@ -78,51 +81,15 @@ get_template_part( 'templates/page', 'banner' );
           </div>
         </div>
         <?php endif; ?>
-      </div>
-    </div>
-  </div>
-</section>
-
-<?php 
-$pcat = get_field('producten_category', $thisID);
-if(!empty($pcat) && $pcat):
-?>
-<section class="subcat-meubilair-grd-sec subcat-meubilair-grd-sec-new" id="subcat-meubilair-grd-sec">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="subcat-meubilair-grd-innr clearfix">
-          <div class="subcat-meubilair-grd-head">
-            <h2><strong><?php echo $pcat->name; ?></strong></h2>
-            <?php if( !empty($pcat->description) ) echo wpautop( $pcat->description ); ?>
-          </div>
-          <div class="fb-proover-categories">
-
-            <?php 
-              $args = array(
-              'type'                     => 'product',
-              'parent'                 => $pcat->term_id,
-              'orderby'                  => 'name',
-              'order'                    => 'ASC',
-              'hide_empty'               => FALSE,
-              'hierarchical'             => 0,
-              'taxonomy'                 => 'product_cat',
-              ); 
-              $child_categories = get_categories($args );
-              echo '<ul class="class ulc clearfix">';
-              foreach($child_categories as $child){
-                echo "<li><a href='".get_term_link( $child )."'>{$child->name}</a></li>";
-              }
-              echo '</ul>';
-            ?>
-          </div>
+        <div class="sub-cat-request-price" style="background:url(<?php echo THEME_URI; ?>/assets/images/sub-cat-request-price-bg.jpg)">
+          <h3>vraag je prijs aan</h3>
+          <p>Pellentesque tincidunt eros lacinia dolor semper tempus. <br /> Etiam quis sapien vitae justo vehicula lacinia.</p>
+          <a href="#"><span>vraag je prijs aan</span></a>
         </div>
       </div>
     </div>
   </div>
 </section>
-<?php endif; ?>
-
 
 
 <section class="ftr-top-newsletter-con"> 

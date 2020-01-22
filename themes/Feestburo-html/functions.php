@@ -32,6 +32,7 @@ if( !function_exists('cbv_theme_setup') ){
 		add_image_size( 'rvposter', 646, 672, true );
 		add_image_size( 'rvgalerij', 312, 324, true );
 		add_image_size( 'gmimg', 290, 264, true );
+		add_image_size( 'scatvposter', 670, 480, true );
 		
 
 		
@@ -80,7 +81,7 @@ Includes->>
 include_once(THEME_DIR .'/inc/widgets-area.php');
 include_once(THEME_DIR .'/inc/cbv-functions.php');
 include_once(THEME_DIR .'/inc/breadcrumbs.php');
-//include_once(THEME_DIR .'/inc/product-loadmore.php');
+include_once(THEME_DIR .'/inc/product-loadmore.php');
 
 /**
 ACF Option pages->>
