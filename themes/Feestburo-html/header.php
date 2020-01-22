@@ -135,6 +135,7 @@
   $telefoon = trim(str_replace($spacialArry, $replaceArray, $show_telefoon));
   $fburl = get_field('facebook_url', 'options');
   $insturl = get_field('instagram_url', 'options');
+  $hevents = get_field('hdr_events', 'options');
 ?>
 <div class="body-overlay"></div>
 <header class="header">
@@ -143,8 +144,10 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="hdr-topbar-inner clearfix">
+            <?php if( !empty($hevents)): ?>
             <div class="hdr-topbar-lft">
               <ul class="clearfix ulc">
+                <?php foreach( $hevents as $hevent ): ?>
                 <li>
                   <div class="hdr-topbar-date-item">
                     <em> 
@@ -152,23 +155,16 @@
                         <use xlink:href="#star-red-icon-svg"></use>
                       </svg> 
                     </em>
-                    <strong>20.10.2019</strong>
-                    <span>Trouwbeurs Burssels Expo</span>
+                    <?php 
+                    if( !empty($hevent['datum']) ) printf('<strong>%s</strong>', $hevent['datum']); 
+                    if( !empty($hevent['titel']) ) printf('<span>%s</span>', $hevent['titel']); 
+                    ?>
                   </div>
                 </li>
-                <li>
-                  <div class="hdr-topbar-date-item">
-                    <em> 
-                      <svg class="star-red-icon-svg" width="25" height="25" viewBox="0 0 25 25" fill="#EB1C23">
-                        <use xlink:href="#star-red-icon-svg"></use>
-                      </svg> 
-                    </em>
-                    <strong>20.10.2019</strong>
-                    <span>Feestburs Burssels Expo</span>
-                  </div>
-                </li>
+                <?php endforeach; ?>
               </ul>
             </div>
+            <?php endif; ?>
             <div class="hdr-topbar-rgt clearfix">
               <div class="hdr-topbar-social">
                 <ul class="clearfix ulc">

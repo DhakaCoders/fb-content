@@ -77,7 +77,7 @@ function ajax_product_script_load_more($args, $term_slug='') {
     if($query->have_posts()):
 
     while($query->have_posts()): $query->the_post();
-     //$relexcerpt = get_field('product_excerpt', get_the_ID()); 
+        $relexcerpt = get_field('product_excerpt', get_the_ID()); 
         ?>
         <li>
           <div class="subcat-meubilair-grd">

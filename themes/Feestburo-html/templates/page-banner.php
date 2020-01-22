@@ -2,10 +2,10 @@
 $thisID = get_the_ID();
 $pageTitle = get_the_title($thisID);
 $standaardbanner = get_field('bannerafbeelding', $thisID);
-$custom_page_title = get_field('custom_page_title', $thisID);
+/*$custom_page_title = get_field('custom_page_titel', $thisID);
 if(!empty(str_replace(' ', '', $custom_page_title))){
   $pageTitle = $custom_page_title;
-}
+}*/
 ?>
 <section class="page-banner">
   <a class="main-bnr-rgt-btn" href="#">Offerte aanvragen</a>
