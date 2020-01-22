@@ -31,6 +31,7 @@ if( !function_exists('cbv_theme_setup') ){
 		add_image_size( 'galerij', 424, 325, true );
 		add_image_size( 'rvposter', 646, 672, true );
 		add_image_size( 'rvgalerij', 312, 324, true );
+		add_image_size( 'gmimg', 290, 264, true );
 		
 
 		

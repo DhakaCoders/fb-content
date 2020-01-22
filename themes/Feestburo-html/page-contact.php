@@ -3,7 +3,7 @@
   Template Name: Contact
 */
 get_header(); 
-
+  $thisID = get_the_ID();
 
   $spacialArry = array(".", "/", "+", " ");$replaceArray = '';
   $adres = get_field('address', 'options');
@@ -13,13 +13,11 @@ get_header();
   $telefoon = trim(str_replace($spacialArry, $replaceArray, $show_telefoon));
   $gmaplink = !empty($gmapsurl)?$gmapsurl: 'javascript:void()';
 
-  $titel = get_field('titel');
-  $beschrijving = get_field('beschrijving');
-  $afbeelding = get_field('afbeelding');
-  $google_map = get_field('google_maps');
+  $gmap = get_field('google_maps', $thisID);
+  $google_map = $gmap['maps'];
 
-  if(!empty($afbeelding)){
-    $contimg = cbv_get_image_src($afbeelding, 'ref_grid');
+  if(!empty($gmap['afbeelding'])){
+    $contimg = cbv_get_image_src($gmap['afbeelding'], 'gmimg');
   }else{
     $contimg = '';
   }
@@ -59,7 +57,10 @@ get_header();
             <div class="Contact-info-img" style="background: url(<?php echo $contimg; ?>)">
             </div>
             <div class="Contact-info-dsc">
-              <?php if( !empty( $adres ) ) printf('<h1><strong>Feest</strong>Buro</h1><p>%s</p>', $adres)  ?>
+              <?php 
+                if( !empty( $gmap['titel'] ) ) printf('<h1>%s</h1>', $gmap['titel']); 
+                if( !empty( $adres ) ) printf('<p>%s</p>', $adres); 
+              ?>
               <?php if( !empty( $show_telefoon ) ): ?>
               <span>
                 <i>
@@ -88,7 +89,10 @@ get_header();
   </div>
   <div data-homeurl="<?php echo THEME_URI; ?>" id="googlemap" data-latitude="<?php echo $google_map['lat']; ?>" data-longitude="<?php echo $google_map['lng']; ?>"></div>
 </section><!-- end of google-map-sec-wrp -->
-
+<?php 
+$contacteer = get_field('contacteer_ons', $thisID);
+$cta = get_field('cta', $thisID);
+?>
 <section class="contact-form-sec-wrp">
   <div class="container">
     <div class="row">
@@ -96,12 +100,14 @@ get_header();
         <div class="contact-form-wrp clearfix">
           <div class="contac-form-dsc">
             <?php 
-              if( !empty( $titel ) ) printf( '<h2>%s</h2>', $titel); 
-              if( !empty( $beschrijving ) ) echo wpautop($beschrijving); 
+              if( !empty( $contacteer['titel'] ) ) printf( '<h2>%s</h2>', $contacteer['titel']); 
+              if( !empty( $contacteer['beschrijving'] ) ) echo wpautop( $contacteer['beschrijving'] ); 
             ?>
           </div>
           <div class="contact-form">
-            <?php echo do_shortcode('[wpforms id="192"]'); ?>
+            <?php 
+              if( !empty( $contacteer['form_shortcode'] ) ) echo do_shortcode($contacteer['form_shortcode']); 
+            ?>
           </div>
         </div>
       </div>
@@ -110,8 +116,13 @@ get_header();
       <div class="col-sm-12">
         <div class="contact-form-offer-btn-wrp">
           <div class="contact-form-offer-btn clearfix">
-            <p>Wenst u meteen een offerte aan te vragen?</p>
-            <a href="#">Offerte aanvragen</a>
+          <?php 
+            if( !empty( $cta['titel'] ) ) printf( '<p>%s</p>', $cta['titel']); 
+            $knop = $cta['knop'];
+            if( is_array( $knop ) &&  !empty( $knop['url'] ) ){
+              printf('<a href="%s" target="%s">%s</a>', $knop['url'], $knop['target'], $knop['title']); 
+            } 
+          ?>
           </div>
         </div>
       </div>
