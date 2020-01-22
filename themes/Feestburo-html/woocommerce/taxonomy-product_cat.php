@@ -18,6 +18,11 @@ if( !empty($cats_root2) && $cats_root2){
 	$cat_details = $cats_root2;
 }
 
+if( !empty($cat_details) && $cat_details ){
+	$cat_details = $ccat;
+	$cats_root = $ccat;
+}
+
 ?>
 <section class="page-banner page-banner-small">
   <div class="page-banner-con">
@@ -73,7 +78,7 @@ if( !empty($cats_root2) && $cats_root2){
               'taxonomy'                 => 'product_cat',
               ); 
               $child_categories = get_categories($args );
-              $child3_id = 0;
+              $child3_id = '';
               echo '<ul class="class ulc clearfix">';
               foreach($child_categories as $child){
               	$activeClass = '';
@@ -84,9 +89,7 @@ if( !empty($cats_root2) && $cats_root2){
                 echo "<li class='".$activeClass."'><a href='".get_term_link( $child )."'>{$child->name}</a></li>";
               }
               echo '</ul>';
-              if($ccat->slug){
 
-              }
               $args = array(
               'parent'                   => $child3_id,
               'orderby'                  => 'name',
@@ -99,7 +102,7 @@ if( !empty($cats_root2) && $cats_root2){
             ?>
         </div>
         <?php 
-        if(!empty($child3_categories) && $child3_categories): 
+        if(!empty((array)$child3_categories) && $child3_categories): 
         	$activeClass2 = '';
         	if( $ccat->term_id == $child3_id ){
           		$activeClass2 = 'fb-proover-sub-cat-active';
@@ -124,7 +127,7 @@ if( !empty($cats_root2) && $cats_root2){
       </div>
     </div>
   </div>
-  <?php ?>
+
   <span style="display: none;" id="catSlug" data-slug="<?php echo $ccat->slug; ?>"></span>
   <div class="product-overview-grds-wrap">
     <div class="container">
