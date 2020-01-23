@@ -680,6 +680,13 @@ a.main-bnr-rgt-btn:hover{
 		padding: 0 15px;
 
 	}
+	.xs-popup-social ul li a{
+		color: #fff;
+		font-size: 18px;
+	}
+	.xs-popup-social ul li a:hover{
+		color: #EB1C23;
+	}
 	.hdr-topbar-tel{
 		float: none;
 		margin-top: 15px;

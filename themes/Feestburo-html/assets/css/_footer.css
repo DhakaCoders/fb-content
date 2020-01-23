@@ -144,6 +144,14 @@
 .ftr-social > ul > li > a:hover{
 	fill:#EB1C23!important;
 }
+.ftr-social.ftsm a{
+	color: #fff;
+	font-size: 16px;
+}
+.ftr-social.ftsm a:hover,
+.ftr-social > ul > li > a:hover{
+  color: #EB1C23;
+}
 .ftr-btm{
 	padding: 36px 0 33px;
 }

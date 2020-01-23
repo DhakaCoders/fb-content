@@ -120,24 +120,17 @@
                 ?>
                 </ul>           
               </div>     
-              <div class="ftr-social">
-                <?php if(!empty($fburl)): ?>
-                <a href="<?php echo esc_url($fburl); ?>" target="_blank">
-                  <i>
-                    <svg class="ftr-fb-svg" width="16" height="16" viewBox="0 0 16 16" fill="white">
-                      <use xlink:href="#ftr-fb-svg"></use>
-                    </svg> 
-                  </i>
-                </a>
-                <?php endif; if(!empty($insturl)): ?>
-                <a href="<?php echo esc_url($insturl); ?>" target="_blank">
-                  <i>
-                    <svg class="ftr-instra-svg" width="16" height="16" viewBox="0 0 16 16" fill="white">
-                      <use xlink:href="#ftr-instra-svg"></use>
-                    </svg> 
-                  </i>
-                </a>
-                <?php endif; ?>
+              <div class="ftr-social ftsm">
+                <?php 
+                  if(!empty($smedias)): 
+                  foreach($smedias as $smedia): ?>
+                  <a target="_blank" href="<?php echo $smedia['url']; ?>">
+                    <?php echo $smedia['icon']; ?>
+                  </a>
+                <?php 
+                  endforeach; 
+                  endif; 
+                ?>
               </div>
             </div>
           </div>
@@ -172,86 +165,20 @@
     </div>
   </div>
 </footer>
-
-
-
-<!-- <div class="home-bnr-xs-nav-bar-controller show-xs">
-  <div class="xs-menu-btn-bar clearfix">
-      <div class="xs-menu-btn-contact">
-        <a href="#">
-          <i><img src="<?php echo THEME_URI; ?>/assets/images/cart-xs-icon.svg"></i>
-        </a>
-      </div>
-      <div class="nav-opener">
-       <div class="nav-opener-btn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <strong>MENU</strong>
-     </div>
-  </div>
-</div>
-
-<div class="xs-popup-main-menu-controller">
-    <div class="xs-popup-logo">
-      <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/logo.svg"></a>
-    </div>
-    <div class="hdr-btm-nav">
-      <ul class="clearfix ulc">
-        <li><a href="#">products</a></li>
-        <li><a href="#">Wi-Fi / LAN</a></li>
-      </ul>
-    </div>
-    <nav class="xs-popup-main-nav clearfix">
-      <ul class="clearfix ulc">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us </a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="hdr-search">
-      <form>
-        <input type="search" name="" placeholder="Search">
-        <button>
-          <em><img src="<?php echo THEME_URI; ?>/assets/images/search-icon.svg"></em>
-        </button>
-      </form>
-    </div>
-    <div class="hdr-cart-btn">
-      <em><img src="<?php echo THEME_URI; ?>/assets/images/cart-icon-white.svg">Shopping Cart</em>
-    </div>
-    <div class="nw-lang">
-      <ul class="ulc">
-        <li class="lag-active"><a href="#">EN </a></li>
-        <li><a href="#">ES</a></li>
-      </ul>
-    </div>
-    <div class="xs-menu-btn-bar-popup">
-      <div class="xs-menu-btn-bar clearfix">
-        <div class="xs-menu-btn-contact">
-          <a href="#">
-            <i><img src="<?php echo THEME_URI; ?>/assets/images/cart-xs-icon.svg"></i>
-          </a>
-        </div>
-        <div class="nav-opener">
-         <div class="nav-opener-btn">
-            <img src="<?php echo THEME_URI; ?>/assets/images/close-icon.svg">
-          </div>
-          <strong>CLOSE</strong>
-       </div>
-      </div>
-    </div>
-</div> -->
-
+<?php if($cproposal && !empty($cproposal)): ?>
 <div class="xs-ftr-btm-red-lnc-wrp show-xs">
-  <div class="ftr-btm-xs-gap-con" style="display: none;">
+  <div class="ftr-btm-xs-gap-con">
     <div class="xs-ftr-btm-red-lnc">
-      <a href="#">OFFERTE AANVRAGEN</a>
+      <?php 
+        $link = $cproposal['knop'];
+        if( is_array( $link ) &&  !empty( $link['url'] ) ){
+         printf('<a href="%s" target="%s"><span>%s</span></a>', $link['url'], $link['target'], $link['title']);
+        }
+      ?>
     </div> 
   </div>
 </div>
+<?php endif;?>
 <?php wp_footer(); ?>
 </body>
 </html>

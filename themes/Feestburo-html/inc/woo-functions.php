@@ -15,3 +15,13 @@ function cbv_woocommerce_breadcrumbs() {
         );
 }
 endif;
+
+function woocommerce_disable_shop_page() {
+    global $post;
+    if (is_shop() OR is_cart() OR is_checkout() OR is_account_page()):
+    global $wp_query;
+    $wp_query->set_404();
+    status_header(404);
+    endif;
+}
+add_action( 'wp', 'woocommerce_disable_shop_page' );

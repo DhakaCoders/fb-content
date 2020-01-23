@@ -275,30 +275,19 @@
       ?>
     </nav>
     <div class="xs-popup-main-menu-ftr">
+      <?php if($smedias): ?>
       <div class="xs-popup-social">
         <ul class="clearfix ulc">
-          <?php if(!empty($fburl)): ?>
-          <li><a href="<?php echo esc_url($fburl); ?>">
-            <i>
-              <svg class="hdr-fb-icon" width="20" height="20" viewBox="0 0 20 20" fill="#fff">
-                <use xlink:href="#hdr-fb-icon-svg"></use>
-              </svg>  
-            </i>
-          </a>
-          </li>
-          <?php endif; if(!empty($insturl)): ?>
-          <li>
-            <a href="<?php echo esc_url($insturl); ?>">
-              <i>
-                <svg class="hdr-instagram-icon" width="20" height="20" viewBox="0 0 20 20" fill="#fff">
-                  <use xlink:href="#hdr-instagram-icon-svg"></use>
-                </svg>  
-              </i>
-            </a>
-          </li>
-          <?php endif; ?>
+          <?php foreach($smedias as $smedia): ?>
+            <li>
+              <a target="_blank" href="<?php echo $smedia['url']; ?>">
+                <?php echo $smedia['icon']; ?>
+              </a>
+            </li>
+          <?php endforeach; ?>
         </ul>
       </div>
+      <?php endif; ?>
       <?php if( !empty( $show_telefoon ) ): ?>
       <div class="hdr-topbar-tel">
         <em> 

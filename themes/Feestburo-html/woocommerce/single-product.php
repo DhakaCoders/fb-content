@@ -47,13 +47,15 @@ $gallery_pro = get_field('producten_galerij', $thisID);
                   ?>
                 <div class="fl-product-summary-btns">
                   <span><a id="go-spacification" href="#">Product Specificaties</a></span>
-                  <?php 
-                  $knop = get_field('knop', get_the_ID());
-                    if( is_array( $knop ) &&  !empty( $knop['url'] ) ){
-                      printf('<span><a href="%s" target="%s">%s</a></span>', $knop['url'], $knop['target'], $knop['title']); 
+                 <?php 
+                  $cproposal = get_field('custom_proposal', 'options');
+                  if($cproposal && !empty($cproposal)):  
+                    $link = $cproposal['knop'];
+                    if( is_array( $link ) &&  !empty( $link['url'] ) ){
+                     printf('<span><a href="%s" target="%s"><span>%s</span></a></span>', $link['url'], $link['target'], $link['title']);
                     }
-
-                  ?>
+                 endif;
+                 ?>
                 </div>
               </div>
             </div>
