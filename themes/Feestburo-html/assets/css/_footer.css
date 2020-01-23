@@ -131,12 +131,17 @@
 	display: inline-block;
 	margin-right: 10px;
 }
-.ftr-social a svg{
+.ftr-social ul li a{
+	font-size: 16px;
+}
+.ftr-social a svg,
+.ftr-social a{
 	-webkit-transition: all .3s ease;
 	-ms-transition: all .3s ease;
 	transition: all .3s ease;
 }
-.ftr-social > ul > li > a:hover svg{
+.ftr-social > ul > li > a:hover svg,
+.ftr-social > ul > li > a:hover{
 	fill:#EB1C23!important;
 }
 .ftr-btm{

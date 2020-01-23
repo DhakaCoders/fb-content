@@ -183,13 +183,19 @@
 .hdr-topbar-social ul li,
 .hdr-topbar-social ul li a{
 	display: inline-block;
+	color: #919499;
+}
+.hdr-topbar-social ul li a{
 	vertical-align: baseline;
+	font-size: 18px;
 }
 .hdr-topbar-social ul li:not(:last-child){
-	padding-right: 20px;
+	padding-right: 18px;
 }
 
-
+.hdr-topbar-social ul li a:hover{
+	color: #EB1C23;
+}
 
 
 .hdr-btmbar{
