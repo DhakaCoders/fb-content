@@ -98,7 +98,7 @@ get_template_part( 'templates/page', 'banner' );
                 if(!empty($refImage)){
                   $refImgsrc = cbv_get_image_src($refImage);
                 }else{
-                  $refImgsrc = THEME_URI.'/assets/images/hm-tp-gallery-small-img-1.png';
+                  $refImgsrc = THEME_URI.'/assets/images/refer-sm-grid.png';
                 }        
               ?>
               <li>
@@ -125,7 +125,7 @@ get_template_part( 'templates/page', 'banner' );
               if(!empty($refImage2)){
                 $refImgsrc2 = cbv_get_image_src($refImage2);
               }else{
-                $refImgsrc2 = THEME_URI.'/assets/images/hm-tp-gallery-small-img-1.png';
+                $refImgsrc2 = THEME_URI.'/assets/images/refer-big-grid.png';
               }
           ?>
           <div class="hm-gallery-item-top-rgt hide-xs">
@@ -174,6 +174,28 @@ get_template_part( 'templates/page', 'banner' );
 <?php
   $producten = get_field('producten', $thisID);
   if( $producten ):
+
+  $pdids = $producten['producten_ids'];
+  if(isset($pdids) && !empty($pdids) && $pdids > 0){
+    $pquery = new WP_Query(array( 
+        'post_type'=> 'product',
+        'post_status' => 'publish',
+        'posts_per_page' => count($pdids),
+        'orderby' => 'date',
+        'order'=> 'DESC',
+        'post__in' => $pdids
+      ) 
+    );
+    }else{
+    $pquery = new WP_Query(array( 
+        'post_type'=> 'product',
+        'post_status' => 'publish',
+        'posts_per_page' => 8,
+        'orderby' => 'date',
+        'order'=> 'DESC'
+      ) 
+    );
+  } 
 ?>
 <section class="pt-btm-slider-sec-wrp">
   <div class="container">
@@ -182,79 +204,35 @@ get_template_part( 'templates/page', 'banner' );
         <div class="pt-meets-title">
           <?php if( !empty($producten['titel']) ) printf('<h3>%s</h3>', $producten['titel']); ?>
         </div>
+        <?php if($pquery->have_posts()): ?>
         <div class="pt-btm-slider-wrp clearfix">
           <div class="PtBtmSliderArrow">
              <span class="leftArrow"></span>
              <span class="rightArrow"></span>
           </div>
           <ul id="PtBtmSlider">
+            <?php 
+              while($pquery->have_posts()): $pquery->the_post();
+            ?>
             <li>
               <div class="pt-btm-slide-item">
                 <span>Populair</span>
                 <div class="pt-btm-slide-item-img">
-                  <a href="#"><span><img src="<?php echo THEME_URI; ?>/assets/images/pt-btm-slide-item-img-1.png"></span></a>
+                  <a href="<?php the_permalink();?>"><span>
+                    <?php echo wp_get_attachment_image( get_post_thumbnail_id(get_the_ID()), 'pgrid' ); ?>
+                  </span></a>
                 </div>
                 <div class="pt-btm-slide-item-dsc">
-                  <h5><a href="#">Arco Circular Special Color Copa Low</a></h5>
-                  <p>Salon in kleur op aanvraag leder bestaande uit 4 Arco met salontafel Copa Low.</p>
-                  <a href="#">meer info</a>
+                  <h5><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h5>
+                  <?php echo wpautop( cbv_excerpt(), true ); ?>
+                  <a href="<?php the_permalink();?>">meer info</a>
                 </div>
               </div>
             </li>
-            <li>
-              <div class="pt-btm-slide-item">
-                <span>Populair</span>
-                <div class="pt-btm-slide-item-img">
-                  <a href="#"><span><img src="<?php echo THEME_URI; ?>/assets/images/pt-btm-slide-item-img-2.png"></span></a>
-                </div>
-                <div class="pt-btm-slide-item-dsc">
-                  <h5><a href="#">Plato Buffet Shafing dish</a></h5>
-                  <p>Salon in kleur op aanvraag leder bestaande uit 4 Arco met salontafel Copa Low.</p>
-                  <a href="#">meer info</a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="pt-btm-slide-item">
-                <span>Populair</span>
-                <div class="pt-btm-slide-item-img">
-                  <a href="#"><span><img src="<?php echo THEME_URI; ?>/assets/images/pt-btm-slide-item-img-3.png"></span></a>
-                </div>
-                <div class="pt-btm-slide-item-dsc">
-                  <h5><a href="#">Wireless Speakers</a></h5>
-                  <p>Salon in kleur op aanvraag leder bestaande uit 4 Arco met salontafel Copa Low.</p>
-                  <a href="#">meer info</a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="pt-btm-slide-item">
-                <span>Populair</span>
-                <div class="pt-btm-slide-item-img">
-                  <a href="#"><span><img src="<?php echo THEME_URI; ?>/assets/images/pt-btm-slide-item-img-4.png"></span></a>
-                </div>
-                <div class="pt-btm-slide-item-dsc">
-                  <h5><a href="#">Carpet</a></h5>
-                  <p>Salon in kleur op aanvraag leder bestaande uit 4 Arco met salontafel Copa Low.</p>
-                  <a href="#">meer info</a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="pt-btm-slide-item">
-                <span>Populair</span>
-                <div class="pt-btm-slide-item-img">
-                  <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/pt-btm-slide-item-img-1.png"></a>
-                </div>
-                <div class="pt-btm-slide-item-dsc">
-                  <h5><a href="#">Arco Circular Special Color Copa Low</a></h5>
-                  <p>Salon in kleur op aanvraag leder bestaande uit 4 Arco met salontafel Copa Low.</p>
-                  <a href="#">meer info</a>
-                </div>
-              </div>
-            </li>
+            <?php endwhile; ?>
           </ul>
         </div>
+      <?php wp_reset_postdata(); endif; ?>
         <?php 
           $pknop = $producten['knop'];
           if( is_array( $pknop ) &&  !empty( $pknop['url'] ) ){

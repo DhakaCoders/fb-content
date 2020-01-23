@@ -201,7 +201,7 @@ if($showhide_werken):
                 if(!empty($refImage)){
                   $refImgsrc = cbv_get_image_src($refImage);
                 }else{
-                  $refImgsrc = THEME_URI.'/assets/images/hm-tp-gallery-small-img-1.png';
+                  $refImgsrc = THEME_URI.'/assets/images/refer-sm-grid.png';
                 }        
               ?>
               <li>
@@ -228,7 +228,7 @@ if($showhide_werken):
               if(!empty($refImage2)){
                 $refImgsrc2 = cbv_get_image_src($refImage2);
               }else{
-                $refImgsrc2 = THEME_URI.'/assets/images/hm-tp-gallery-small-img-1.png';
+                $refImgsrc2 = THEME_URI.'/assets/images/refer-big-grid.png';
               }
           ?>
           <div class="hm-gallery-item-top-rgt hide-xs">

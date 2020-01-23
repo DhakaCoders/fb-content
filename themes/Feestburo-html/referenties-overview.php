@@ -2,33 +2,9 @@
 /*
   Template Name: Referenties
 */
-get_header(); ?>
-<section class="page-banner">
-  <a class="main-bnr-rgt-btn" href="#">Offerte aanvragen</a>
-  <div class="page-banner-con">
-    <div class="page-banner-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/page-banner-bg.jpg);"></div>
-    <div class="page-banner-des">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="page-banner-des-innr">
-              <strong class="banner-page-title">Referenties</strong>
-              <div class="breadcrumbs">
-                <ul>           
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Binnenpagina</a></li>
-                  <li><a href="#">Binnenpagina</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+get_header(); 
+get_template_part( 'templates/page', 'banner' );
+?>
 <section class="ref-overview-sec">
   <div class="container">
     <div class="row">
@@ -93,9 +69,9 @@ get_header(); ?>
               while($refQuery->have_posts()): $refQuery->the_post(); 
               $gridImage = get_post_thumbnail_id(get_the_ID());
               if(!empty($gridImage)){
-                $refImgsrc = cbv_get_image_src($gridImage, 'ref_grid');
+                $refImgsrc = cbv_get_image_src($gridImage, 'refgrid');
               }else{
-                $refImgsrc = '';
+                $refImgsrc = THEME_URI.'/assets/images/refer-sm-grid.png';;
               }         
             ?>
               <li>
@@ -139,36 +115,8 @@ get_header(); ?>
   </div>
 </section>
 
+<?php 
+get_template_part( 'templates/footer', 'newsletter' );
 
-<section class="ftr-top-newsletter-con"> 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="ftr-top-newsletter-innr-wrp">
-          <div class="ftr-top-newsletter-innr"> 
-            <div class="ftr-top-newsletter-head">
-              <h3>nieuwsbrief</h3>
-              <p>Blijf op de hoogte van ons evoluerend assortiment. Je ontvangt 3 keer per jaar onze nieuwsbrief.</p>              
-            </div>
-            <div class="ftr-top-newsletter"> 
-              <form action="">
-                <div class="from-group-wrp clearfix"> 
-                  <div class="from-group">
-                    <input placeholder="Namm" type="text">
-                  </div>
-                  <div class="from-group">
-                    <input placeholder="E-mailadres" type="email"> 
-                  </div>
-                  <div class="from-group">
-                    <button>Inschrijven</button> 
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>            
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<?php get_footer(); ?>
+get_footer(); 
+?>

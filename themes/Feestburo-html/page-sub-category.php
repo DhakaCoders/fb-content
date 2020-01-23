@@ -81,11 +81,26 @@ get_template_part( 'templates/page', 'banner' );
           </div>
         </div>
         <?php endif; ?>
-        <div class="sub-cat-request-price" style="background:url(<?php echo THEME_URI; ?>/assets/images/sub-cat-request-price-bg.jpg)">
-          <h3>vraag je prijs aan</h3>
-          <p>Pellentesque tincidunt eros lacinia dolor semper tempus. <br /> Etiam quis sapien vitae justo vehicula lacinia.</p>
-          <a href="#"><span>vraag je prijs aan</span></a>
+        <?php
+        $reqprice = get_field('request_price', 'options');
+        if( $reqprice ):
+          if(!empty($reqprice['afbeelding'])){
+            $rqpimg = cbv_get_image_src($reqprice['afbeelding']);
+          }else{
+            $rqpimg = '';
+          }
+        ?>
+        <div class="sub-cat-request-price" style="background:url(<?php echo $rqpimg; ?>)">
+          <?php 
+            if(!empty($reqprice['titel'])) printf('<h3>%s</h3>', $reqprice['titel']);
+            if(!empty($reqprice['beschrijving'])) echo wpautop( $reqprice['beschrijving'], true );
+            $knop = $reqprice['knop'];
+            if( is_array( $knop ) &&  !empty( $knop['url'] ) ){
+             printf('<a href="%s" target="%s"><span>%s</span></a>', $knop['url'], $knop['target'], $knop['title']);
+            }
+          ?>
         </div>
+        <?php endif; ?>
       </div>
     </div>
   </div>

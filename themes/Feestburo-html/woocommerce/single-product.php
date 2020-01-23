@@ -3,38 +3,14 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit; // Exit if accessed directly
 }
 get_header();
+get_template_part( 'templates/page', 'banner' );
 while ( have_posts() ) :
   the_post();
   $thisID = get_the_ID();
 ?>
-<section class="page-banner">
-  <div class="page-banner-con">
-    <a class="main-bnr-rgt-btn" href="#">Offerte aanvragen</a>
-    <div class="page-banner-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/page-banner-bg.jpg);"></div>
-    <div class="page-banner-des">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="page-banner-des-innr">
-              <strong class="banner-page-title">Producten</strong>
-              <div class="breadcrumbs">
-                <ul>           
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Binnenpagina</a></li>
-                  <li><a href="#">Binnenpagina</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 <?php 
-
 $excerpt = get_field('product_excerpt', $thisID); 
-
 $gallery_pro = get_field('producten_galerij', $thisID);
 ?>
 <section class="fl-product-single-wrap">
@@ -121,20 +97,9 @@ $gallery_pro = get_field('producten_galerij', $thisID);
   </div>    
 </section>
 
-
-<section class="pd-request-price-sec">
-  <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="sub-cat-request-price" style="background:url(<?php echo THEME_URI; ?>/assets/images/sub-cat-request-price-bg.jpg)">
-            <h3>vraag je prijs aan</h3>
-            <p>Pellentesque tincidunt eros lacinia dolor semper tempus.<br> Etiam quis sapien vitae justo vehicula lacinia.</p>
-            <a href="#"><span>vraag je prijs aan</span></a>
-          </div>
-        </div>
-      </div>
-  </div>    
-</section>
+<?php 
+  get_template_part( 'templates/price', 'request' );
+?>
 
 <?php 
 $q = cbv_get_related_category_posts();
@@ -176,36 +141,10 @@ if ( $q->have_posts() ) {
   </div>
 </section>
 <?php wp_reset_postdata(); } ?>
+<?php 
 
-<section class="ftr-top-newsletter-con"> 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="ftr-top-newsletter-innr-wrp">
-          <div class="ftr-top-newsletter-innr"> 
-            <div class="ftr-top-newsletter-head">
-              <h3>nieuwsbrief</h3>
-              <p>Blijf op de hoogte van ons evoluerend assortiment. Je ontvangt 3 keer per jaar onze nieuwsbrief.</p>              
-            </div>
-            <div class="ftr-top-newsletter"> 
-              <form action="">
-                <div class="from-group-wrp clearfix"> 
-                  <div class="from-group">
-                    <input placeholder="Namm" type="text">
-                  </div>
-                  <div class="from-group">
-                    <input placeholder="E-mailadres" type="email"> 
-                  </div>
-                  <div class="from-group">
-                    <button>Inschrijven</button> 
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>            
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<?php endwhile; get_footer(); ?>
+endwhile;
+get_template_part( 'templates/footer', 'newsletter' );
+
+get_footer(); 
+?>

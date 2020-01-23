@@ -83,7 +83,7 @@ function ajax_product_script_load_more($args, $term_slug='') {
           <div class="subcat-meubilair-grd">
             <span>Populair</span>
             <div class="subcat-meubilair-grd-bg-wrp">
-             <?php echo wp_get_attachment_image( get_post_thumbnail_id(get_the_ID()), 'dfpageg1' ); ?>
+             <?php echo wp_get_attachment_image( get_post_thumbnail_id(get_the_ID()), 'pgrid' ); ?>
               <a href="<?php the_permalink();?>" class="overlay-link"></a>
             </div>
             <div class="subcat-meubilair-grd-des subcatGrd-matchCol">

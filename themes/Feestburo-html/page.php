@@ -1,34 +1,9 @@
 <?php 
-get_header(); 
+get_header();
+get_template_part( 'templates/page', 'banner' ); 
 while ( have_posts() ) :
   the_post();
 ?>
-<section class="page-banner">
-  <a class="main-bnr-rgt-btn" href="#">Offerte aanvragen</a>
-  <div class="page-banner-con">
-    <div class="page-banner-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/page-banner-bg.jpg);"></div>
-    <div class="page-banner-des">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="page-banner-des-innr">
-              <strong class="banner-page-title">Meubilair</strong>
-              <div class="breadcrumbs">
-                <ul>           
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Binnenpagina</a></li>
-                  <li><a href="#">Binnenpagina</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 <section class="innerpage-con-wrap">
   <?php if(have_rows('inhoud')){  ?>
   <div class="container-sm">
@@ -160,7 +135,7 @@ while ( have_posts() ) :
             }elseif( get_row_layout() == 'afbeelding' ){
               $fc_afbeelding = get_sub_field('fc_afbeelding');
               if( !empty( $fc_afbeelding ) ){
-                printf('<div class="df-page-simage">%s</div>', cbv_get_image_tag($fc_afbeelding));
+                printf('<div class="dfp-plate-one-img-bx">%s</div>', cbv_get_image_tag($fc_afbeelding));
               }
             }elseif( get_row_layout() == 'horizontal_rule' ){
               $rheight = get_sub_field('fc_horizontal_rule');
@@ -179,37 +154,9 @@ while ( have_posts() ) :
   </div>
 <?php } ?>
 </section>
+<?php 
+endwhile; 
 
-
-<section class="ftr-top-newsletter-con"> 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="ftr-top-newsletter-innr-wrp">
-          <div class="ftr-top-newsletter-innr"> 
-            <div class="ftr-top-newsletter-head">
-              <h3>nieuwsbrief</h3>
-              <p>Blijf op de hoogte van ons evoluerend assortiment. Je ontvangt 3 keer per jaar onze nieuwsbrief.</p>              
-            </div>
-            <div class="ftr-top-newsletter"> 
-              <form action="">
-                <div class="from-group-wrp clearfix"> 
-                  <div class="from-group">
-                    <input placeholder="Namm" type="text">
-                  </div>
-                  <div class="from-group">
-                    <input placeholder="E-mailadres" type="email"> 
-                  </div>
-                  <div class="from-group">
-                    <button>Inschrijven</button> 
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>            
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<?php endwhile; get_footer(); ?>
+get_template_part( 'templates/footer', 'newsletter' );
+get_footer(); 
+?>

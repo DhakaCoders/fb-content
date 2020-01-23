@@ -2,6 +2,7 @@
 $thisID = get_the_ID();
 $pageTitle = get_the_title($thisID);
 $standaardbanner = get_field('bannerafbeelding', $thisID);
+if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-banner-bg.jpg';
 /*$custom_page_title = get_field('custom_page_titel', $thisID);
 if(!empty(str_replace(' ', '', $custom_page_title))){
   $pageTitle = $custom_page_title;
@@ -16,8 +17,18 @@ if(!empty(str_replace(' ', '', $custom_page_title))){
         <div class="row">
           <div class="col-sm-12">
             <div class="page-banner-des-innr">
-              <strong class="banner-page-title"><?php echo $pageTitle; ?></strong>
-              <?php cbv_breadcrumbs(); ?>
+              <?php 
+               if( is_product() ) {
+                  echo '<strong class="banner-page-title">Producten</strong>';
+                  woocommerce_breadcrumb();
+                }elseif ( is_single() && 'referentie' == get_post_type() ) {
+                   echo '<strong class="banner-page-title">Referenties</strong>';
+                   woocommerce_breadcrumb();
+                }else{
+                  echo '<strong class="banner-page-title">'.$pageTitle.'</strong>';
+                  cbv_breadcrumbs();
+                }
+              ?>
             </div>
           </div>
         </div>

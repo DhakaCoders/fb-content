@@ -28,13 +28,7 @@ if( !empty($cats_root2) && $cats_root2){
         <div class="row">
           <div class="col-sm-12">
             <div class="page-banner-des-innr">
-              <div class="breadcrumbs">
-                <ul>           
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Binnenpagina</a></li>
-                  <li><a href="#">Binnenpagina</a></li>
-                </ul>
-              </div>
+              <?php woocommerce_breadcrumb(); ?>
             </div>
           </div>
         </div>

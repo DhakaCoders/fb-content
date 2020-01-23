@@ -1,31 +1,8 @@
 <?php get_header(); 
+get_template_part( 'templates/page', 'banner' );
 while ( have_posts() ) : the_post();
 $thisID = get_the_ID();
 ?>
-<section class="page-banner">
-  <a class="main-bnr-rgt-btn" href="#">Offerte aanvragen</a>
-  <div class="page-banner-con">
-    <div class="page-banner-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/page-banner-bg.jpg);"></div>
-    <div class="page-banner-des">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="page-banner-des-innr">
-              <strong class="banner-page-title">Referenties</strong>
-              <div class="breadcrumbs">
-                <ul>           
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Binnenpagina</a></li>
-                  <li><a href="#">Binnenpagina</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <?php 
 $informat = get_field('informatie', $thisID);
@@ -37,7 +14,7 @@ $informat = get_field('informatie', $thisID);
         <div class="ref-del-innr">
           <div class="ref-del-top"> 
             <div class="ref-del-back">
-              <a href="#">terug naar overzicht</a>
+              <a href="<?php echo esc_url( home_url('Referenties') );?>">terug naar overzicht</a>
             </div>
             <div class="ref-del-head">
               <h1><?php echo get_the_title(); ?></h1>
@@ -217,11 +194,26 @@ $informat = get_field('informatie', $thisID);
               <?php endif; ?>
             </div>
           </div>
-          <div class="sub-cat-request-price" style="background:url(<?php echo THEME_URI; ?>/assets/images/sub-cat-request-price-bg.jpg)">
-            <h3>vraag je prijs aan</h3>
-            <p>Pellentesque tincidunt eros lacinia dolor semper tempus. <br /> Etiam quis sapien vitae justo vehicula lacinia.</p>
-            <a href="#"><span>vraag je prijs aan</span></a>
+          <?php
+            $reqprice = get_field('request_price', 'options');
+            if( $reqprice ):
+              if(!empty($reqprice['afbeelding'])){
+                $rqpimg = cbv_get_image_src($reqprice['afbeelding']);
+              }else{
+                $rqpimg = '';
+              }
+          ?>
+          <div class="sub-cat-request-price" style="background:url(<?php echo $rqpimg; ?>)">
+            <?php 
+            if(!empty($reqprice['titel'])) printf('<h3>%s</h3>', $reqprice['titel']);
+            if(!empty($reqprice['beschrijving'])) echo wpautop( $reqprice['beschrijving'], true );
+            $knop = $reqprice['knop'];
+            if( is_array( $knop ) &&  !empty( $knop['url'] ) ){
+             printf('<a href="%s" target="%s"><span>%s</span></a>', $knop['url'], $knop['target'], $knop['title']);
+            }
+          ?>
           </div>
+          <?php endif; ?>
         </div> 
       </div>
     </div>
@@ -230,6 +222,27 @@ $informat = get_field('informatie', $thisID);
 
 <?php 
   $gprod = get_field('gebruikte_producten', $thisID);
+  $pdids = $gprod['producten_ids'];
+  if(isset($pdids) && !empty($pdids) && $pdids > 0){
+    $pquery = new WP_Query(array( 
+        'post_type'=> 'product',
+        'post_status' => 'publish',
+        'posts_per_page' => count($pdids),
+        'orderby' => 'date',
+        'order'=> 'DESC',
+        'post__in' => $pdids
+      ) 
+    );
+    }else{
+    $pquery = new WP_Query(array( 
+        'post_type'=> 'product',
+        'post_status' => 'publish',
+        'posts_per_page' => 8,
+        'orderby' => 'date',
+        'order'=> 'DESC'
+      ) 
+    );
+  } 
 ?>
 <section class="subcat-meubilair-grd-sec" id="refDel-subcat-meubilair-grd">
   <div class="container">
@@ -241,102 +254,36 @@ $informat = get_field('informatie', $thisID);
               if( !empty($gprod['titel']) ) printf('<h2>%s</h2>', $gprod['titel']);
             ?>
           </div>
+          <?php if($pquery->have_posts()): ?>
           <div class="subcat-meubilair-grd-main"> 
-            <ul class="ulc clearfix"> 
+            <ul class="ulc clearfix">
+            <?php 
+              while($pquery->have_posts()): $pquery->the_post();
+            ?> 
               <li>
                 <div class="subcat-meubilair-grd">
                   <div class="subcat-meubilair-grd-bg-wrp">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/subcategoty-meubilair-img005.jpg" alt="">
-                    <a href="#" class="overlay-link"></a>
+                     <?php echo wp_get_attachment_image( get_post_thumbnail_id(get_the_ID()), 'pgrid' ); ?>
+                    <a href="<?php the_permalink();?>" class="overlay-link"></a>
                   </div>
                   <div class="subcat-meubilair-grd-des subcatGrd-matchCol">
-                    <h6><a href="#">Arco Circular Special Color Copa Low</a></h6>
-                    <p>Salon in kleur op aanvraag leder bestaande uit 4 Arco met salontafel Copa Low.</p>
-                    <a href="#">meer info</a>
+                    <h6><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h6>
+                    <?php echo wpautop( cbv_excerpt(), true ); ?>
+                    <a href="<?php the_permalink();?>">meer info</a>
                   </div>
                 </div>
               </li> 
-              <li>
-                <div class="subcat-meubilair-grd">
-                  <div class="subcat-meubilair-grd-bg-wrp">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/subcategoty-meubilair-img002.jpg" alt="">
-                    <a href="#" class="overlay-link"></a>
-                  </div>
-                  <div class="subcat-meubilair-grd-des subcatGrd-matchCol">
-                    <h6><a href="#">Plato Buffet shafing dish</a></h6>
-                    <p>Barelement met zwart bovenblad. Front te kiezen.</p>
-                    <a href="#">meer info</a>
-                  </div>
-                </div>
-              </li> 
-              <li>
-                <div class="subcat-meubilair-grd">
-                  <div class="subcat-meubilair-grd-bg-wrp">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/subcategoty-meubilair-img003.jpg" alt="">
-                    <a href="#" class="overlay-link"></a>
-                  </div>
-                  <div class="subcat-meubilair-grd-des subcatGrd-matchCol">
-                    <h6><a href="#">Multi Bar // Black Top</a></h6>
-                    <p>Barelement met zwart bovenblad. Front te kiezen.</p>
-                    <a href="#">meer info</a>
-                  </div>
-                </div>
-              </li> 
-              <li>
-                <div class="subcat-meubilair-grd">
-                  <div class="subcat-meubilair-grd-bg-wrp">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/subcategoty-meubilair-img004.jpg" alt="">
-                    <a href="#" class="overlay-link"></a>
-                  </div>
-                  <div class="subcat-meubilair-grd-des subcatGrd-matchCol">
-                    <h6><a href="#">Rotondo Set Low Copper</a></h6>
-                    <p>Set van 3 koperen, ronde salontafels met mangoblad.</p>
-                    <a href="#">meer info</a>
-                  </div>
-                </div>
-              </li>
+              <?php endwhile; ?>
             </ul>
           </div>
+          <?php wp_reset_postdata(); endif; ?>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-
-<section class="ftr-top-newsletter-con ref-del-newsletter"> 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="ftr-top-newsletter-innr-wrp">
-          <div class="ftr-top-newsletter-innr"> 
-            <div class="ftr-top-newsletter-head">
-              <h3>nieuwsbrief</h3>
-              <p>Blijf op de hoogte van ons evoluerend assortiment. Je ontvangt 3 keer per jaar onze nieuwsbrief.</p>              
-            </div>
-            <div class="ftr-top-newsletter"> 
-              <form action="">
-                <div class="from-group-wrp clearfix"> 
-                  <div class="from-group">
-                    <input placeholder="Namm" type="text">
-                  </div>
-                  <div class="from-group">
-                    <input placeholder="E-mailadres" type="email"> 
-                  </div>
-                  <div class="from-group">
-                    <button>Inschrijven</button> 
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>            
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <?php 
 endwhile; 
+get_template_part( 'templates/footer', 'newsletter' );
 get_footer(); 
 ?>
