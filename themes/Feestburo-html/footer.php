@@ -16,9 +16,7 @@
   $copyright_text = get_field('copyright_text', 'options');
   $gmaplink = !empty($gmapsurl)?$gmapsurl: 'javascript:void()';
   $bwt = get_field('bwt', 'options');
-
-  $fburl = get_field('facebook_url', 'options');
-  $insturl = get_field('instagram_url', 'options');
+  $smedias = get_field('sociale_media', 'options');
 ?>
 
 <footer class="footer-wrap">
@@ -66,32 +64,20 @@
                     );
                   wp_nav_menu( $fpmenuOptions ); 
                 ?>
+                <?php if($smedias): ?>
                 <div class="ftr-social">
                   <ul class="ulc clearfix">
-                    <?php if(!empty($fburl)): ?>
+                    <?php foreach($smedias as $smedia): ?>
                     <li>
-                      <a href="<?php echo esc_url($fburl); ?>" target="_blank">
-                        <i>
-                          <svg class="ftr-fb-svg" width="16" height="16" viewBox="0 0 16 16" fill="white">
-                            <use xlink:href="#ftr-fb-svg"></use>
-                          </svg> 
-                        </i>
+                      <a target="_blank" href="<?php echo $smedia['url']; ?>">
+                        <?php echo $smedia['icon']; ?>
                       </a>
                     </li>
-                    <?php endif; if(!empty($insturl)): ?>
-                    <li>
-                      <a href="<?php echo esc_url($insturl); ?>" target="_blank">
-                        <i>
-                          <svg class="ftr-instra-svg" width="16" height="16" viewBox="0 0 16 16" fill="white">
-                            <use xlink:href="#ftr-instra-svg"></use>
-                          </svg> 
-                        </i>
-                      </a>
-                    </li>
-                    <?php endif; ?>
+                    <?php endforeach; ?>
                   </ul>
                 </div>              
               </div>
+              <?php endif; ?>
               <div class="ftr-col-4 ftr-col">
                 <ul class="ulc">
                 <?php 

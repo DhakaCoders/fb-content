@@ -129,13 +129,12 @@
     $ftlogo_tag = '';
   }
 
- $spacialArry = array(".", "/", "+", " ");$replaceArray = '';
+  $spacialArry = array(".", "/", "+", " ");$replaceArray = '';
 
   $show_telefoon = get_field('telephone', 'options');
   $telefoon = trim(str_replace($spacialArry, $replaceArray, $show_telefoon));
-  $fburl = get_field('facebook_url', 'options');
-  $insturl = get_field('instagram_url', 'options');
   $hevents = get_field('hdr_events', 'options');
+  $smedias = get_field('sociale_media', 'options');
 ?>
 <div class="body-overlay"></div>
 <header class="header">
@@ -166,31 +165,20 @@
             </div>
             <?php endif; ?>
             <div class="hdr-topbar-rgt clearfix">
+              <?php if($smedias): ?>
               <div class="hdr-topbar-social">
                 <ul class="clearfix ulc">
-                  <?php if(!empty($fburl)): ?>
+                  <?php foreach($smedias as $smedia): ?>
                   <li>
-                    <a href="<?php echo esc_url($fburl); ?>">
-                      <em> 
-                        <svg class="hdr-fb-icon-svg" width="10" height="16" viewBox="0 0 10 16" fill="#919499">
-                          <use xlink:href="#hdr-fb-icon-svg"></use>
-                        </svg> 
-                      </em>
+                    <a target="_blank" href="<?php echo $smedia['url']; ?>">
+                      <?php echo $smedia['icon']; ?>
                     </a>
                   </li>
-                  <?php endif; if(!empty($insturl)): ?>
-                  <li>
-                    <a href="<?php echo esc_url($insturl); ?>">
-                      <em> 
-                        <svg class="hdr-instagram-icon-svg" width="16" height="16" viewBox="0 0 16 16" fill="#919499">
-                          <use xlink:href="#hdr-instagram-icon-svg"></use>
-                        </svg> 
-                      </em>
-                    </a>
-                  </li>
-                  <?php endif; ?>
+                  <?php endforeach; ?>
                 </ul>
               </div>
+              <?php endif; ?>
+
               <?php if( !empty( $show_telefoon ) ): ?>
               <div class="hdr-topbar-tel">
                 <em> 

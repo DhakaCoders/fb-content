@@ -1,12 +1,12 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 get_header(); 
 
 $thisID = get_the_ID();
 
 $ccat = get_queried_object();
-
-
-
 
 $cats_root = get_term($ccat->parent, 'product_cat');
 
@@ -16,11 +16,6 @@ if( !empty($cats_root->parent) ){
 $cat_details = $cats_root;
 if( !empty($cats_root2) && $cats_root2){
 	$cat_details = $cats_root2;
-}
-
-if( !empty($cat_details) && $cat_details ){
-	$cat_details = $ccat;
-	$cats_root = $ccat;
 }
 
 ?>
@@ -51,9 +46,12 @@ if( !empty($cat_details) && $cat_details ){
 <section class="product-overview-grd-sec product-overview-grd-sec-new">
   <div class="container">
     <div class="row">
-      <?php 
+      <?php
+      	$termid = !empty($cat_details->term_id)? $cat_details->term_id: $ccat->term_id; 
+      	$termname = !empty($cat_details->name)? $cat_details->name: $ccat->name; 
+      	$termdesc = !empty($cat_details->description)? $cat_details->description: $ccat->description; 
         $pcat_thumb = ''; 
-		$thumbnail_id = get_term_meta ( $cat_details->term_id, 'thumbnail_id', true ); 
+		$thumbnail_id = get_term_meta ( $termid, 'thumbnail_id', true ); 
 		if( !empty($thumbnail_id) ) $pcat_thumb = cbv_get_image_tag( $thumbnail_id );
       ?>
       <div class="col-sm-12">
@@ -62,8 +60,8 @@ if( !empty($cat_details) && $cat_details ){
             <?php echo $pcat_thumb; ?>
           </span>
 			<?php
-			  if( !empty($cat_details->name) ) printf('<h1>%s</h1>', $cat_details->name);
-			  if( !empty($cat_details->description) ) echo wpautop( $cat_details->description ); 
+			  if( !empty($termname ) ) printf( '<h1>%s</h1>', $termname );
+			  if( !empty($termdesc) ) echo wpautop( $termdesc ); 
 			?>
         </div>
       </div>
@@ -71,37 +69,37 @@ if( !empty($cat_details) && $cat_details ){
         <div class="fb-proover-categories">
             <?php 
               $args = array(
-              'parent'                 => $cat_details->term_id,
+              'parent'                 => $termid,
               'orderby'                  => 'name',
               'order'                    => 'ASC',
               'hide_empty'               => FALSE,
               'taxonomy'                 => 'product_cat',
               ); 
               $child_categories = get_categories($args );
-              $child3_id = '';
+              $child3_id = 0;
               echo '<ul class="class ulc clearfix">';
               foreach($child_categories as $child){
               	$activeClass = '';
-              	if( $ccat->slug == $child->slug OR $cats_root->slug == $child->slug){
+              	if( $ccat->slug == $child->slug OR (!empty($cats_root->slug) && ($cats_root->slug == $child->slug ))){
               		$activeClass = 'fb-proover-cat-active';
               		$child3_id = $child->term_id;
               	}
                 echo "<li class='".$activeClass."'><a href='".get_term_link( $child )."'>{$child->name}</a></li>";
               }
               echo '</ul>';
-
-              $args = array(
-              'parent'                   => $child3_id,
-              'orderby'                  => 'name',
-              'order'                    => 'ASC',
-              'hide_empty'               => FALSE,
-              'taxonomy'                 => 'product_cat',
-              ); 
-              $child3_categories = get_categories($args );
-
+              
             ?>
         </div>
         <?php 
+        if(isset($child3_id) && $child3_id > 0):
+		$args = array(
+		'parent'                   => $child3_id,
+		'orderby'                  => 'name',
+		'order'                    => 'ASC',
+		'hide_empty'               => FALSE,
+		'taxonomy'                 => 'product_cat',
+		); 
+		$child3_categories = get_categories($args );
         if(!empty((array)$child3_categories) && $child3_categories): 
         	$activeClass2 = '';
         	if( $ccat->term_id == $child3_id ){
@@ -123,7 +121,7 @@ if( !empty($cat_details) && $cat_details ){
             ?>
           </ul>
         </div>
-    	<?php endif; ?>
+    	<?php endif; endif; ?>
       </div>
     </div>
   </div>
