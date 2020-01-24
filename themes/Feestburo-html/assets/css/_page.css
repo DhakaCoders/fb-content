@@ -151,8 +151,12 @@ h1.banner-page-title,
 .sitemap ol li a:focus{
 	text-decoration: underline;
 }
-
-
+.pageTitle h1.banner-page-title{
+	color: #0C1421;
+}
+.pageTitle .page-banner-des-innr {
+    padding: 50px 0 45px;
+}
 /*
 ----- Responsive ------
 */
