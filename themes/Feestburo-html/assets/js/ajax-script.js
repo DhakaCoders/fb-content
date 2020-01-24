@@ -46,12 +46,18 @@ $.ajax({
 if($("#catSlug").length){
   var catSlug = $("#catSlug").data('slug');
 }
-
+if($("#keyWord").length){
+  var keyWord = $("#keyWord").data('keyword');
+}
 $("#loadMore").on('click', function(e) {
     e.preventDefault();
     var cat_slug = '';
+    var key_word = '';
     if(catSlug != ''){
       cat_slug = catSlug;
+    }
+    if(keyWord != ''){
+      key_word = keyWord;
     }
     //init
     var that = $(this);
@@ -66,6 +72,7 @@ $("#loadMore").on('click', function(e) {
         data: {
             page: page,
             cat_slug: cat_slug,
+            key_word: key_word,
             action: 'ajax_product_script_load_more'
         },
         beforeSend: function ( xhr ) {

@@ -129,15 +129,18 @@ if( !empty($cats_root2) && $cats_root2){
   </div>
 
   <span style="display: none;" id="catSlug" data-slug="<?php echo $ccat->slug; ?>"></span>
+  <?php if( isset($_GET['keyword']) && !empty($_GET['keyword'])): ?>
+  <span id="keyWord" data-keyword="<?php echo $_GET['keyword']; ?>"></span>
+  <?php endif; ?>
   <div class="product-overview-grds-wrap">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
           <div class="product-overview-page-search product-overview-page-search-new">
             <div class="clearfix">
-              <form action="" method="">
-                <input type="search" name="" placeholder="Zoek hier">
-                <button>
+              <form action="" method="get">
+                <input type="search" name="keyword" placeholder="Zoek hier" value="<?php echo ( isset($_GET['keyword']) && !empty($_GET['keyword']))? $_GET['keyword']: ''; ?>">
+                <button type="submit">
                   <img src="<?php echo THEME_URI; ?>/assets/images/search-white-icon.svg">
                 </button>
               </form>
