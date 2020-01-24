@@ -37,7 +37,7 @@ function ajax_product_script_load_more($args, $term_slug='', $keyword = '') {
         $ajax = true;
     }
     //number of posts per page default
-    $num =1;
+    $num =4;
     //page number
     $paged = 1;
     if(isset($_POST['cat_slug']) && !empty($_POST['cat_slug'])){
