@@ -6,6 +6,10 @@
 .hdr-topbar-lft{
 	float: left;
 	width: 55%;
+	overflow: hidden;
+}
+.hdr-topbar-lft ul{
+	width: 1200px;
 }
 .hdr-topbar-rgt{
 	float: right;
