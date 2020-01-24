@@ -5,9 +5,11 @@
 
 function product_script_load_more($args = array()) {
   $ccat = get_queried_object();
+  $keyword = '';
+  if( isset($_GET['keyword']) && !empty($_GET['keyword'])) $keyword = $_GET['keyword'];
 
   echo '<ul class="ulc clearfix" id="ajax-content">';
-      ajax_product_script_load_more($args, $ccat->slug);
+      ajax_product_script_load_more($args, $ccat->slug, $keyword);
   echo '</ul>';
  
   echo '<div class="nba-mlb-grid-btm-lnc">
@@ -25,7 +27,7 @@ add_shortcode('ajax_product_posts', 'product_script_load_more');
 /*
  * load more script call back
  */
-function ajax_product_script_load_more($args, $term_slug='') {
+function ajax_product_script_load_more($args, $term_slug='', $keyword = '') {
   
     //init ajax
     $ajax = false;
@@ -41,14 +43,34 @@ function ajax_product_script_load_more($args, $term_slug='') {
     if(isset($_POST['cat_slug']) && !empty($_POST['cat_slug'])){
         $term_slug = $_POST['cat_slug'];
     }
-    
+    if(isset($_POST['key_word']) && !empty($_POST['key_word'])){
+        $keyword = $_POST['key_word'];
+    }
     if(isset($_POST['page']) && !empty($_POST['page'])){
         $paged = $_POST['page'] + $paged;
     }
-     if(!empty($term_slug)){
+     if(!empty($term_slug) && empty($keyword)){
         $query = new WP_Query(array( 
             'post_type'=> 'product',
             'post_status' => 'publish',
+            'posts_per_page' =>$num,
+            'paged'=>$paged,
+            'orderby' => 'date',
+            'order'=> 'DESC',
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'product_cat',
+                'field' => 'slug',
+                'terms' => $term_slug
+              )
+            )
+          ) 
+        );
+     }elseif(!empty($term_slug) && !empty($keyword)){
+        $query = new WP_Query(array( 
+            'post_type'=> 'product',
+            'post_status' => 'publish',
+            's' => $keyword,
             'posts_per_page' =>$num,
             'paged'=>$paged,
             'orderby' => 'date',

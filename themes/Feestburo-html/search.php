@@ -30,18 +30,6 @@ $cproposal = get_field('custom_proposal', 'options');
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <div class="product-overview-page-search product-overview-page-search-new">
-            <div class="clearfix">
-              <form>
-                <input type="search" name="" placeholder="Zoek hier">
-                <button>
-                  <img src="<?php echo THEME_URI; ?>/assets/images/search-white-icon.svg">
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12">
           <div class="product-overview-grds-controller">
             <?php
             if(have_posts()): ?>
