@@ -5,7 +5,7 @@
 get_header(); 
 
 $thisID = get_the_ID();
-get_template_part( 'templates/page', 'banner' );
+get_template_part( 'templates/page', 'banner-small' );
 ?>
 
 <?php 
@@ -45,7 +45,7 @@ get_template_part( 'templates/page', 'banner' );
             <div class="categoty-meubilair-lft-des">
               <?php
                 $intcontent = $intro['content'];
-                if( !empty($intcontent['titel']) ) printf('<h1>%s</h1>', $intcontent['titel']);
+                if( !empty($intcontent['titel']) ) printf('<h1><strong>%s</strong></h1>', $intcontent['titel']);
                 if( !empty($intcontent['beschrijving']) ) echo wpautop( $intcontent['beschrijving'] );
               ?>
               <a href="#subcat-meubilair-grd-sec"><span>Alle producten</span></a>

@@ -4,7 +4,7 @@
 */
 get_header(); 
 $thisID = get_the_ID();
-get_template_part( 'templates/page', 'banner' );
+get_template_part( 'templates/page', 'banner-small' );
 ?>
 
 <?php 
