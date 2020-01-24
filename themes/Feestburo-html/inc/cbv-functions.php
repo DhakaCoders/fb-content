@@ -393,7 +393,9 @@ function cbv_get_related_category_posts($taxno= 'product_cat', $perpage = 4)
 }
 
 function cbv_excerpt($limit = 10) {
-  $excerpt = explode(' ', get_field('product_excerpt'), $limit);
+  global $product;
+  $excerpt = $product->get_short_description(); 
+  $excerpt = explode(' ', $excerpt, $limit);
   if (count($excerpt)>=$limit) {
     array_pop($excerpt);
     $excerpt = implode(" ",$excerpt);

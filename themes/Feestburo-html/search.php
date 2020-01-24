@@ -46,9 +46,7 @@ $cproposal = get_field('custom_proposal', 'options');
             <?php
             if(have_posts()): ?>
               <ul class="ulc clearfix">
-               <?php while(have_posts()): the_post();
-                    $relexcerpt = get_field('product_excerpt', get_the_ID()); 
-                    ?>
+               <?php while(have_posts()): the_post(); ?>
                     <li>
                       <div class="subcat-meubilair-grd">
                         <span>Populair</span>

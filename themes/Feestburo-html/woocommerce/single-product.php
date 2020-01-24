@@ -3,6 +3,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit; // Exit if accessed directly
 }
 get_header();
+global $product;
 get_template_part( 'templates/page', 'banner' );
 while ( have_posts() ) :
   the_post();
@@ -10,8 +11,10 @@ while ( have_posts() ) :
 ?>
 
 <?php 
-$excerpt = get_field('product_excerpt', $thisID); 
-$gallery_pro = get_field('producten_galerij', $thisID);
+$excerpt = $product->get_description(); 
+
+$attachment_ids = $product->get_gallery_image_ids();
+
 ?>
 <section class="fl-product-single-wrap">
   <div class="container">
@@ -23,7 +26,7 @@ $gallery_pro = get_field('producten_galerij', $thisID);
       </div>
       <div class="col-sm-12">
         <div class="fl-product clearfix">
-            <?php if( $gallery_pro OR has_post_thumbnail()): ?>
+            <?php if( has_post_thumbnail()): ?>
               <div class="woocommerce-product-gallery">
                 <?php if(has_post_thumbnail()): ?>
                 <div class="woocommerce-product-gallery__image">
@@ -31,13 +34,17 @@ $gallery_pro = get_field('producten_galerij', $thisID);
                       <?php echo wp_get_attachment_image( get_post_thumbnail_id($thisID), 'dfpageg1' ); ?>
                     </a>
                 </div>
-                  <?php endif; if($gallery_pro): foreach( $gallery_pro as $image ): ?>
+                  <?php 
+                  endif; 
+                  if ( $attachment_ids && $product->get_image_id() ) {
+                  foreach ( $attachment_ids as $attachment_id ) { 
+                  ?>
                   <div class="woocommerce-product-gallery__image">
                     <a class="woocommerce-main-image fancybox" href="#">
-                      <?php echo wp_get_attachment_image( $image['ID'], 'dfpageg1' ); ?>
+                      <?php echo wp_get_attachment_image( $attachment_id, 'dfpageg1' ); ?>
                     </a>
                   </div>
-                  <?php endforeach; endif; ?>              
+                  <?php }  } ?>              
               </div>
             <?php endif; ?>
               <div class="summary entry-summary">
@@ -119,7 +126,6 @@ if ( $q->have_posts() ) {
             <ul class="ulc clearfix"> 
               <?php 
               while ( $q->have_posts() ) { $q->the_post();
-                $relexcerpt = get_field('product_excerpt', get_the_ID());
               ?>
               <li>
                 <div class="subcat-meubilair-grd">
