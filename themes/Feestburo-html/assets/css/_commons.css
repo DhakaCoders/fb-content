@@ -175,9 +175,9 @@ form .bootstrap-select .caret{
 }
 form .bootstrap-select .caret::before {
     content: "\f107";
-    font-family: FontAwesome;
+    font-family: "Font Awesome 5 Free";
     font-style: normal;
-    font-weight: normal;
+    font-weight: 900;
     text-decoration: inherit;
     color: #710023;
     font-size: 22px;
