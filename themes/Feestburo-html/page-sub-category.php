@@ -84,13 +84,8 @@ get_template_part( 'templates/page', 'banner-small' );
         <?php
         $reqprice = get_field('request_price', 'options');
         if( $reqprice ):
-          if(!empty($reqprice['afbeelding'])){
-            $rqpimg = cbv_get_image_src($reqprice['afbeelding']);
-          }else{
-            $rqpimg = '';
-          }
         ?>
-        <div class="sub-cat-request-price" style="background:url(<?php echo $rqpimg; ?>)">
+        <div class="sub-cat-request-price" style="background:url(<?php echo THEME_URI; ?>/assets/images/sub-cat-request-price-bg.jpg)">
           <?php 
             if(!empty($reqprice['titel'])) printf('<h3>%s</h3>', $reqprice['titel']);
             if(!empty($reqprice['beschrijving'])) echo wpautop( $reqprice['beschrijving'], true );
