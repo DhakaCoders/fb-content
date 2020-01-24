@@ -15,7 +15,19 @@ if( $newsltr ):
             ?>             
             </div>
             <div class="ftr-top-newsletter"> 
-            <?php if( !empty( $newsltr['form_shortcode'] ) ) echo do_shortcode($newsltr['form_shortcode']); ?>
+              <form action="">
+                <div class="from-group-wrp clearfix"> 
+                  <div class="from-group">
+                    <input placeholder="Namm" type="text">
+                  </div>
+                  <div class="from-group">
+                    <input placeholder="E-mailadres" type="email"> 
+                  </div>
+                  <div class="from-group">
+                    <button>Inschrijven</button> 
+                  </div>
+                </div>
+              </form>
             </div>
           </div>            
         </div>

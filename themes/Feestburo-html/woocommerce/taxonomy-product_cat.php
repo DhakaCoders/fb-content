@@ -3,6 +3,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 get_header(); 
+$cproposal = get_field('custom_proposal', 'options');
 
 $thisID = get_the_ID();
 
@@ -21,7 +22,14 @@ if( !empty($cats_root2) && $cats_root2){
 ?>
 <section class="page-banner page-banner-small">
   <div class="page-banner-con">
-    <a class="main-bnr-rgt-btn" href="#">Offerte aanvragen</a>
+  <?php 
+  if($cproposal && !empty($cproposal)):  
+    $link = $cproposal['knop'];
+    if( is_array( $link ) &&  !empty( $link['url'] ) ){
+     printf('<a class="main-bnr-rgt-btn" href="%s" target="%s"><span>%s</span></a>', $link['url'], $link['target'], $link['title']);
+    }
+  endif;
+  ?>
     <div class="page-banner-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/page-banner-bg-small.jpg);"></div>
     <div class="page-banner-des">
       <div class="container">
@@ -127,7 +135,7 @@ if( !empty($cats_root2) && $cats_root2){
         <div class="col-sm-12">
           <div class="product-overview-page-search product-overview-page-search-new">
             <div class="clearfix">
-              <form>
+              <form action="" method="">
                 <input type="search" name="" placeholder="Zoek hier">
                 <button>
                   <img src="<?php echo THEME_URI; ?>/assets/images/search-white-icon.svg">

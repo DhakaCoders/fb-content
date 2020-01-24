@@ -227,10 +227,10 @@
                   </div>
                 </div>
                 <div class="hdr-search">
-                  <form>
-                    <input type="search" name="" placeholder="Search">
+                  <form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                    <input type="search" value="<?php echo get_search_query(); ?>" name="s" placeholder="Search">
                   </form>
-                  <button>
+                  <button type="submit">
                     <em> 
                       <svg class="search-icon-svg" width="25" height="25" viewBox="0 0 25 25" fill="#3E4B60">
                         <use xlink:href="#search-icon-svg"></use>

@@ -4,6 +4,15 @@
 */
 get_header(); 
 get_template_part( 'templates/page', 'banner' );
+
+$type_taxs = get_terms( array(
+    'taxonomy' => 'referenties_type',
+    'hide_empty' => false
+) );
+$terms = get_terms( array(
+    'taxonomy' => 'referenties_cat',
+    'hide_empty' => false
+) );
 ?>
 <section class="ref-overview-sec">
   <div class="container">
@@ -12,53 +21,128 @@ get_template_part( 'templates/page', 'banner' );
         <div class="ref-overview-innr">
           <div class="ref-overview-filter-wrp">
             <div class="ref-overview-filter-main">
-              <form action="">
+              <form action="" method="get">
                 <ul class="ulc clearfix">
                   <li>
                     <div class="ref-overview-slct">
-                      <label>Feesttype</label>  
+                      
+                      <label>Feesttype</label> 
+                       <?php if ( ! empty( $type_taxs ) && ! is_wp_error( $type_taxs ) ){ ?>
                       <div class="select-input">
                         <div class="select-dep">
-                          <select class="selectpicker">
-                            <option value="1">Huwelijk</option>
-                            <option value="2">Huwelijk 2</option>
-                            <option value="3">Huwelijk 3</option>
+                          <select name="type" class="selectpicker">
+                            <option value="">Kiezen Feesttype</option>
+                            <?php foreach ( $type_taxs as $type_tax ) { ?>
+                            <option value="<?php echo $type_tax->slug; ?>"><?php echo $type_tax->name; ?></option>
+                            <?php } ?>
                           </select>
                         </div>
                       </div>
+                      <?php } ?>
                     </div>
                   </li>
                   <li>
                     <div class="ref-overview-slct">
                       <label>Producten gehuurd</label> 
+                      <?php if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){ ?>
                       <div class="select-input">
                         <div class="select-dep">
-                          <select class="selectpicker">
-                            <option value="1">Meubilair, Drank / Catering, Decoratie</option>
-                            <option value="2">Meubilair, Drank / Catering, Decoratie 2</option>
-                            <option value="3">Meubilair, Drank / Catering, Decoratie 3</option>
+                          <select name="rented" class="selectpicker">
+                            <option value="">Kiezen gehuurd</option>
+                            <?php foreach ( $terms as $term ) { ?>
+                            <option value="<?php echo $term->slug; ?>"><?php echo $term->name; ?></option>
+                            <?php } ?>
                           </select>
                         </div>
                       </div>
+                      <?php } ?>
                     </div>
                   </li>
                   <li>
-                    <button>Filter</button>
+                    <button type="submits">Filter</button>
                   </li>
                 </ul>                
               </form>
             </div>
           </div>
           <?php 
+            $typeslug = $rentedslug = '';
+            if(isset($_GET['type']) && empty($_GET['type']) && isset($_GET['rented']) && empty($_GET['rented'])):
+              echo '<script>alert("Select at least one.");</script>';
+            endif;
+
+            if( isset($_GET['type']) && !empty($_GET['type']) ){
+              $typeslug = $_GET['type'];
+            }
+            if( isset($_GET['rented']) && !empty($_GET['rented']) ){
+              $rentedslug = $_GET['rented'];
+            }
+
+          
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-            $refQuery = new WP_Query(array( 
-                    'post_type'=> 'referentie',
-                    'post_status' => 'publish',
-                    'posts_per_page' => 6,
-                    'paged' => $paged,
-                    'order'=> 'DESC'
-                  ) 
-                );
+
+            if( !empty($typeslug) && empty($rentedslug) ):
+              $args = array( 
+                'post_type'=> 'referentie',
+                'post_status' => 'publish',
+                'posts_per_page' => 6,
+                'paged' => $paged,
+                'order'=> 'DESC',
+                'tax_query' => array(
+                  array(
+                    'taxonomy' => 'referenties_type',
+                    'field' => 'slug',
+                    'terms' => $typeslug
+                  )
+                )
+              ); 
+            elseif( !empty($rentedslug) && empty($typeslug) ):
+              $args = array( 
+                'post_type'=> 'referentie',
+                'post_status' => 'publish',
+                'posts_per_page' => 6,
+                'paged' => $paged,
+                'order'=> 'DESC',
+                'tax_query' => array(
+                  array(
+                    'taxonomy' => 'referenties_cat',
+                    'field' => 'slug',
+                    'terms' => $rentedslug
+                  )
+                )
+              ); 
+            elseif( !empty($rentedslug) && !empty($typeslug) ):
+              $args = array( 
+                'post_type'=> 'referentie',
+                'post_status' => 'publish',
+                'posts_per_page' => 6,
+                'paged' => $paged,
+                'order'=> 'DESC',
+                'tax_query' => array(
+                  'relation' => 'AND',
+                  array(
+                    'taxonomy' => 'referenties_type',
+                    'field' => 'slug',
+                    'terms' => $typeslug
+                  ),
+                  array(
+                    'taxonomy' => 'referenties_cat',
+                    'field' => 'slug',
+                    'terms' => $rentedslug
+                  ),
+                )
+              ); 
+            elseif( empty($rentedslug) && empty($typeslug) ):
+              $args = array( 
+                'post_type'=> 'referentie',
+                'post_status' => 'publish',
+                'posts_per_page' => 6,
+                'paged' => $paged,
+                'order'=> 'DESC'
+              ); 
+            endif;
+
+            $refQuery = new WP_Query($args);
 
             if( $refQuery->have_posts() ):
           ?>
@@ -108,6 +192,8 @@ get_template_part( 'templates/page', 'banner' );
               endif; 
             ?>
           </div>
+          <?php else: ?>
+            <div class="hasgap"></div>
           <?php endif;wp_reset_postdata(); ?>
         </div> 
       </div>
