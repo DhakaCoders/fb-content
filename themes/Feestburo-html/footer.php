@@ -161,7 +161,7 @@
             <?php if( !empty( $copyright_text ) ) printf( '<span>%s</span>', $copyright_text); ?>
           </div>
           <div class="ftr-btm-rgt">
-            <a href="#">webdesign by conversal</a>
+            <a target="_blank" href="https://www.conversal.be/">webdesign by conversal</a>
           </div>
         </div>
       </div>

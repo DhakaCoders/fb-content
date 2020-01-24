@@ -3,7 +3,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit; // Exit if accessed directly
 }
 get_header();
-get_template_part( 'templates/page', 'banner' );
+get_template_part( 'templates/page', 'banner-small' );
 while ( have_posts() ) :
   the_post();
   $thisID = get_the_ID();
