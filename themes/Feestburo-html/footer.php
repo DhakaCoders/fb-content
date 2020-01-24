@@ -59,11 +59,12 @@
                   $fpmenuOptions = array( 
                       'theme_location' => 'cbv_top_menu', 
                       'menu_class' => 'ulc clearfix',
-                      'container' => 'spnav',
-                      'container_class' => 'spnav'
+                      'container' => false,
+                      'container_class' => ''
                     );
                   wp_nav_menu( $fpmenuOptions ); 
                 ?>
+                
                 <?php if($smedias): ?>
                 <div class="ftr-social">
                   <ul class="ulc clearfix">
@@ -76,8 +77,9 @@
                     <?php endforeach; ?>
                   </ul>
                 </div>              
+                <?php endif; ?>
               </div>
-              <?php endif; ?>
+              
               <div class="ftr-col-4 ftr-col">
                 <ul class="ulc">
                 <?php 
@@ -89,6 +91,7 @@
                 </ul>              
               </div>
             </div>
+
             <div class="ftr-col-wrp-xs show-xs clearfix">
               <div class="ftr-xs-logo">
                 <a href="<?php echo esc_url(home_url('/')); ?>">

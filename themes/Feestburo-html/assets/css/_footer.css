@@ -177,6 +177,7 @@
 }
 .ftr-btm-lft span p {
     margin: 0;
+    line-height: 25px;
 }
 .ftr-btm-lft > span{
 	padding-right: 18px;
@@ -200,6 +201,7 @@
 	left: 0;
 	top:3px;
 	color: #929292;
+	line-height: 1;
 }
 .ftr-btm-rgt{
 	text-align: right;

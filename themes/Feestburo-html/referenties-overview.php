@@ -3,7 +3,7 @@
   Template Name: Referenties
 */
 get_header(); 
-get_template_part( 'templates/page', 'banner' );
+get_template_part( 'templates/page', 'banner-title' );
 
 $type_taxs = get_terms( array(
     'taxonomy' => 'referenties_type',
