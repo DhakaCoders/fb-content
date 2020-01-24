@@ -348,12 +348,15 @@
     margin-right: -12px;
     margin-left: -12px;
 }
+.woocommerce.woocommerce-page .products > li{
+	margin: 0 !important;
+}
 .product-overview-grds-controller > ul > li{
-	width: 25%;
-    float: left;
-    padding-left: 12px;
-    padding-right: 12px;
-    margin-bottom: 25px;
+    width: 25% !important;
+    float: left !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    margin-bottom: 25px !important;
 }
 .product-overview-grds-controller > ul > li:nth-child(4n+1) {
     clear: left;
@@ -641,7 +644,10 @@ div#ajxaloader img {
 		margin-bottom: 10px;
 	}
 	.product-overview-grds-controller > ul > li{
-		width: 33.3333%;
+		width: 33.3333% !important;
+	}
+	.woocommerce.woocommerce-page .products > li{
+		margin-bottom: 25px !important;
 	}
 	.product-overview-grds-controller > ul > li:nth-child(4n+1){
 		clear: initial;
@@ -728,7 +734,10 @@ div#ajxaloader img {
 		padding-bottom: 35px;
 	}
 	.product-overview-grds-controller > ul > li{
-		width: 50%;
+		width: 50% !important;
+	}
+	.woocommerce.woocommerce-page .products > li{
+		margin-bottom: 25px !important;
 	}
 	.product-overview-grds-controller > ul > li:nth-child(3n+1){
 		clear: initial;
@@ -767,7 +776,10 @@ div#ajxaloader img {
 	    padding-top: 30px;
 	}
 	.product-overview-grds-controller > ul > li{
-		width: 100%;
+		width: 100% !important;
+	}
+	.woocommerce.woocommerce-page .products > li{
+		margin-bottom: 25px !important;
 	}
 	.product-overview-grds-controller .subcat-meubilair-grd{
 		max-width: 350px;
