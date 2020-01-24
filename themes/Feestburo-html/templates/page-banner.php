@@ -26,7 +26,7 @@ if(!empty(str_replace(' ', '', $custom_page_title))){
           <div class="col-sm-12">
             <div class="page-banner-des-innr">
               <?php 
-               if( is_product() ) {
+               if( is_product() OR is_shop() ) {
                   echo '<strong class="banner-page-title">Producten</strong>';
                   woocommerce_breadcrumb();
                 }elseif ( is_single() && 'referentie' == get_post_type() ) {

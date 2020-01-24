@@ -26,9 +26,11 @@ add_action('woocommerce_before_main_content', 'get_custom_wc_output_content_wrap
 add_action('woocommerce_after_main_content', 'get_custom_wc_output_content_wrapper_end', 10, 1);
 
 function get_custom_wc_output_content_wrapper(){
-
+    if(is_shop() OR is_product_category()){
+        get_template_part( 'templates/page', 'banner' );
+    }
     if(is_shop() OR is_product_category()){ $customClass = ' product-cat-sec'; $controlClass = ' product-overview-grds-controller';}elseif(is_product()){$customClass = ' product-des-sec';$controlClass = ' product-overview-grds-controller'; }else{ $customClass = ''; $controlClass = '';}
-    echo '<section class="product-overview-grd-sec'.$customClass.'"><div class="product-overview-grds-wrap"><div class="container"><div class="row"><div class="col-sm-12"><div class="main-content-wrp'.$controlClass.' clearfix">';
+    echo '<section class="product-overview-grd-sec'.$customClass.'"><div class="product-overview-grds-wrap topgap"><div class="container"><div class="row"><div class="col-sm-12"><div class="main-content-wrp'.$controlClass.' clearfix">';
 
 }
 

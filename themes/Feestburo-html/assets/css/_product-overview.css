@@ -344,6 +344,9 @@
 .product-overview-grds-controller .subcat-meubilair-grd-bg-wrp{
 	text-align: center;
 }
+.product-overview-grds-wrap.topgap{
+	padding-top: 30px;
+}
 .product-overview-grds-controller > ul {
     margin-right: -12px;
     margin-left: -12px;
