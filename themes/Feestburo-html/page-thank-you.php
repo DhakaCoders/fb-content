@@ -4,7 +4,7 @@
 */
 get_header();
 $thisID = get_the_ID();
-get_template_part( 'templates/page', 'banner' );
+get_template_part( 'templates/page', 'banner-title' );
 ?>
 
 <?php 
@@ -17,7 +17,7 @@ $pthcases = get_field('cases', $thisID);
       <div class="col-sm-12">
         <div class="message-dsc-wrp">
           <div class="message-dsc">
-            <?php if( !empty($intro['cases']) ): ?>
+            <?php if( !empty($intro['icon']) ): ?>
             <span><img src="<?php echo $intro['icon']; ?>" alt="<?php echo cbv_get_image_alt($intro['icon']); ?>"></span>
             <?php endif; ?>
 
@@ -29,7 +29,7 @@ $pthcases = get_field('cases', $thisID);
           <?php if( $pthcases ): ?>
           <div class="hm-single-post-wrp clearfix">
           <?php 
-            if( !empty($pthcases['titel']) ) printf('<h5>%s</h5>', $intro['titel']); 
+            if( !empty($pthcases['titel']) ) printf('<h5>%s</h5>', $pthcases['titel']); 
             $ptcaseids = $pthcases['select_cases'];
             if( is_array( $ptcaseids ) ){
               $refQuery = new WP_Query(array(
