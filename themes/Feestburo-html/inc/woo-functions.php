@@ -97,3 +97,10 @@ function woocommerce_disable_shop_page() {
     endif;
 }
 add_action( 'wp', 'woocommerce_disable_shop_page' );
+
+add_filter( 'loop_shop_per_page', 'bbloomer_redefine_products_per_page', 9999 );
+
+function bbloomer_redefine_products_per_page( $per_page ) {
+  $per_page = 3;
+  return $per_page;
+}

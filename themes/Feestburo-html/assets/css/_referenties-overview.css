@@ -106,36 +106,47 @@
 ul.page-numbers {
     list-style: none;
 }
-.ref-overview-pagi ul li{
+.woocommerce-pagination ul{
+	border: 0 !important;
+}
+.woocommerce-pagination ul li{
+	border-right: 0 !important;
+}
+.ref-overview-pagi ul li,
+.woocommerce-pagination ul li{
 	float: left;
-	padding-left: 4px;
-	padding-right: 4px;
+	padding-left: 4px !important;
+	padding-right: 4px !important;
 	text-align: center;
 }
 .ref-overview-pagi ul li a,
-.ref-overview-pagi ul li span{
-	display: inline-block;
+.ref-overview-pagi ul li span,
+.woocommerce-pagination ul li span,
+.woocommerce-pagination ul li a{
+	display: inline-block !important;
 	vertical-align: baseline;
-	font-weight: 600;
-	font-size: 14px;
-	line-height: 20px;
+	font-weight: 600 !important;
+	font-size: 14px !important;
+	line-height: 20px !important;
 	text-align: center;
 	letter-spacing: -0.1px;
-	color: #1C1C1C;
+	color: #1C1C1C !important;
 	width:36px;
 	height: 36px;
-	background: #fff;
-	border: 1px solid #EEEEEE;
+	background: #fff !important;
+	border: 1px solid #EEEEEE !important;
 	box-sizing: border-box;
 	border-radius: 4px;
-	padding: 6px 0;
+	padding: 6px 0 !important;
 }
-.ref-overview-pagi ul li a:hover{
-	color: #EB1C23;
-	border-color: #EB1C23;
+.ref-overview-pagi ul li a:hover,
+.woocommerce-pagination ul li a:hover{
+	color: #EB1C23 !important;
+	border-color: #EB1C23 !important;
 }
 .ref-overview-pagi ul li.active span,
-.ref-overview-pagi ul li span.current{
+.ref-overview-pagi ul li span.current,
+.woocommerce-pagination ul li span.current{
 	display: inline-block;
 	vertical-align: baseline;
 	font-weight: 600;
@@ -143,9 +154,9 @@ ul.page-numbers {
 	line-height: 20px;
 	text-align: center;
 	letter-spacing: -0.1px;
-	color: #fff;
-	background: #EB1C23;
-	border-color: #EB1C23;
+	color: #fff !important;
+	background: #EB1C23 !important;
+	border-color: #EB1C23 !important;
 }
 .ref-overview-filter-wrp{
 	position:relative;
