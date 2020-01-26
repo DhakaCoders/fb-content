@@ -193,7 +193,6 @@ if($showhide_werken):
             </div>
             <ul id="HmGalleryItemTopLft">
               <?php
-                $pcount = $refQuery->found_posts;
                 $getid = 0;
                 $i = 1;
                 while($refQuery->have_posts()): $refQuery->the_post(); 
@@ -202,7 +201,8 @@ if($showhide_werken):
                   $refImgsrc = cbv_get_image_src($refImage);
                 }else{
                   $refImgsrc = THEME_URI.'/assets/images/refer-sm-grid.png';
-                }        
+                }   
+                $count_posts = $refQuery->current_post + 1;     
               ?>
               <li>
                 <div class="hm-gallery-top-lft-item">
@@ -212,7 +212,7 @@ if($showhide_werken):
                   <a href="<?php the_permalink(); ?>" class="hm-gallery-small-btn"><?php the_title(); ?></a>
                 </div>
               </li>
-              <?php if($pcount == $i) $getid = get_the_ID(); $i++; endwhile; ?>
+              <?php if($count_posts == $i) $getid = get_the_ID(); $i++; endwhile; ?>
             </ul>
           </div>
           <?php wp_reset_postdata(); } 
