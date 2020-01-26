@@ -116,6 +116,8 @@ function ajax_product_script_load_more($args, $term_slug='', $keyword = '') {
         </li>
         <?php
     endwhile; 
+    else:
+      echo '<div class="postnot-found">Geen resultaten!</div>';
     endif;  
     
     wp_reset_postdata();

@@ -449,7 +449,10 @@ a.noVideo:hover > span{
     -ms-transform: scale(1)!important;
     -webkit-transform: scale(1)!important;
 }
-
+.postnot-found {
+    text-align: center;
+    font-size: 18px;
+}
 /*
 ----- Responsive ------
 */
