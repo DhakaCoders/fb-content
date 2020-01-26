@@ -4,10 +4,17 @@
  */
 
 function product_script_load_more($args = array()) {
-  $ccat = get_queried_object();
   $keyword = '';
+  $ccat = get_queried_object();
   if( isset($_GET['keyword']) && !empty($_GET['keyword'])) $keyword = $_GET['keyword'];
-
+       if(!empty($ccat->slug) && empty($keyword)){
+        $query = new WP_Query(array( 'post_type'=> 'product','post_status' => 'publish','tax_query' =>array(array('taxonomy' => 'product_cat','field' => 'slug','terms' => $ccat->slug))));
+     }elseif(!empty($ccat->slug) && !empty($keyword)){
+        $query = new WP_Query(array( 'post_type'=> 'product','post_status' => 'publish','s' => $keyword,'tax_query' => array(array('taxonomy' => 'product_cat','field' => 'slug','terms' => $ccat->slug))));
+     }else{
+       $query = new WP_Query(array( 'post_type'=> 'product','post_status' => 'publish',) );
+     }
+  if($query->have_posts()):
   echo '<ul class="ulc clearfix" id="ajax-content">';
       ajax_product_script_load_more($args, $ccat->slug, $keyword);
   echo '</ul>';
@@ -16,6 +23,9 @@ function product_script_load_more($args = array()) {
   <div class="ajaxloading" id="ajxaloader" style="display:none"><img src="'.THEME_URI.'/assets/images/loading.gif" alt="loader"></div>
    <div class="po-more-btn"><a href="#" id="loadMore"  data-page="1" data-url="'.admin_url("admin-ajax.php").'" >meer laden</a></div>';
    echo '</div>';
+  else:
+echo '<div class="postnot-found">Geen resultaten!</div>';
+  endif;
 
 }
 /*
@@ -28,7 +38,6 @@ add_shortcode('ajax_product_posts', 'product_script_load_more');
  * load more script call back
  */
 function ajax_product_script_load_more($args, $term_slug='', $keyword = '') {
-  
     //init ajax
     $ajax = false;
     //check ajax call or not
@@ -95,9 +104,9 @@ function ajax_product_script_load_more($args, $term_slug='', $keyword = '') {
           ) 
         );
      }
-
+    $pcount = $query->found_posts;
     if($query->have_posts()):
-
+   
     while($query->have_posts()): $query->the_post(); 
         ?>
         <li>
@@ -116,8 +125,6 @@ function ajax_product_script_load_more($args, $term_slug='', $keyword = '') {
         </li>
         <?php
     endwhile; 
-    else:
-      echo '<div class="postnot-found">Geen resultaten!</div>';
     endif;  
     
     wp_reset_postdata();

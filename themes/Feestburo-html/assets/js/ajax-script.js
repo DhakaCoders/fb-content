@@ -83,7 +83,7 @@ $("#loadMore").on('click', function(e) {
             console.log(response);
             //check
             if (response == 0) {
-                $('#ajax-content').append('<div class="clearfix"></div><div class="text-center"><p>No more products to load.</p></div>');
+                $('#ajax-content').append('<div class="clearfix"></div><div class="text-center"><p>Geen producten meer om te laden.</p></div>');
                 $('#loadMore').hide();
                 $('#ajxaloader').hide();
             } else {
@@ -93,7 +93,7 @@ $("#loadMore").on('click', function(e) {
             }
         },
         error: function(response) {
-            console.log(response);
+            console.log('asdfsd');
         },
     });
 });
