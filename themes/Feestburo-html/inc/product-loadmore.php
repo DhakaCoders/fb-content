@@ -15,14 +15,16 @@ function product_script_load_more($args = array()) {
        $query = new WP_Query(array( 'post_type'=> 'product','post_status' => 'publish',) );
      }
   if($query->have_posts()):
+    $pcount = $query->found_posts;
   echo '<ul class="ulc clearfix" id="ajax-content">';
       ajax_product_script_load_more($args, $ccat->slug, $keyword);
   echo '</ul>';
- 
+   if( $pcount > 4 ):
   echo '<div class="nba-mlb-grid-btm-lnc">
   <div class="ajaxloading" id="ajxaloader" style="display:none"><img src="'.THEME_URI.'/assets/images/loading.gif" alt="loader"></div>
    <div class="po-more-btn"><a href="#" id="loadMore"  data-page="1" data-url="'.admin_url("admin-ajax.php").'" >meer laden</a></div>';
    echo '</div>';
+   endif;
   else:
 echo '<div class="postnot-found">Geen resultaten!</div>';
   endif;
@@ -107,7 +109,7 @@ function ajax_product_script_load_more($args, $term_slug='', $keyword = '') {
     $pcount = $query->found_posts;
     if($query->have_posts()):
    
-    while($query->have_posts()): $query->the_post(); 
+    while($query->have_posts()): $query->the_post();  
         ?>
         <li>
           <div class="subcat-meubilair-grd">
