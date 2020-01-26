@@ -1,4 +1,3 @@
-
 .hdr-topbar{
 	background: rgba(247, 247, 247, 0.9);
 	
@@ -6,10 +5,7 @@
 .hdr-topbar-lft{
 	float: left;
 	width: 55%;
-	overflow: hidden;
-}
-.hdr-topbar-lft ul{
-	width: 1200px;
+	position: relative;
 }
 .hdr-topbar-rgt{
 	float: right;
@@ -47,10 +43,10 @@
 	display: inline-block;
 	vertical-align: baseline;
 }
-.hdr-topbar-lft ul li:last-child:before{
+.hdr-topbar-lft:before{
 	content: "";
 	position: absolute;
-	left: 0;
+	width: 60%;
 	top: 0;
 	bottom: 0;
 	right: 0;
@@ -59,7 +55,13 @@
 	-ms-background: linear-gradient(270deg, #F6F6F6 42.31%, rgba(246, 246, 246, 0) 115.81%);
 	-webkit-background: linear-gradient(270deg, #F6F6F6 42.31%, rgba(246, 246, 246, 0) 115.81%);
 }
-
+.hdr-topbar-lft ul li{
+	display: none;
+}
+.hdr-topbar-lft ul li:first-child,
+.hdr-topbar-lft ul.slick-initialized li{
+	display: inline-block!important;
+}
 .hdr-topbar-date-item{
 	position: relative;
 	padding-left: 35px;
@@ -180,9 +182,6 @@
     width: 23px;
     height: 2px;
     background: #afb1b5;
-}
-.hdr-topbar-social ul{
-	padding-top: 2px;
 }
 .hdr-topbar-social ul li,
 .hdr-topbar-social ul li a{
@@ -397,7 +396,7 @@ nav.main-nav > ul > li.current-menu-item > a:before{
 a.main-bnr-rgt-btn{
 	position: fixed;
 	right: 28px;
-	top: 145px;
+	top: 50%;
 	transform-origin: right;
 	transform: rotate(-90deg);
 	-ms-transform: rotate(-90deg);
@@ -412,6 +411,7 @@ a.main-bnr-rgt-btn{
 	font-size: 14px;
 	line-height: 16px;
 	font-weight: 700;
+	margin-top: -113px;
 }
 a.main-bnr-rgt-btn:hover{
 	background: #e7070f;
@@ -534,6 +534,9 @@ a.main-bnr-rgt-btn:hover{
 	}
 	.hdr-search {
 	    padding-top: 36px;
+	}
+	.hdr-search button em{
+		vertical-align: middle;
 	}
 
 }

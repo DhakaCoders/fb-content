@@ -109,7 +109,9 @@
 .overOns-howWeWork-head{
 	text-align: center;
 }
-.overOns-howWeWork-head h1{
+.overOns-howWeWork-head h1,
+.overOns-howWeWork-head h2,
+.overOns-howWeWork-head h3{
 	font-weight: 300;
 	font-size: 36px;
 	line-height: 60px;
@@ -210,11 +212,18 @@
     padding-bottom: 85px;
 }
 
-.hm-gallery-post-sec-wrp.overOns-gallery-post-sec .hm-enti-hdr-dsc h2{
+.hm-gallery-post-sec-wrp.overOns-gallery-post-sec .hm-enti-hdr-dsc h2,
+.hm-gallery-post-sec-wrp.overOns-gallery-post-sec .hm-enti-hdr-dsc h3{
     font-size: 36px;
     font-weight: 300;
+    margin: 0;
+    margin-bottom: 12px;
+    line-height: 38px;
+    color: #0C1421;
+    text-transform: uppercase;
 }
-.hm-gallery-post-sec-wrp.overOns-gallery-post-sec .hm-enti-hdr-dsc h2 strong{
+.hm-gallery-post-sec-wrp.overOns-gallery-post-sec .hm-enti-hdr-dsc h2 strong,
+.hm-gallery-post-sec-wrp.overOns-gallery-post-sec .hm-enti-hdr-dsc h3 strong{
     font-weight: 700;
 }
 
@@ -304,7 +313,9 @@
 	    line-height:52px;
 	    margin-bottom: 12px;
 	}
-	.overOns-howWeWork-head h1 {
+	.overOns-howWeWork-head h1,
+	.overOns-howWeWork-head h2,
+	.overOns-howWeWork-head h3{
 	    font-size: 28px;
 	    line-height: 40px;
 	}
@@ -345,7 +356,9 @@
 	.over-ons-feest-buro-rgt p {
 	    margin-bottom: 20px;
 	}
-	.overOns-howWeWork-head h1 {
+	.overOns-howWeWork-head h1,
+	.overOns-howWeWork-head h2,
+	.overOns-howWeWork-head h3{
 	    font-size: 25px;
 	    line-height: 35px;
 	}

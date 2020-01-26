@@ -7,17 +7,8 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-
 if(!empty(str_replace(' ', '', $custom_page_title))){
   $pageTitle = $custom_page_title;
 }*/
- $cproposal = get_field('custom_proposal', 'options');
 ?>
 <section class="page-banner page-banner-small">
-  <?php 
-  if($cproposal && !empty($cproposal)):  
-    $link = $cproposal['knop'];
-    if( is_array( $link ) &&  !empty( $link['url'] ) ){
-     printf('<a class="main-bnr-rgt-btn" href="%s" target="%s"><span>%s</span></a>', $link['url'], $link['target'], $link['title']);
-    }
- endif;
- ?>
   <div class="page-banner-con">
     <div class="page-banner-bg" style="background-image: url(<?php echo $standaardbanner; ?>);"></div>
     <div class="page-banner-des">

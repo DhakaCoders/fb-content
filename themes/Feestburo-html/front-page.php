@@ -46,11 +46,12 @@ get_header();
   $hshowhide_diensten = get_field('showhide_diensten', HOMEID);
   $hdienstens = get_field('home_diensten', HOMEID);
   if($hshowhide_diensten):
+  $getCls = cbv_cls_based_on_item( count($hdienstens), 5 );
 ?>
 <section class="hm-catagorys-sec-wrp">
   <?php if($hdienstens){ ?>
   <div class="hm-catagory-wrp">
-    <ul>
+    <ul class="<?php echo $getCls; ?>">
     <?php 
       foreach( $hdienstens as $hdiensten ): 
       $hdienposter = !empty($hdiensten['afbeelding'])? $hdiensten['afbeelding']: '';
@@ -71,7 +72,7 @@ get_header();
              $knopurl2 = (is_array( $knop ) &&  !empty( $knop['url'] ))?  $knop['url']: 'javascript:void(0)';
               if( !empty($hdiensten['titel']) ) printf(' <h5 class="hide-xs"><a href="%s">%s</a></h5>', $knopurl2, $hdiensten['titel']);
               if( is_array( $knop2 ) &&  !empty( $knop2['url'] ) ){
-                  printf('<h5 class="show-xs"><a href="%s" target="%s">%s</a></h5>', $knop2['url'], $knop2['target'], $knop2['title']); 
+                  printf('<h5 class="show-xs"><a href="%s" target="%s">%s</a></h5>', $knop2['url'], $knop2['target'], $hdiensten['titel']); 
               }
             ?>
           </div>
@@ -96,7 +97,7 @@ get_header();
     <div class="row">
       <div class="col-sm-12">
         <div class="hm-service-wrp clearfix">
-          <ul id="HmServiceSlider">
+          <ul class="clearfix" id="HmServiceSlider">
             <?php foreach( $husps as $husp ): ?>
             <li>
               <div class="hm-service-dsc">
@@ -237,7 +238,7 @@ get_header();
         </div>
         <?php if( $allfeestens ): ?>
         <div class="hm-single-post-wrp clearfix">
-          <ul>
+          <ul class="clearfix">
             <?php 
               foreach( $allfeestens as $afeestens ): 
                 $feeImgsrc = '';
@@ -345,7 +346,7 @@ get_header();
             </div>
             <div class="hm-gallery-middel-btn">
               <?php 
-                $knop_7 = get_field('featured_producten', HOMEID);
+                $knop_7 = get_field('producten_btn', HOMEID);
                 if( is_array( $knop_7 ) &&  !empty( $knop_7['url'] ) ){
                   printf('<a class="hide-xs" href="%s" target="%s">%s</a>', $knop_7['url'], $knop_7['target'], $knop_7['title']); 
                   printf('<a class="show-xs" href="%s" target="%s">%s</a>', $knop_7['url'], $knop_7['target'], $knop_7['title']); 

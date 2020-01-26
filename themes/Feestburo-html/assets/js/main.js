@@ -67,7 +67,7 @@ if( $('.refDetailsSlider').length){
   $('.refDetailsSlider').slick({
     pauseOnHover: false,
     autoplay: false,
-    infinite: true,
+    infinite: false,
     speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -698,6 +698,21 @@ if( $('.bannerSlider').length ){
       fade: true,
     });
 }
+if( $('.hdr-topbar-lft ul').length ){
+    $('.hdr-topbar-lft ul').slick({
+      pauseOnHover: true,
+      autoplay: true,
+      autoplaySpeed: 0,
+      cssEase: 'linear',
+      arrows:false,
+      dots: false,
+      infinite: true,
+      speed: 9000,
+      slidesToShow: 2,
+      variableWidth: true
+    });
+}
+
 
 /**
 Slick slider

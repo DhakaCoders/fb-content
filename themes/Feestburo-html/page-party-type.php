@@ -27,7 +27,6 @@ get_template_part( 'templates/page', 'banner' );
         <div class="feest-buro-innr clearfix"> 
           <div class="feest-buro-lft matchHeightCol">
             <div class="feest-buro-lft-bg" style="background:url(<?php echo $introsrc; ?>);"></div>
-            <i><?php echo $introtag; ?></i>
           </div>
           <div class="feest-buro-rgt matchHeightCol">  
             <?php

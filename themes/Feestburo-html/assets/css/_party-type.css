@@ -160,6 +160,7 @@ pt-btm-slider-sec-wrp
 	overflow: hidden;
 }
 .pt-btm-slider-wrp ul li{
+	max-width: 350px;
     float: left;
     padding: 35px 12px;
 }

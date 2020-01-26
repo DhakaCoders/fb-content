@@ -62,7 +62,8 @@ if( !empty($cats_root2) && $cats_root2){
             <?php echo $pcat_thumb; ?>
           </span>
 			<?php
-			  if( !empty($termname ) ) printf( '<h1>%s</h1>', $termname );
+        $termTitle = get_field('custom_titel', 'term_' . $termid);
+			  if( !empty($termTitle ) ) printf( '<h1>%s</h1>', $termTitle ); else printf( '<h1><strong>%s</strong></h1>', $termname );
 			  if( !empty($termdesc) ) echo wpautop( $termdesc ); 
 			?>
         </div>

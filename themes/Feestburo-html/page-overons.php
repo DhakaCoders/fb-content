@@ -116,7 +116,7 @@ if($showhide_werken):
         <div class="overOns-howWeWork-innr">
           <div class="overOns-howWeWork-head">
             <?php 
-              if( !empty( $hoe_werken['titel'] ) ) printf( '<h1>%s</h1>', $hoe_werken['titel']); 
+              if( !empty( $hoe_werken['titel'] ) ) printf( '<h3>%s</h3>', $hoe_werken['titel']); 
               if( !empty( $hoe_werken['beschrijving'] ) ) echo wpautop( $hoe_werken['beschrijving'], true );
             ?>
           </div>

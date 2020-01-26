@@ -405,3 +405,18 @@ function cbv_excerpt($limit = 10) {
   //$excerpt = preg_replace('`\[[^\]]*\]`',$dot,$excerpt);
   return $excerpt;
 }
+
+function cbv_cls_based_on_item($count = 0, $default = 0){
+  $cls = '';
+  if( $count && $default ){
+    if( $count > $default ){
+      $cls = 'mfd';
+    }elseif($count < $default){
+      $cls = 'lfd';
+    }else{
+      $cls = 'sasd';
+    }
+    return $cls;
+  }
+  return false;
+}

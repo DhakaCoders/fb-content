@@ -23,10 +23,12 @@ get_template_part( 'templates/page', 'banner-small' );
     $vtag .= '<i><img src="'.THEME_URI.'/assets/images/play.png" alt="play"></i>';
     $vtag .= '<span style="background: url('.$vthumb.');"></span>';
     $vtag .= '</a>';
-  }else{
-    $vtag .= '<a class="img-zoom">';
+  }elseif(!empty($vthumb)){
+    $vtag .= '<a class="img-zoom noVideo">';
     $vtag .= '<span style="background: url('.$vthumb.');"></span>';
     $vtag .= '</a>';
+  }else{
+
   }
 ?>
 <section class="categoty-meubilair-sec">
@@ -70,7 +72,7 @@ get_template_part( 'templates/page', 'banner-small' );
             <div class="catMeubilairSlider-item">
               <div class="catMeubilairSlider-bg-wrp">
                 <div class="catMeubilairSlider-bg" style="background:url(<?php echo $gimagesrc; ?>)">
-                  <a data-fancybox href="<?php echo $gimagesrcfull; ?>" class="overlay-link"></a>                      
+                  <a data-fancybox="gallery" href="<?php echo $gimagesrcfull; ?>" class="overlay-link"></a>            
                 </div>
               </div>
             </div>

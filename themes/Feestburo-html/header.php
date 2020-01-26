@@ -136,6 +136,15 @@
   $hevents = get_field('hdr_events', 'options');
   $smedias = get_field('sociale_media', 'options');
 ?>
+<?php 
+$cproposal = get_field('custom_proposal', 'options');
+if($cproposal && !empty($cproposal)):  
+  $link = $cproposal['knop'];
+  if( is_array( $link ) &&  !empty( $link['url'] ) ){
+   printf('<a class="main-bnr-rgt-btn" href="%s" target="%s"><span>%s</span></a>', $link['url'], $link['target'], $link['title']);
+  }
+endif;
+?>
 <div class="body-overlay"></div>
 <header class="header">
   <div class="hdr-topbar">

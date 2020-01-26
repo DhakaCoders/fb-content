@@ -316,3 +316,8 @@ a.hm-gallery-small-btn:hover:after{
 	right: -5px;
 }
 
+.slick-arrow.slick-hidden{
+	left: auto!important;
+	right: auto!important;
+	display: none!important;
+}

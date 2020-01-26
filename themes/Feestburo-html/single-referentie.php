@@ -34,7 +34,10 @@ $informat = get_field('informatie', $thisID);
           ?>
           <div class="ref-del-slider-wrp">
             <div class="refDetailsSlider">
-              <?php foreach( $rslides as  $rslider): ?>
+              <?php 
+              $gl = 1; 
+              foreach( $rslides as  $rslider): 
+              ?>
               <div class="refDetailsSlider-item clearfix">
                 <?php 
                   $lftpart = $rslider['left_part']; 
@@ -48,17 +51,21 @@ $informat = get_field('informatie', $thisID);
                     if( $lptype ): 
                       if(!empty($vposter['url'])){
                         $vthumb = $vposter['sizes']['rvposter'];
+                        $vtfull = $vposter['url'];
                       }
                       $vtag = '';
+                      //printr($vposter);
                       if(!empty($vurl)){
-                        $vtag .= '<a class="img-zoom" data-fancybox="article" href="'.$vurl.'">';
-                        $vtag .= '<i><img src="'.THEME_URI.'/assets/images/play.png" alt="play"></i>';
+                        $vtag .= '<a class="img-zoom" data-fancybox="gallery'.$gl.'" href="'.$vurl.'">';
+                        $vtag .= '<i><img src="'.THEME_URI.'/assets/images/play.png"></i>';
+                        $vtag .= '<span style="background: url('.$vthumb.');"></span>';
+                        $vtag .= '</a>';
+                      }elseif(!empty($vthumb)){
+                        $vtag .= '<a data-fancybox="gallery'.$gl.'" href="'.$vtfull.'" class="img-zoom noVideohasFancybox">';
                         $vtag .= '<span style="background: url('.$vthumb.');"></span>';
                         $vtag .= '</a>';
                       }else{
-                        $vtag .= '<a class="img-zoom">';
-                        $vtag .= '<span style="background: url('.$vthumb.');"></span>';
-                        $vtag .= '</a>';
+
                       }
                   ?>
                   <div class="video-play-wrap">
@@ -82,12 +89,12 @@ $informat = get_field('informatie', $thisID);
                       <div class="refDetailsSlider-rgt-grd">
                         <div class="refDetailsSlider-rgt-grd-bg" style="background: url(<?php echo $rgimage; ?>);">
                         </div>
-                        <a data-fancybox href="<?php echo $rgimagefull; ?>" class="overlay-link"></a> 
+                        <a data-fancybox="gallery<?php echo $gl; ?>" href="<?php echo $rgimagefull; ?>" class="overlay-link"></a> 
                       </div>
                     </li>
                   <?php 
                       endforeach;
-                      echo '<ul>';
+                      echo '</ul>';
                     endif; 
                     endif; 
                   ?>
@@ -105,18 +112,21 @@ $informat = get_field('informatie', $thisID);
                     if( $rgptype ): 
                       
                       if(!empty($rvposter)){
-                        $rvthumb = cbv_get_image_src($rvposter, 'rvposter');;
+                        $rvthumb = cbv_get_image_src($rvposter, 'rvposter');
+                        $rvfull = cbv_get_image_src($rvposter, 'full');
                       }
                       $rvtag = '';
                       if(!empty($rvurl)){
-                        $rvtag .= '<a class="img-zoom" data-fancybox="article" href="'.$rvurl.'">';
+                        $rvtag .= '<a class="img-zoom" data-fancybox="gallery'.$gl.'" href="'.$rvurl.'">';
                         $rvtag .= '<i><img src="'.THEME_URI.'/assets/images/play.png" alt="play"></i>';
                         $rvtag .= '<span style="background: url('.$rvthumb.');"></span>';
                         $rvtag .= '</a>';
-                      }else{
-                        $rvtag .= '<a class="img-zoom">';
+                      }elseif(!empty($rvthumb)){
+                        $rvtag .= '<a data-fancybox="gallery'.$gl.'" href="'.$rvfull.'" class="img-zoom noVideohasFancybox">';
                         $rvtag .= '<span style="background: url('.$rvthumb.');"></span>';
                         $rvtag .= '</a>';
+                      }else{
+
                       }
                   ?>
                   <div class="video-play-wrap">
@@ -140,18 +150,18 @@ $informat = get_field('informatie', $thisID);
                       <div class="refDetailsSlider-rgt-grd">
                         <div class="refDetailsSlider-rgt-grd-bg" style="background: url(<?php echo $rrgimage; ?>);">
                         </div>
-                        <a data-fancybox href="<?php echo $rrgimagefull; ?>" class="overlay-link"></a> 
+                        <a data-fancybox="gallery<?php echo $gl; ?>" href="<?php echo $rrgimagefull; ?>" class="overlay-link"></a> 
                       </div>
                     </li>
                   <?php 
                       endforeach;
-                      echo '<ul>';
+                      echo '</ul>';
                     endif; 
                     endif; 
                   ?>
                 </div>
               </div>
-              <?php endforeach; ?>
+              <?php $gl++; endforeach; ?>
             </div>
           </div>
           <?php endif; ?>
