@@ -78,7 +78,7 @@ if($showhide_intro):
               <div class="over-ons-feest-buro-rgt">
                 <?php 
                   if( !empty( $intrep['titel'] ) ) printf( '<h3>%s</h3>', $intrep['titel']); 
-                  if( !empty( $intrep['beschrijving'] ) ) echo wpautop( $intrep['beschrijving'], true );; 
+                  if( !empty( $intrep['beschrijving'] ) ) echo wpautop( $intrep['beschrijving'], true ); 
                   
 
                   $knop1 = $intrep['knop_1'];
